@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Select First child of div</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+	
+	<style>
+	   h2, div , p   {
+	     padding: 5px;
+	     margin:5px;
+	     width: 350px;
+	     border: 1px solid blue;
+	   }
+	</style>
+	
+    <script>
+	   function selectAdv()  {  
+	       $('div p:first-child').css("background","#ccc");
+	   }	
+	</script>
+</head>
+<body>
+
+	<input type="button" onclick="selectAdv();" value="Select First Child of div"/> 
+	<a href="">Reset</a>
+	
+	
+	<div>Div element</div>
+	
+    <h2 class='abc'>H2 element</h2>
+	
+	<div> Div element
+	    
+	     <p class='abc'>p - first child of div</p>
+	     
+	     <p class='abc'>p - second child of div</p>
+	     
+	     <div class='abc'> Div element
+	     
+	          <p>p -  first child of div</p>
+	          
+	     </div>
+	
+	</div> 	
+    
+    
+	<div>
+	     
+	     <div class='abc'>Div element</div>
+	     
+	     <p class='abc'>p - second child of p</p>	     
+	
+	</div> 	
+	
+</body>
+</html>

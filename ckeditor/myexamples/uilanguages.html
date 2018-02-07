@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>User Interface Globalization</title>
+      
+      <script src="../ckeditor.js"></script> 
+      
+   </head>
+   <body>
+   
+      <h1>User Interface Languages</h1>
+      <form action="" method="post">
+      
+         <select onchange="createEditor( this.value );" id="languages">
+            <option value="en-gb">English (United Kingdom)</option>
+            <option value="vi">Vietnamese</option>
+            <option value="zh-cn">Chinese Simplified</option>
+            <option value="zh">Chinese Traditional</option>
+         </select>
+         
+         <textarea id="editor1" name="editor1"  cols="80" rows="10">
+			   <p>Hello <strong>CKEditor</strong></p>
+		 </textarea>
+		 
+         <script> 
+            var editor;
+            
+            function createEditor( languageCode ) {
+            	if ( editor )
+            		editor.destroy();
+            
+            	// Replace the <textarea id="editor"> with an CKEditor
+            	// instance, using default configurations.
+            	editor = CKEDITOR.replace( 'editor1', {
+            		language: languageCode,
+            
+            		on: {
+            			instanceReady: function() {
+            				// Wait for the editor to be ready to set
+            				// the language combo.
+            				var languages = document.getElementById( 'languages' );
+            				languages.value = this.langCode;
+            				languages.disabled = false;
+            			}
+            		}
+            	});
+            }
+            
+            // At page startup, load the default language:
+            createEditor( '' );
+            
+         </script>
+         
+      </form>
+   </body>
+</html>

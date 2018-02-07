@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Traversing - children</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+	
+	<style>
+		div, span, ul, li , h2 {padding: 5px; margin: 5px; border: 1px solid blue;} 
+	</style>
+	
+    <script>
+    
+	   function highlightChildren()  {    
+	       $('div').children().css("border","2px solid red"); 
+	   }	
+	</script>
+	
+</head>
+<body>
+
+    <h3>jQuery Traversing - children</h3>
+    <p>$('div').children().css("border","2px solid red");</p>
+    <input type="button" onclick="highlightChildren();" 
+              value="Highlight children of DIV"/>
+    <a href="">Reset</a>
+    	
+	<div> div element
+	    
+	     <h2>h2 element</h2>
+	     
+	     <ul>
+	        ul element
+	        
+	        <li>li element</li>
+	        <li>li element</li>
+	     </ul>
+	
+	</div> 
+	
+</body>
+</html>

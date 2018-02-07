@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Traversing - not(fn)</title>
+     
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+     
+    <style>
+        div,  h2 , ul, li {padding: 5px; margin: 5px; border: 1px solid blue;}
+    </style>
+     
+    <script>
+     
+       function highlightNot()  {    
+       
+           $('h4').not(function(index, element) {
+              if(index == 1) {
+                 return true;
+              }
+              if( $(element).hasClass('highlight')  ) {
+                 return true;
+              }
+              return false;
+           }).css('color','red');
+       }    
+       
+    </script>
+     
+</head>
+<body>
+ 
+    <h3>jQuery Traversing - not(fn)</h3>
+     
+    <input type="button" onclick="highlightNot();"
+              value="Highlight not(fn)"/>
+               
+    <a href="">Reset</a>
+         
+    <h4>h4 element (index = 0)</h4>    
+         
+    <h4>h4 element (index = 1)</h4>
+     
+    <p>p element</p>
+         
+    <h4 class="highlight">h4 element with class = 'highlight' (index = 2)</h4>
+     
+    <h4>h4 element (index = 3)</h4>
+     
+</body>
+</html>

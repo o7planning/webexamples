@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Traversing - Parent</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+	
+	<style>
+		div, ul, li { width: 200px;padding: 5px; margin: 5px; border: 1px solid blue;}
+		.abc {border: 1px solid red;}
+	</style>
+	
+    <script>
+    
+	   function highlightParents()  {   
+	        
+	       $('.abc').parents('div').css("background","#ccc"); 
+	   }	
+	</script>
+	
+</head>
+<body>
+
+    <h3>jQuery Traversing - parent </h3>
+    <input type="button" onclick="highlightParents();" value="Highlight DIV ancestors of element with class='abc'"/>
+    <a href="">Reset</a>
+    	
+	<div>
+	    
+	     <ul>
+	        <li class='abc'>li class='abc' </li>
+	        <li>li element</li>
+	        <li>li element</li>
+	     </ul>
+	
+	</div> 	
+	
+	<div>
+	    <div class='abc'>Div class='abc'</div>
+	</div>
+	
+</body>
+</html>

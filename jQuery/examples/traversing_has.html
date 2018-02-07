@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Traversing - has(selector)</title>
+     
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+     
+    <style>
+        p, div {padding: 5px; margin: 5px; border: 1px solid blue; width: 300px;}
+    </style>
+     
+    <script>
+     
+       function highlightHas()  {    
+       
+           $('div').has("p").css('border','2px solid red');
+       }    
+       
+    </script>
+     
+</head>
+<body>
+ 
+    <h3>jQuery Traversing - has(selector)</h3>
+     
+    <p>$("div").has("p").css('border','2px solid red');</p>
+     
+    <input type="button" onclick="highlightHas();"
+              value="Highlight has(selector)"/>
+               
+    <a href="">Reset</a>
+         
+    <div>div element
+         
+        <div>div element
+            <p>p element</p>
+        </div>
+    </div>
+         
+    <div>div element
+            <p>p element</p>
+    </div>
+     
+</body>
+</html>

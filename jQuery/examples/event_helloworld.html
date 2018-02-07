@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Event - Hello World example</title>
+ 
+ 
+    <style>
+       h3 {border: 1px solid blue; padding: 5px; width: 200px;}
+       h4 {border: 1px solid red; padding: 5px; width: 200px;}
+    </style>
+         
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+  
+     
+    <script>
+     
+  
+        // At the moment the page is ready
+        $(document).ready(function() {
+ 
+       
+           // Attach an event handler to the "click" event of h3 elements.
+           $("h3").click(function(){
+          
+               // Use $(this) to refer element fire this event. (h3)
+               $(this).css("background","#ccc");
+           });
+ 
+       
+           // Attach an event handler to the "dblclick" event of h4 elements.
+           $("h4").dblclick(function() {
+       
+               // Use $(this) to refer element fire this event. (h4)
+               $(this).css("background","yellow");
+           });
+         
+        });
+         
+    </script>
+     
+ 
+</head>
+<body>
+    <h2>jQuery Event - Hello World example</h2>
+    <a href="">Reset</a>
+     
+    <h3>H3 - Click me!</h3>
+    <h3>H3 - Click me!</h3>
+     
+    <h4>H4 - Double Click me!</h4>
+     
+</body>
+</html>

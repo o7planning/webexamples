@@ -1,0 +1,87 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Traversing - siblings</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+	
+	<style>
+	  h1, h2, h4, p, div {padding: 5px; margin: 5px; border: 1px solid black;} 
+		  h2 {border: 2px solid red;}
+		 .blue {border: 2px solid blue;}
+	</style>
+	
+    <script>
+       function clearAll() {
+           $('h1, h2, h4, p, div').css("background","white"); 
+       }
+	   function highlightSiblings()  { 
+	       clearAll();   
+	       $('h2').siblings().css("background","yellow"); 
+	   }
+	   function highlightNext()  { 
+	       clearAll();     
+	       $('h2').next().css("background","yellow"); 
+	   }
+	   function highlightNextAll()  { 
+	       clearAll();     
+	       $('h2').nextAll().css("background","yellow"); 
+	   }
+	   function highlightNextUntil()  { 
+	       clearAll();     
+	       $('h2').nextUntil('h4.blue').css("background","yellow"); 
+	   }
+	   function highlightPrev()  { 
+	       clearAll();     
+	       $('h2').prev().css("background","yellow"); 
+	   }
+	   function highlightPrevAll()  { 
+	       clearAll();     
+	       $('h2').prevAll().css("background","yellow"); 
+	   }
+	   function highlightPrevUntil()  { 
+	       clearAll();     
+	       $('h2').prevUntil('h1').css("background","yellow"); 
+	   }	   	   	   	   	   	   	
+	</script>
+	
+</head>
+<body>
+
+    <h3>jQuery Traversing - siblings</h3>
+   
+    <input type="button" onclick="highlightSiblings();" value="siblings()"/>
+    <input type="button" onclick="highlightNext();" value="next()"/>
+    <input type="button" onclick="highlightPrev();" value="prev()"/>
+    
+    <input type="button" onclick="highlightNextAll();" value="nextAll()"/>
+    <input type="button" onclick="highlightPrevAll();" value="prevAll()"/>
+    
+    <input type="button" onclick="highlightNextUntil();" value="nextUntil()"/>
+    <input type="button" onclick="highlightPrevUntil();" value="prevUntil()"/>
+    
+    
+    <a href="">Reset</a>
+    	
+   
+	     
+     <div>div element
+        <h1 class='blue'>h1 element (Until)</h1>   
+        <div>div element</div> 
+        <div>div element</div> 
+        <h2>h2 element (current)</h2> 
+        <p>p element</p> 
+        <div>div element
+            <br>
+            <p style="background:white;">p element</p>
+        </div> 
+        <h1>h1 element</h1> 
+        <h4>h4 element</h4> 
+        <h4 class='blue'>h4 element class='blue'  (Until)</h4> 
+        <div>div element</div>  
+     </div>
+	
+
+	
+</body>
+</html>

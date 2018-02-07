@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery - Get Attribute</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+ 
+	
+    <script>
+    
+	   function getAttr()  {   
+	       // Lấy ra giá trị thuộc tính href của phần tử có id= 'atag'
+	       var hrefValue = $('#atag').attr("href"); 
+	       
+	       // Sét html vào thẻ có id = 'atag'.
+	       $('#atag').html(hrefValue);
+	   }	
+	</script>
+</head>
+<body>
+   <input type="button" onclick="getAttr();" value="Get Attribute"/>
+   <a href="">Reset</a>
+   
+   <br><br>
+   
+   <a id="atag" href="http://jquery.com" target="_blank">jQuery</a>
+	
+</body>
+</html>

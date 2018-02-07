@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Event attribute example</title>
+ 
+ 
+    <style>
+       div {margin : 10px; width: 250px; height: 150px; float: left; }
+    </style>
+         
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+ 
+     
+    <script>
+     
+        $(document).ready(function() {
+         
+           $("div").click(function(event) {  
+               var s="Type  = "+ event.type+ "<br>"
+                    +"pageX = "+ event.pageX+"<br>"
+                    +"pageY = "+ event.pageY+"<br>"
+                    +"screenX = "+ event.screenX+"<br>"
+                    +"screenY = "+ event.screenY+"<br>"
+                    +"which = "+ event.which+"<br>"
+                    +"target = "+ event.target.innerHTML+"<br>"
+                    ;
+                     
+               $('div#log').html(s);
+           });
+ 
+        });
+         
+    </script>
+     
+ 
+</head>
+<body>
+    <h2>jQuery Event attribute example</h2>
+     
+     
+    <div style="background:blue;">
+       DIV 1
+    </div>
+     
+    <div style="background:red;">
+       DIV 2
+    </div>
+     
+    <hr style="clear:both;"/>
+     
+    <div id="log" style="border:1px solid #ccc;padding:10px;width:550px;">
+   
+     
+    </div>
+</body>
+</html>

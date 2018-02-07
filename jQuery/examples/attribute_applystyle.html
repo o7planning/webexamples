@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery - Apply Style</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+ 
+	<style>
+	   .selected {color: red; }
+	   .highlight {background: yellow;}
+	
+	</style>
+	
+    <script>
+    
+	   function applyStyle()  {   
+	       $('h1').addClass('selected highlight');
+	       $('h2').addClass('selected');
+	   }	
+	</script>
+</head>
+<body>
+   <input type="button" onclick="applyStyle();" value="Apply Style"/>
+   <a href="">Reset</a>
+   
+   <br><br>
+   
+   <h1>H1 will apply selected + highlight</h1>
+   
+   <h2>H2 will apply selected</h2>
+   
+   <h1>H1 will apply selected + highlight</h1>
+	
+</body>
+</html>

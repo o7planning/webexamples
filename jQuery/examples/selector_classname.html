@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Select elements by classname</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+	
+	<style>
+	   h2, div {
+	     padding: 5px;
+	     margin:5px;
+	     width: 250px;
+	   }
+	</style>
+	
+    <script>
+	   function selectByClassName()  {  
+	       $('.abc').css("border","1px solid red");
+	   }	
+	</script>
+</head>
+<body>
+
+	<input type="button" onclick="selectByClassName();" value="Select By ClassName"/> 
+	<a href="">Reset</a>
+	
+	
+	<div>Div1</div>
+	
+    <h2 class='abc'>H2 with class='abc'</h2>
+	
+	<div>
+	    
+	     <div class='abc'>Div3 with class='abc'</div>
+	     
+	     <div class='abc'>Div4 with class='abc'</div>
+	
+	</div> 
+	
+	
+</body>
+</html>

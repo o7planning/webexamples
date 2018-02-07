@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Event - bind()/unbind() example</title>
+ 
+ 
+    <style>
+       h3 {border: 1px solid blue; padding: 5px; width: 300px;}
+       h4 {border: 1px solid red; padding: 5px; width: 300px;}
+        
+       p {border: 1px solid green; padding: 5px; width: 300px;}
+    </style>
+         
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+  
+     
+    <script>
+     
+     
+        // At the moment the page is ready
+        $(document).ready(function() {
+              
+    
+           // Bind an event handler to the "click" event of h3 elements.
+           $("h3").bind('click', function() {
+               $(this).css("background","#ccc");
+           });
+ 
+     
+           // Bind an event handler to the "dblclick" event of h4 elements.
+           $("h4").bind('dblclick', function(){
+               $(this).css("background","yellow");
+           });
+            
+           $("p").bind('click', function()  {
+        
+               // Remove the event handler click on h3.
+               $("h3").unbind("click");
+               $("h3").text("click handler removed!");
+               $("h3").css("background", "white");               
+           });        
+        });
+         
+    </script>
+     
+ 
+</head>
+<body>
+    <h2>jQuery Event - bind()/unbind() example</h2>
+    <a href="">Reset</a>
+     
+    <h3>H3 - Click me!</h3>
+    <h3>H3 - Click me!</h3>
+     
+    <h4>H4 - Double Click me!</h4>
+     
+    <p>Click to remove click handler in h3</hp>
+</body>
+</html>

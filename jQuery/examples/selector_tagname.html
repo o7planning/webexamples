@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Select elements by tagName</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+	
+	<style>
+	   div {
+	     padding: 5px;
+	     margin:5px;
+	     width: 100px;
+	   }
+	</style>
+	
+    <script>
+	   function selectDiv()  {  
+	       $('div').css("border","1px solid red");
+	   }	
+	</script>
+</head>
+<body>
+
+	<input type="button" onclick="selectDiv();" value="Select Div"/> 
+	<a href="">Reset</a>
+	
+	
+	<div>Div1</div>
+	
+    <h2>H2 tag</h2>
+	
+	<div>
+	    
+	     <div>Div3</div>
+	     
+	     <div>Div4</div>
+	
+	</div> 
+	
+	
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Traversing - parentsUntil</title> 
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.js"></script>
+	
+	<style>
+		div, span, ul, li , h2 {padding: 5px; margin: 5px; border: 1px solid blue;} 
+	</style>
+	
+    <script>
+    
+	   function highlightParentsUntil()  {    
+	       $('h2').parentsUntil('div').css("border","2px solid red"); 
+	   }	
+	</script>
+	
+</head>
+<body>
+
+    <h3>jQuery Traversing - parentsUtil</h3>
+    <p>$('h2').parentsUntil('div').css("border","2px solid red");</p>
+    <input type="button" onclick="highlightParentsUntil();" 
+              value="Highlight ancestors elements between H2 and DIV"/>
+    <a href="">Reset</a>
+    	
+	<div> div element
+	    
+	     <ul> ul element
+	     	         
+	        <li>
+	           li element
+	           <h2>h2 element</h2>
+	        </li>
+	        
+	        <li>li element</li>
+	     </ul>
+	
+	</div> 
+	
+</body>
+</html>
