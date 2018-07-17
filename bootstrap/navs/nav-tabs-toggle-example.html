@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Bootstrap Nav</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <h4>Nav Tabs Data-Toggle</h4>
+
+         <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+               <a class="nav-link" id="tab-javascript" data-toggle="tab"
+                  href="#content-javascript"
+                  role="tab" aria-controls="content-javascript" aria-selected="false">
+               Javascript
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" id="tab-css" data-toggle="tab"
+                  href="#content-css"
+                  role="tab" aria-controls="content-css" aria-selected="false">
+               CSS
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link active" id="tab-bootstrap" data-toggle="tab"
+                  href="#content-bootstrap"
+                  role="tab" aria-controls="content-bootstrap" aria-selected="true">
+               Bootstrap
+               </a>
+            </li>
+         </ul>
+         <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="content-javascript"
+               role="tabpanel" aria-labelledby="tab-javascript">
+               JavaScript is a cross-platform, object-oriented scripting language ...
+            </div>
+            <div class="tab-pane fade" id="content-css"
+               role="tabpanel" aria-labelledby="tab-css">
+               CSS stands for Cascading Style Sheets. ...
+            </div>
+            <div class="tab-pane fade show active" id="content-bootstrap"
+               role="tabpanel" aria-labelledby="tab-bootstrap">
+               Bootstrap is a free front-end framework for faster and easier web development...
+            </div>
+         </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   </body>
+</html>

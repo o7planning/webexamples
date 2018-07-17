@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>PopOver Example</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <style>
+         .btn {margin: 5px;}
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid mt-3">
+         <h2>Popover via Data Attributes</h2>
+         <br><br><br>
+
+         <button type="button" class="btn btn-warning myPopover"
+            data-toggle="popover"
+            data-placement="right" title="Right Popover"
+            data-content="Popover show on Right">Tooltip on right</button>
+
+         <button type="button" class="btn btn-danger myPopover"
+            data-toggle="popover"
+            data-placement="top" title="Top Popover"
+            data-content="Popover show on top.">Tooltip on top</button>
+
+         <button type="button" class="btn btn-info myPopover"
+            data-toggle="popover"
+            data-placement="bottom" title="Bottom Popover"
+            data-content="Popover show on Bottom.">Tooltip on bottom</button>
+
+         <button type="button" class="btn btn-success myPopover"
+            data-toggle="popover"
+            data-placement="left" title="Left Popover"
+            data-content="Popover show on Left">Tooltip on left</button>
+
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+      <script>
+         $(function(){
+            $(".myPopover").popover();
+         });
+      </script>
+
+   </body>
+</html>

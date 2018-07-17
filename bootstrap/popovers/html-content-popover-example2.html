@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Popover Example</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <style>
+         .btn {margin: 5px;}
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid mt-3">
+         <h2>Popover (HTML Content)</h2>
+         <br><br>
+         <a href="#"
+            class="myPopover"
+            data-toggle="popover"
+            data-placement="right" title="Quick guide"
+            data-trigger="hover"
+            data-html="true"
+            data-popover-content="#myPopoverContent">Download Software</a>
+
+         <!-- Content for Popover: -->
+         <div id="myPopoverContent" style="display:none">
+            <strong>Steps to do..</strong>
+            <ol style="padding:10px">
+               <li>Download this file</li>
+               <li>Install the software</li>
+               <li>Restart your computer</li>
+            </ol>
+         </div>
+
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+      <script>
+         $('.myPopover').popover({
+         html : true,
+         content: function() {
+          var elementId = $(this).attr("data-popover-content");
+          return $(elementId).html();
+         }
+         });
+      </script>
+   </body>
+</html>

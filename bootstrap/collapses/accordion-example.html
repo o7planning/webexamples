@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Accordion Example</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+   </head>
+   <body>
+      <div class="container mt-3">
+         <h4 class="mb-1">Accordion Example</h4>
+
+         <div class="accordion" id="accordionExample">
+            <div class="card">
+               <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link" type="button" data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        Javascript
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseOne" class="collapse show"
+                  aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                     JavaScript is a scripting or programming language that
+                     allows you to implement complex things on web pages ..
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                      Css
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    CSS stands for Cascading Style Sheets.
+                    CSS describes how HTML elements are to be displayed on screen,
+                    paper, or in other media ..
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                       Bootstrap
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Bootstrap is a free front-end framework for faster and easier web development.
+                    Bootstrap includes HTML and CSS based design templates for typography ...
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Form Example</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+   </head>
+   <body>
+      <div class="container-fluid mt-3">
+         <h4 class="mb-2">Complex Form</h4>
+         <form>
+            <div class="form-row">
+               <div class="form-group col-sm-6">
+                  <label for="myEmail">Email</label>
+                  <input type="email" class="form-control"
+                     id="myEmail" placeholder="Email">
+               </div>
+               <div class="form-group col-sm-6">
+                  <label for="myPassword">Password</label>
+                  <input type="password" class="form-control"
+                     id="myPassword" placeholder="Password">
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="inputAddress">Address</label>
+               <input type="text" class="form-control"
+                  id="myAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+               <label for="inputAddress2">Address 2</label>
+               <input type="text" class="form-control"
+                  id="myAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+               <div class="form-group col-sm-6">
+                  <label for="myCity">City</label>
+                  <input type="text" class="form-control" id="myCity">
+               </div>
+               <div class="form-group col-sm-4">
+                  <label for="myState">State</label>
+                  <select id="myState" class="form-control">
+                     <option selected>Choose...</option>
+                     <option>...</option>
+                  </select>
+               </div>
+               <div class="form-group col-sm-2">
+                  <label for="myZip">Zip</label>
+                  <input type="text" class="form-control" id="myZip">
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="myCheck">
+                  <label class="form-check-label" for="myCheck">
+                  Check me out
+                  </label>
+               </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+         </form>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   </body>
+</html>

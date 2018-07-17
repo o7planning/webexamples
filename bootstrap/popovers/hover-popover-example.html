@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>PopOver Example</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <style>
+         .btn {margin: 5px;}
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid mt-3">
+         <h2>Popover (Hover)</h2>
+         <br><br>
+
+         <button type="button"
+            class="btn btn-warning myPopover"
+            data-toggle="popover"
+            data-placement="right" title="Hover Popover"
+            data-trigger="hover"
+            data-content="I display when pointer over the element">Hover over me</button>
+
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+      <script>
+          $('.myPopover').popover();
+      </script>
+
+   </body>
+</html>
