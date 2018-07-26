@@ -2,21 +2,27 @@
 <html>
    <head>
       <meta charset="utf-8">
-      <title>Margin Example</title>
+      <title>.d-block Example</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <style>body {padding:5px;}</style>
    </head>
    <body>
-      <h3>Responsive Margin</h3>
+     <h3 class="mb-3">.d-block example</h3>
 
-      <div class="container-fluid border border-primary">
-         <div class="border border-danger m-1 m-sm-5" style="width:100px;">
-           .m-1 .m-sm-5
-         </div>
+      <div class="container">
+           <div class="d-block border" style="width:150px;">
+                I am a .d-block (width:150px)
+           </div>
+           <div class="d-block border">
+                I am a .d-block
+           </div>
+           <div class="d-block border" style="height:90px;">
+                I am a .d-block (height:90px)
+           </div>
       </div>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
    </body>
-
 </html>
