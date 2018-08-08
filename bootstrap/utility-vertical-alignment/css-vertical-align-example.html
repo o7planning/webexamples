@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Css Vertical Alignment</title>
+
+      <style>
+        .parent  {
+            border:1px solid red;
+            height:400px;
+            width:300px;
+            text-align: center;
+        }
+
+        .child  {
+           border:1px solid blue;
+           display: inline-block;
+           vertical-align: middle;
+        }
+        .main {
+            height: 172px;
+            line-height:172px;
+            border: 1px solid #000000;
+        }
+        .inner {
+            display: inline-block;
+            vertical-align: bottom;
+            border: 1px solid #000000;
+            width: 100%;
+            line-height: normal;
+            box-sizing: border-box;
+        }
+      </style>
+   </head>
+   <body>
+      <h3 class="mb-3">Css Vertical Alignment</h3>
+      <div class="parent">
+
+
+        <div class="child">Div 1</div>
+
+      </div>
+
+      <div class="main">
+    <div class="inner">This paragraph should be centered in the larger box</div>
+</div>
+   </body>
+</html>
