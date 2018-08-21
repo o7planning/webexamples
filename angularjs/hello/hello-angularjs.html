@@ -8,11 +8,17 @@
    </head>
    <body>
       <div ng-app="myApp" ng-controller="myCtrl">
-         <h3>Hello AngularJS:</h3>
-         <p><b>First Name:</b> {{ firstName }} </p>
-         <p><b>Last Name:</b> {{ firstName }} </p>
-         <p><b>Full Name:</b> {{ firstName + " " + lastName }} </p>
-         <p><b>Full Name:</b> {{ fullName() }} </p>
+         <h3>Calculator:</h3>
+         <p>Variable 1: <input ng-model = "variable1"> </p>
+         <p>Variable 2: <input ng-model = "variable2"> </p>
+
+         <button ng-click = "setOperationSum()">+</button>
+         <button ng-click = "setOperationMinus()">-</button>
+
+         <p>{{variable1}} {{ operation }} {{variable2}}</p>
+
+         <button ng-click = "calculate()"> = </button>
+         <p>Result: <b style="color:red">{{ result }}<b></p>
       </div>
    </body>
 </html>
