@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Hello AngularJS</title>
+      <!-- Check version: https://code.angularjs.org/ -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="hello-angularjs.js"></script>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Hello AngularJS:</h3>
+         <p><b>First Name:</b> {{ firstName }} </p>
+         <p><b>Last Name:</b> {{ firstName }} </p>
+         <p><b>Full Name:</b> {{ firstName + " " + lastName }} </p>
+         <p><b>Full Name:</b> {{ fullName() }} </p>
+      </div>
+   </body>
+</html>
