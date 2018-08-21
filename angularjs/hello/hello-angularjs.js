@@ -1,27 +1,27 @@
-// Create a Application named "myApp".
+// Create an Application named "myApp".
 var app = angular.module("myApp", []);
 
 // Create a Controller named "myCtrl"
 app.controller("myCtrl", function($scope) {
 
-    $scope.operation = "+";
+    $scope.operator = "+";
 
     $scope.variable1 = 30;
     $scope.variable2 = 20;
     $scope.result = 0;
 
-    $scope.setOperationSum = function() {
-        $scope.operation = "+";
+    $scope.setOperatorSum = function() {
+        $scope.operator = "+";
     }
 
-    $scope.setOperationMinus = function() {
-        $scope.operation = "-";
+    $scope.setOperatorMinus = function() {
+        $scope.operator = "-";
     }
 
     $scope.calculate = function() {
-        if ($scope.operation == "+") {
+        if ($scope.operator == "+") {
             $scope.result = parseFloat($scope.variable1) + parseFloat($scope.variable2);
-        } else if ($scope.operation == "-") {
+        } else if ($scope.operator == "-") {
             $scope.result = parseFloat($scope.variable1) - parseFloat($scope.variable2);
         }
     }

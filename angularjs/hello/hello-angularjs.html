@@ -12,10 +12,10 @@
          <p>Variable 1: <input ng-model = "variable1"> </p>
          <p>Variable 2: <input ng-model = "variable2"> </p>
 
-         <button ng-click = "setOperationSum()">+</button>
-         <button ng-click = "setOperationMinus()">-</button>
+         <button ng-click = "setOperatorSum()">+</button>
+         <button ng-click = "setOperatorMinus()">-</button>
 
-         <p style="color:blue">{{variable1}} {{ operation }} {{variable2}}</p>
+         <p style="color:blue">{{variable1}} {{ operator }} {{variable2}}</p>
 
          <button ng-click = "calculate()"> = </button>
          <p>Result: <b style="color:red">{{ result }}<b></p>
