@@ -1,9 +1,7 @@
 // Create an Application named "myApp"
 var app = angular.module("myApp", []);
 
-// Create a Directvie named "myComment"
-
-
+// Create a Directvie named "myComment" 
 app.directive("myComment", function() {
     return {
         restrict : "M",
