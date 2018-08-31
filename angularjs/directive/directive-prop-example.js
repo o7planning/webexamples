@@ -14,6 +14,6 @@ app.directive("personProfile", function() {
     return {
         restrict : "E",
 
-        templateUrl : "file://E:/webexamples/angularjs/directive/person-profile-template.html" 
+        templateUrl : "https://rawgit.com/o7planning/webexamples/master/angularjs/directive/person-profile-template.html" 
     };
 });
