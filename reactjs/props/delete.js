@@ -1,19 +1,12 @@
 
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state.searchText
+var array1 = [
+  { empId: 1, fullName: "Trump", gender: "Male" },
+  { empId: 2, fullName: "Ivanka", gender: "Female" },
+  { empId: 3, fullName: "Kushner", gender: "Male" }
+];
 
-
-    : "reactjs",
-      searchCount: 0,
-      resultCount: 0
-    };
-  }
-
-  // Other code
-}
-
-// Render
-ReactDOM.render(<Search />, document.getElementById("search1"));
+var array2 = array1.map (
+    e =>
+    <Emloyee fullName={e.fullName} gender={e.gender} />
+);
