@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Directive</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="todo-example.js"></script>
+      <style>
+         .my-todo-list  {
+         border: 1px solid #ddd;
+         padding: 5px;
+         margin: 5px;
+         width: 320px;
+         }
+      </style>
+   </head>
+   <body>
+      <div ng-app="myApp">
+         <div  ng-controller="myCtrl">
+            <h2>Custom Directive with templateUrl</h2>
+
+            <my-todo-list todo-datas="todoList" title="My Todo List"/>
+
+         </div>
+      </div>
+   </body>
+</html>
