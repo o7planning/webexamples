@@ -22,9 +22,9 @@ class Order extends React.Component {
     this.state = {
       amount: 0,
       details: [
-        { id: 1, productName: "IPhone X", price: 900, quantity: 1 },
-        { id: 2, productName: "Samsung S9", price: 800, quantity: 1 },
-        { id: 3, productName: "Nokia 8", price: 650, quantity: 1 }
+        { id: 1, productName: "IPhone X", price: 900, quantity: 0 },
+        { id: 2, productName: "Samsung S9", price: 800, quantity: 0 },
+        { id: 3, productName: "Nokia 8", price: 650, quantity: 0 }
       ]
     };
   }
