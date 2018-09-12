@@ -5,7 +5,7 @@ class OrderDetail extends React.Component {
     return (
       <div className="order-detail">
         <h4>{this.props.productName}</h4>
-        <p>Price: $ {this.props.price}</p>
+        <p>Price: {this.props.price} USD</p>
         <p>Quantity: {this.props.quantity}</p>
         <p>
           <button onClick={this.props.addHandler}>+</button>
@@ -58,7 +58,7 @@ class Order extends React.Component {
       <div className="order">
         {detailTags}
         <div className="clear" />
-        <p className="total">Total: {this.state.amount}</p>
+        <p className="total">Total: <b>{this.state.amount} USD</b></p>
       </div>
     );
   }
