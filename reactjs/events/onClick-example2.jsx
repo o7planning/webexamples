@@ -8,8 +8,8 @@ class CurrentTime extends React.Component {
     };
   }
 
-  // A method of CurrentTime component
-  refreshCurrentTime() {
+  // A method of this Component
+  refreshCurrentTime(event) { 
     var now = new Date();
     this.setState({ currentTime: now.toString() });
   }
@@ -18,7 +18,7 @@ class CurrentTime extends React.Component {
       <div>
         <h4>Current Time:</h4>
         <p>{this.state.currentTime}</p>
-        <button onClick={() => this.refreshCurrentTime()}>
+        <button onClick={this.refreshCurrentTime.bind(this,event)}>
           Refresh Current Time
         </button>
       </div>
