@@ -12,12 +12,12 @@ var ctrl = app.controller("myCtrl", function($scope) {
 
 // Create a Directive named "myTodoList"
 // E: Element <my-todo-list todo-list="=" title="@">
+
 app.directive("myTodoList", function() {
     return {
         restrict : "E",
         templateUrl : "todo-template.html",
-        // '=' : an expression
-        // '@': a string
+
         scope: {
           todoList: '=',
           title: '@'

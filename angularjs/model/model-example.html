@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Model</title>
+      <!-- Check version: https://code.angularjs.org/ -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="model-example.js"></script>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Enter your name:</h3>
+         <p><input ng-model = "fullName"/></p>
+         <p>Your Name: {{fullName}}</p>
+      </div>
+   </body>
+</html>
