@@ -2,7 +2,7 @@ var app = angular.module("myApp", []);
 
 var ctrl = app.controller("myCtrl", function($scope) {
 
-  $scope.todoList = [
+  $scope.todoDatas = [
     {name: 'Create a custom directive', completed: true},
     {name: 'Learn about restrict', completed: true},
     {name: 'Master scopes', completed: false}
@@ -11,7 +11,7 @@ var ctrl = app.controller("myCtrl", function($scope) {
 });
 
 // Create a Directive named "myTodoList"
-// E: Element <my-todo-list todo-datas="=" title="@">
+// E: Element <my-todo-list todo-list="=" title="@">
 app.directive("myTodoList", function() {
     return {
         restrict : "E",
@@ -19,7 +19,7 @@ app.directive("myTodoList", function() {
         // '=' : an expression
         // '@': a string
         scope: {
-          todoDatas: '=',
+          todoList: '=',
           title: '@'
         }
     };
