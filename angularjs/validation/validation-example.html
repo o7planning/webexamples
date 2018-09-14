@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Model Validation</title>
+      <!-- Check version: https://code.angularjs.org/ -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="validation-example.js"></script>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Enter Your Info:</h3>
+
+         <form name="myForm">
+            Email:<br/>
+            <input type="email" name="myEmail" ng-model="email"/>
+            <span ng-show="myForm.myEmail.$error.email" required style="color:red;">
+               Invalid Email!
+            </span>
+            <br/>
+            Age:<br/>
+            <input type="text" name="myAge" ng-model="age" ng-pattern="/^[1-9][0-9]?$|^100$/" />
+            <span ng-show="myForm.myAge.$error.pattern" style="color:red;">
+              Invalid Number!
+            </span>
+
+         </form>
+      </div>
+   </body>
+</html>
