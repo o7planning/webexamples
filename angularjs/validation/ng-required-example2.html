@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Validation - ng-required</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="ng-required-example2.js"></script>
+      <style>
+         .error-msg {
+         font-size: 90%;
+         font-style: italic;
+         color: red;
+         }
+      </style>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Validation Directive: ng-required</h3>
+         <p>Enter User Name:</p>
+         <form name="myForm">
+            <input type="checkbox" ng-model="autoName" /> Auto Name?
+            <br/>
+            User Name
+            <br/>
+            <input type="text"
+               name="myUserName" ng-model="userName" ng-required ="!autoName" />
+            <span ng-show="myForm.myUserName.$invalid" class="error-msg">
+            Please Enter User Name.
+            </span>
+         </form>
+      </div>
+   </body>
+</html>
