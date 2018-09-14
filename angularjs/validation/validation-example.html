@@ -11,6 +11,14 @@
          <h3>Enter Your Info:</h3>
 
          <form name="myForm">
+            Full Name <br/>
+            <input type="text"
+                 name="myFullName" ng-model="employee.fullName"
+                 ng-minlength = '3' ng-maxlength= '20' ng-required />
+            <span ng-show="myForm.myFullName.$invalid" style="color:red;">
+               Invalid
+            </span>
+            <br/>
             Email:<br/>
             <input type="email" name="myEmail" ng-model="email"/>
             <span ng-show="myForm.myEmail.$error.email" required style="color:red;">
