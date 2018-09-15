@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>AngularJS Validation - ng-required</title>
+      <title>AngularJS Validation</title>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-      <script src="ng-minlength-example.js"></script>
+      <script src="minmax-length-example.js"></script>
       <style>
          .error-msg {
          font-size: 90%;
@@ -21,12 +21,13 @@
             Password <br/>
             <input type="password"
                name="myPassword" ng-model="password"
-               ng-minlength= "5" ng-required="true"/>
+               ng-minlength= "5" ng-maxlength= "10" ng-required="true"/>
+               
             <span ng-show="myForm.myPassword.$invalid" class="error-msg">
-                 At least 5 characters
+                 Password must be minimum 5 and maximum 10 characters
             </span>
             <br/>
-            <button type="submit" >Submit</button> 
+            <button type="submit" >Submit</button>
          </form>
       </div>
    </body>
