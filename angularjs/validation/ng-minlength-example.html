@@ -3,9 +3,9 @@
    <head>
       <title>AngularJS Validation - ng-required</title>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-      <script src="ng-required-example.js"></script>
+      <script src="ng-minlength-example.js"></script>
       <style>
-         .error-msg {  
+         .error-msg {
          font-size: 90%;
          font-style: italic;
          color: red;
@@ -17,14 +17,16 @@
          <h3>Validation Directive: ng-minlength, ng-maxlength</h3>
          <p>Enter Password:</p>
 
-         <form name="myForm">
+         <form name="myForm" action="" ng-submit="checkOnSubmit($event)">
             Password <br/>
             <input type="password"
                name="myPassword" ng-model="password"
-               ng-minlength= "5" />
+               ng-minlength= "5" ng-required="true"/>
             <span ng-show="myForm.myPassword.$invalid" class="error-msg">
                  At least 5 characters
             </span>
+            <br/>
+            <button type="submit" >Submit</button> 
          </form>
       </div>
    </body>

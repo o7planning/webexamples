@@ -17,13 +17,13 @@
          <h3>Validation Directive: ng-required</h3>
          <p>Enter Your Name:</p>
 
-         <form name="myForm">
+         <form name="myForm" action="" ng-submit="checkOnSubmit($event)">
             Full Name <br/>
             <input type="text"
                name="myFullName" ng-model="fullName" ng-required ="true" />
             <span ng-show="myForm.myFullName.$invalid" class="error-msg">
-            You must enter your Name.
-            </span>
+              You must enter your Name.
+            </span> 
          </form>
       </div>
    </body>
