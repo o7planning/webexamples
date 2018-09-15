@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Validation ng-pattern</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="$dirty-example.js"></script>
+      <style>
+         .error-msg {
+         font-size: 90%;
+         font-style: italic;
+         color: red;
+         }
+      </style>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>$dirty</h3>
+
+         <p><a href="?refresh">Reset</a></p>
+         <p style="color:blue;">Click the Controls to test $dirty</p>
+
+         <form name="myForm" action="">
+            <input type="text" name="myField1" ng-model="field1" />
+            <div class="error-msg">
+              $dirty = {{myForm.myField1.$dirty}}
+            </div>
+         </form>
+      </div>
+   </body>
+</html>

@@ -19,7 +19,7 @@
          <p><a href="?refresh">Reset</a></p>
          <p style="color:blue;">Click the Controls to test $touched & $untouched</p>
 
-         <form name="myForm" action="" ng-submit="checkOnSubmit($event)">
+         <form name="myForm" action="">
             <input type="text" name="myField1" ng-model="field1" />
             <div class="error-msg" ng-show="myForm.myField1.$touched">$touched!</div>
             <div class="error-msg" ng-show="myForm.myField1.$untouched">$untouched!</div>
