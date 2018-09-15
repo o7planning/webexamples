@@ -23,4 +23,4 @@ app.directive("myTodoList", function() {
           title: '@'
         }
     };
-});
+}); 

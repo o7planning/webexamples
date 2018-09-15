@@ -1,33 +1,43 @@
-class CurrentTime extends React.Component {
-  constructor(props) {
-    super(props);
 
-    var now = new Date();
-    this.state = {
-      currentTime: now.toString()
-    };
+class SimpleForm extends React.Component {
 
-    // (***)
-    this.refreshCurrentTime = this.refreshCurrentTime.bind(this);
+constructor(props)  {
+  super(props);
+
+  this.state = {
+     fullName  : ""
+  };
+}
+
+  handleSubmitForm(event)  {
+     alert('Full Name: ' + this.state.fullName);
+     event.preventDefault();
   }
 
-  // A method of this Component
-  refreshCurrentTime( ) {
-    var now = new Date();
-    this.setState({ currentTime: now.toString() });
+  handleInputChange(event)  {
+      var value= event.target.value;
+
+      this.setState({
+         fullName: value
+      });
   }
+
+
   render() {
     return (
-      <div>
-        <h4>Current Time:</h4>
-        <p>{this.state.currentTime}</p>
-        <button onClick={this.refreshCurrentTime}>
-          Refresh Current Time
-        </button>
-      </div>
+      <form onSubmit={(event) => this.handleSubmitForm(event)}>
+        <label>
+          Full Name:
+          <input type="text" value={this.state.fullName}
+                onChange={(event) => this.handleInputChange(event)} />
+        </label>
+        <div>{this.state.fullName}</div>
+        <input type="submit" value="Submit" />
+      </form>
     );
   }
 }
 
+
 // Render
-ReactDOM.render(<CurrentTime />, document.getElementById("currenttime1"));
+ReactDOM.render(<SimpleForm />, document.getElementById("form1"));
