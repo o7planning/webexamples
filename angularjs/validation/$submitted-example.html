@@ -13,21 +13,25 @@
       </style>
    </head>
    <body>
-       <!-- Xem vi du: https://jsfiddle.net/gnwapeb1/11/ -->
-
       <div ng-app="myApp" ng-controller="myCtrl">
          <h3>$sumitted</h3>
-
          <p><a href="?refresh">Reset</a></p>
          <p style="color:blue;">Click Submit button to test $sumitted</p>
+         <h3 style= "color:red;">$submitted = {{myForm.$submitted}}</h3>
+         <!--
+            (IMPOTANT!!) To test with $submitted
+            You need to remove the action attribute in the FORM.
 
-         <form name="myForm" action="" ng-submit="myForm.$valid && checkOnSubmit($event)">
-            <input type="text" name="myField1" ng-model="field1" />
-            <div>myForm.$submitted =  {{myForm.$submitted}}</div>
-            <div  ng-messages="myForm.$error" ng-if="myForm.$submitted" class="error-msg">
-                OK, This form sumitted!
-            </div>
+            novalidate: Disable browser default validation.
+            -->
+         <form name="myForm" ng-submit="myForm.$valid && doSubmitForm($event)" novalidate>
+            <input type="text" name="myField1" ng-model="field1" ng-required="true"/>
+            <span ng-show="myForm.myField1.$invalid" class="error-msg">Required!!</span>
+            <br/>
             <button type="submit">Submit</button>
+            <h4 ng-show="myForm.$submitted && myForm.$invalid" class="error-msg">
+               Something invalid, please check and re-submit
+            </h4>
          </form>
       </div>
    </body>

@@ -1,5 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Validation - ng-required</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="__delete.js"></script>
+      <style>
+         .error-msg {
+         font-size: 90%;
+         font-style: italic;
+         color: red;
+         }
+      </style>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Validation Directive: ng-required</h3>
+         <p>Enter Your Name:</p>
 
+         <form name="myForm" ng-submit="myForm.$valid && submit()" novalidate>
+          <pre>Is it dirty yet? {{ myForm.$dirty }}</pre>
+          <input type="email" name="email" ng-model="email" required/>
 
+          <h3>{{myForm.$submitted}}</h3>
 
+          <div ng-messages="myForm.email.$error" ng-if="myForm.$dirty || myForm.$submitted">
+            <p ng-message="required">Please enter details in these field</p>
+            <p ng-message="email">Please enter email</p>
+          </div>
+          <button type="submit">Save</button>
+        </form>
 
-       <h1>Hello World!</h1>
+      </div>
+   </body>
+</html>
