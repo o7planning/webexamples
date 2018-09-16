@@ -6,7 +6,7 @@ app.controller("myCtrl", function($scope) {
     $scope.password = "";
 
     $scope.checkOnSubmit = function(event) {
-        if ($scope.myForm.$error) {
+        if ($scope.myForm.$invalid) {
             alert("Something invalid!");
             // Cancel submit
             event.preventDefault();
