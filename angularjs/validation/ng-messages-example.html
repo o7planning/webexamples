@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Validation</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <!-- angular-messsages.js Library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-messages.js"></script>
+      <script src="ng-messages-example.js"></script>
+      <style>
+         .error-msg {
+          font-size: 90%;
+          font-style: italic;
+          color: red;
+         }
+      </style>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Validation Directive: ng-messages, ng-message</h3>
+         <p>Enter Password:</p>
+         <form name="myForm" action="" ng-submit="checkOnSubmit($event)">
+            Password <br/>
+            <input type="password"
+               name="myPassword" ng-model="password"
+               ng-minlength= "5" ng-maxlength= "10" ng-required="true"/>
+
+            <div ng-messages="myForm.myPassword.$error" ng-messages-multiple class="error-msg">
+               <div ng-message="required">Required!</div>
+               <div ng-message="minlength">Min length 5 characters</div>
+               <div ng-message="maxlength">Max length 10 characters</div>
+               <div ng-message="customValidator">Custom Error Message</div>
+               <div ng-message="asyncValidator">Custom Async Error Message</div>
+            </div>
+
+            <br/>
+            <button type="submit" >Submit</button>
+         </form>
+      </div>
+   </body>
+</html>
