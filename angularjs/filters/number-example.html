@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Filters</title>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="number-example.js"></script>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Filter: number</h3>
+
+         <p><b>Origin Number:</b> {{ revenueAmount }}</p>
+
+         <p><b>Default Number Format:</b> {{ revenueAmount | number }}</p>
+
+         <p><b>Format with 2 decimal places:</b> {{ revenueAmount | number : 2 }}</p> 
+
+      </div>
+   </body>
+</html>

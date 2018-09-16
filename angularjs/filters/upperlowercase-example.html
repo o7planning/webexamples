@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Filters</title>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="upperlowercase-example.js"></script>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Filters: uppercase/lowercase</h3>
+
+         <p>Origin String: {{ greeting }}</p>
+         <p>Uppercase: {{ greeting | uppercase }}</p>
+         <p>Lowercase: {{ greeting | lowercase }}</p>
+      </div>
+   </body>
+</html>
