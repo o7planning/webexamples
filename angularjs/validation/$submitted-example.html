@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Validation $sumitted</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="$submitted-example.js"></script>
+      <style>
+         .error-msg {
+         font-size: 90%;
+         font-style: italic;
+         color: red;
+         }
+      </style>
+   </head>
+   <body>
+       <!-- Xem vi du: https://jsfiddle.net/gnwapeb1/11/ -->
+
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>$sumitted</h3>
+
+         <p><a href="?refresh">Reset</a></p>
+         <p style="color:blue;">Click Submit button to test $sumitted</p>
+
+         <form name="myForm" action="" ng-submit="myForm.$valid && checkOnSubmit($event)">
+            <input type="text" name="myField1" ng-model="field1" />
+            <div>myForm.$submitted =  {{myForm.$submitted}}</div>
+            <div  ng-messages="myForm.$error" ng-if="myForm.$submitted" class="error-msg">
+                OK, This form sumitted!
+            </div>
+            <button type="submit">Submit</button>
+         </form>
+      </div>
+   </body>
+</html>
