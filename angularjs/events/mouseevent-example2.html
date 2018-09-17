@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Mouse Events</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="mouseevent-example2.js"></script>
+      <style>
+          .my-div  {
+            width: 290px;
+            height: 100px;
+            background: blue;
+          }
+
+      </style>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Mouse Events (mousedown, mouseup, click)</h3>
+
+         <div class="my-div"
+             ng-mousedown ="mousedownHandler($event)"
+             ng-mouseup ="mouseupHandler($event)"
+             ng-click ="clickHandler($event)">
+       </div>
+
+        <ol style="color:red;">
+            <li>Mouse Down: {{mousedownCount}}</li>
+            <li>Mouse Up: {{mouseupCount}}</li>
+            <li>Click: {{clickCount}}</li>
+        </ol>
+
+      </div>
+
+   </body>
+</html>
