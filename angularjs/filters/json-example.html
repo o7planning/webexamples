@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Filters</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="json-example.js"></script>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Filter: json</h3>
+
+         <p>
+            <b ng-non-bindable>{{ department | json : 5 }}</b>:
+            <pre>{{ department | json  : 5}}</pre>
+         </p>
+
+         <p>
+            <b ng-non-bindable>{{ department | json }}</b>:
+            <pre>{{ department | json }}</pre>
+         </p>
+
+      </div>
+   </body>
+</html>
