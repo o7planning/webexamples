@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Mouse Events</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="mouseevent-example.js"></script>
+      <style>
+          .my-div  {
+            width: 290px;
+            height: 100px;
+            background: blue;
+          }
+
+      </style>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Mouse Events (Over, Enter, Move, Leave)</h3>
+
+         <div class="my-div"
+             ng-mouseover ="mouseoverHandler($event)"
+             ng-mouseenter ="mouseenterHandler($event)"
+             ng-mousemove ="mousemoveHandler($event)"
+             ng-mouseleave ="mouseleaveHandler($event)">
+       </div>
+
+        <ol style="color:red;">
+            <li>Mouse Over: {{overCount}}</li>
+            <li>Mouse Enter: {{enterCount}}</li>
+            <li>Mouse Move: {{moveCount}}</li>
+            <li>Mouse Leave: {{leaveCount}}</li>
+        </ol>
+
+      </div>
+
+   </body>
+</html>
