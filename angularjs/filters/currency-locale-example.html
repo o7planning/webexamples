@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Filters</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <!-- Use locale_de-de -->
+      <!-- https://cdnjs.com/libraries/angular-i18n -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.7.4/angular-locale_de-de.js"></script>
+
+      <script src="currency-locale-example.js"></script>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Filter: currency (LOCALE: de-de)</h3>
+         Enter Amount:
+         <input type="number" ng-model="myAmount" />
+         <p>
+            <b ng-non-bindable>{{ myAmount | currency }}</b>:
+            <span>{{ myAmount | currency }}</span>
+         </p>
+         <p>
+            <b ng-non-bindable>{{ myAmount | currency : '$' : 2 }}</b>:
+            <span>{{ myAmount | currency : '$' : 2 }}</span>
+         </p>
+         <p>
+            <b ng-non-bindable>{{ myAmount | currency : '€' : 1 }}</b>:
+            <span>{{ myAmount | currency : '€' : 1 }}</span>
+         </p>
+      </div>
+
+   </body>
+</html>
