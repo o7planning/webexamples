@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>AngularJS Filters</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+      <script src="limitTo-example.js"></script>
+      <style>
+         p {color: blue;}
+      </style>
+   </head>
+   <body>
+      <div ng-app="myApp" ng-controller="myCtrl">
+         <h3>Filter: limitTo</h3>
+
+         <p>
+            Limit {{anArray}} to:
+            <input type="number" step="1" ng-model="arrayLimit">
+         </p>
+         <b>Output Array: {{ anArray | limitTo: arrayLimit }}</b>
+         <p>
+            Limit {{aString}} to:
+            <input type="number" step="1" ng-model="stringLimit">
+         </p>
+         <b>Output String: {{ aString | limitTo: stringLimit }}</b>
+         <p>
+            Limit {{aNumber}} to:
+            <input type="number" step="1" ng-model="numberLimit">
+         </p>
+         <b>Output Number: {{ aNumber | limitTo: numberLimit }}</b>
+      </div>
+
+   </body>
+</html>
