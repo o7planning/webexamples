@@ -4,22 +4,19 @@
 // and pass props around correctly etc but we are keeping it as simply as possible
 class ProductTable extends React.Component {
   constructor (props, context) {
-    super(props, context);
-    this.addProduct = this.addProduct.bind(this);
-    this.removeProduct = this.removeProduct.bind(this);
-    this.editProduct = this.editProduct.bind(this);
+    super(props, context); 
   }
 
-  // EVENT HANDLERS  
+  // EVENT HANDLERS
   // They are responsible for calling `dispatch` which will send events to redux
-  addProduct () {
+  addProduct = () => {
     var action = {
         type: 'ADD_PRODUCT'
     };
     this.props.dispatch(action);
   }
 
-  removeProduct (productId) {
+  removeProduct  = (productId) =>  {
     var action = {
       type: 'REMOVE_PRODUCT',
       productId: productId
@@ -27,13 +24,13 @@ class ProductTable extends React.Component {
     this.props.dispatch(action);
   }
 
-  editProduct (productId, event)  {
-    var newValue =  event.target.value;
+  editProduct = (productId, event) =>   {
+    var newName =  event.target.value;
     var action = {
       type: 'EDIT_PRODUCT',
       data: {
         productId: productId,
-        productName: newValue
+        productName: newName
       }
     };
     this.props.dispatch(action);
@@ -76,7 +73,7 @@ class ProductTable extends React.Component {
   }
 }
 
-var nextProductId = 5;
+var nextProductId = 10;
 
 // MAP STATE TO PROPS
 // Probably the most important method of the demo which handles the React/Redux integration.
