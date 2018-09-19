@@ -1,5 +1,5 @@
 
-/* REACT COMPONENT */
+// REACT COMPONENT
 // Generally you would spilt this up into logical components
 // and pass props around correctly etc but we are keeping it as simply as possible
 class ListTable extends React.Component {
@@ -7,35 +7,35 @@ class ListTable extends React.Component {
     // We use the constructor to make sure our eventHandlers know of `this`
     // Otherwise they will inherit the normal event arguments
     super(props, context);
-    this.addItem = this.addItem.bind(this);
-    this.removeItem = this.removeItem.bind(this);
-    this.editItem = this.editItem.bind(this);
+    this.addProduct = this.addProduct.bind(this);
+    this.removeProduct = this.removeProduct.bind(this);
+    this.editProduct = this.editProduct.bind(this);
   }
 
   /* EVENT HANDLERS */
   // They are responsible for calling `dispatch` which will send events to redux
-  addItem () {
+  addProduct () {
     var action = {
-        type: 'ADD_ITEM'
+        type: 'ADD_PRODUCT'
     };
     this.props.dispatch(action);
   }
 
-  removeItem (index) {
+  removeProduct (productId) {
     var action = {
-      type: 'REMOVE_ITEM',
-      index: index // Index is the list item row index
+      type: 'REMOVE_PRODUCT',
+      productId: productId
     };
     this.props.dispatch(action);
   }
 
-  editItem (index, event)  {
+  editProduct (productId, event)  {
     var newValue =  event.target.value;
     var action = {
-      type: 'EDIT_ITEM',
+      type: 'EDIT_PRODUCT',
       data: {
-        index: index, // Index is the list item row index
-        value: newValue // Send the new value after keyboard input
+        productId: productId,
+        productName: newValue
       }
     };
     this.props.dispatch(action);
@@ -44,13 +44,14 @@ class ListTable extends React.Component {
 
   render () {
     const items = this.props.items;
-    const addItem = this.props.addItem;
 
-    var trList = items.map( (item, index) =>{
-      return (<tr key={index}>
-        <td><input onChange={this.editItem.bind(null, index)} type="text" value={item} /></td>
+    // Example item: { productId : 4 , productName :'Profit' }
+    var trList = items.map( (item, index) => {
+      return (<tr key={item.productId}>
+        <td>{item.productId}</td>
+        <td><input type="text" onChange={this.editProduct.bind(null, item.productId)} value={item.productName} /></td>
         <td>
-          <button onClick={this.removeItem.bind(null, index)}>
+          <button onClick={this.removeProduct.bind(null, item.productId)}>
              Delete
           </button>
         </td>
@@ -59,20 +60,27 @@ class ListTable extends React.Component {
 
 
     return (<div>
-      <table border="0">
+      <table border="1">
+        <thead>
+           <th>ID</th>
+           <th>Product Name</th>
+           <th>Remove</th>
+        </thead>
         <tbody>
           {trList}
         </tbody>
       </table>
-      <button onClick={this.addItem}>
+      <br/>
+      <button onClick={this.addProduct}>
           Create
       </button>
     </div>);
   }
 }
 
+var nextProductId = 5;
 
-/* MAP STATE TO PROPS */
+// MAP STATE TO PROPS
 // Probably the most important method of the demo which handles the React/Redux integration.
 // When state changes, this method is called, which then you can use to customly
 // map the state into props that your React component can use
@@ -82,29 +90,50 @@ const mapStateToProps = (state) => {
   }
 }
 
+// Example item: { productId : 4 , productName :'Profit' }
+const getIndexById = (items, productId)  => {
+    for(var i = 0; i < items.length; i++) {
+       var item = items[i];
+       if(item.productId === productId) {
+         return i;
+       }
+    }
+    return -1;
+};
 
 
-/* REDUCERS */
+
+// REDUCERS
 // Reducers listen for actions that are dispatched and react depending on your logic
 // All state in Redux is immutable(never changes) so we always have to return a new
 // state object.
 // We are going to copy the current state and return a new one based off the action creators above
 const appReducer = (state = {items: []}, action) => {
 
-  let items = state.items.slice(); // Nice hack to truely clone an array without reference
+  // Clone Array.
+  let items = state.items.slice();
   // This is quite a common way of deciding which event to process
   // Note: ALL events will be coming through this reducer
   console.log('Actions', action); // Open your console to see what actions look like
+
   // Even better, install Redux DevTools and your mind will be blown
   switch (action.type) {
-    case 'ADD_ITEM':
-      items.push('') // Add an extra element to items
+    case 'ADD_PRODUCT':
+      nextProductId++;
+      var item = {productId : nextProductId, productName: "" };
+      items.push(item) // Add an extra element to items
       break;
-    case 'REMOVE_ITEM':
-      items.splice(action.index, 1); // Removes element at `index`
+    case 'REMOVE_PRODUCT':
+      var idx = getIndexById(items, action.productId);
+      if(idx != -1)  {
+        items.splice(idx, 1); // Removes element at `idx`
+      }
       break;
-    case 'EDIT_ITEM':
-      items[action.data.index] = action.data.value; // Change value of `index` to new value
+    case 'EDIT_PRODUCT':
+      var idx = getIndexById(items, action.data.productId);
+      if(idx != -1)  {
+          items[idx].productName = action.data.productName;
+      }
       break;
   }
   // As above, we have to return a new state object each time (Redux store is immutable)
@@ -117,7 +146,7 @@ const appReducer = (state = {items: []}, action) => {
   return newState;
 }
 
-/* REDUX STORE */
+// REDUX STORE
 // Create store initializes our Redux store and only has to be called once
 // The first argument is our `appReducer` defined above, it is almost like a listener
 // The second is just our initial state which is just a Javascript object
@@ -125,10 +154,10 @@ const appReducer = (state = {items: []}, action) => {
 // In this example it just loads Redux DevTools so everyone can play around
 let store = Redux.createStore(appReducer, {
   items: [
-    'React',
-    'Redux',
-    '?????',
-    'Profit'
+    { productId : 1 , productName :'React' },
+    { productId : 2 , productName :'Redux' },
+    { productId : 3 , productName :'?????' },
+    { productId : 4 , productName :'Profit' }
   ]
 }, window.devToolsExtension ? window.devToolsExtension() : undefined)
 
