@@ -2,17 +2,15 @@
 // REACT COMPONENT
 // Generally you would spilt this up into logical components
 // and pass props around correctly etc but we are keeping it as simply as possible
-class ListTable extends React.Component {
+class ProductTable extends React.Component {
   constructor (props, context) {
-    // We use the constructor to make sure our eventHandlers know of `this`
-    // Otherwise they will inherit the normal event arguments
     super(props, context);
     this.addProduct = this.addProduct.bind(this);
     this.removeProduct = this.removeProduct.bind(this);
     this.editProduct = this.editProduct.bind(this);
   }
 
-  /* EVENT HANDLERS */
+  // EVENT HANDLERS  
   // They are responsible for calling `dispatch` which will send events to redux
   addProduct () {
     var action = {
@@ -43,16 +41,16 @@ class ListTable extends React.Component {
 
 
   render () {
-    const items = this.props.items;
+    const products = this.props.products;
 
-    // Example item: { productId : 4 , productName :'Profit' }
-    var trList = items.map( (item, index) => {
-      return (<tr key={item.productId}>
-        <td>{item.productId}</td>
-        <td><input type="text" onChange={this.editProduct.bind(null, item.productId)} value={item.productName} /></td>
+    // Example product: { productId : 4 , productName :'Profit' }
+    var trList = products.map( (product, index) => {
+      return (<tr key={product.productId}>
+        <td>{product.productId}</td>
+        <td><input type="text" onChange={this.editProduct.bind(null, product.productId)} value={product.productName} /></td>
         <td>
-          <button onClick={this.removeProduct.bind(null, item.productId)}>
-             Delete
+          <button onClick={this.removeProduct.bind(null, product.productId)}>
+             Remove
           </button>
         </td>
       </tr>);
@@ -86,15 +84,15 @@ var nextProductId = 5;
 // map the state into props that your React component can use
 const mapStateToProps = (state) => {
   return {
-    items: state.items,
+    products: state.products,
   }
 }
 
-// Example item: { productId : 4 , productName :'Profit' }
-const getIndexById = (items, productId)  => {
-    for(var i = 0; i < items.length; i++) {
-       var item = items[i];
-       if(item.productId === productId) {
+// Example product: { productId : 4 , productName :'Profit' }
+const getIndexByProductId = (products, productId)  => {
+    for(var i = 0; i < products.length; i++) {
+       var product = products[i];
+       if(product.productId === productId) {
          return i;
        }
     }
@@ -108,10 +106,10 @@ const getIndexById = (items, productId)  => {
 // All state in Redux is immutable(never changes) so we always have to return a new
 // state object.
 // We are going to copy the current state and return a new one based off the action creators above
-const appReducer = (state = {items: []}, action) => {
+const appReducer = (state = {products: []}, action) => {
 
   // Clone Array.
-  let items = state.items.slice();
+  let products = state.products.slice();
   // This is quite a common way of deciding which event to process
   // Note: ALL events will be coming through this reducer
   console.log('Actions', action); // Open your console to see what actions look like
@@ -120,19 +118,19 @@ const appReducer = (state = {items: []}, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
       nextProductId++;
-      var item = {productId : nextProductId, productName: "" };
-      items.push(item) // Add an extra element to items
+      var product = {productId : nextProductId, productName: "" };
+      products.push(product);
       break;
     case 'REMOVE_PRODUCT':
-      var idx = getIndexById(items, action.productId);
+      var idx = getIndexByProductId(products, action.productId);
       if(idx != -1)  {
-        items.splice(idx, 1); // Removes element at `idx`
+        products.splice(idx, 1); // Removes element at `idx`
       }
       break;
     case 'EDIT_PRODUCT':
-      var idx = getIndexById(items, action.data.productId);
+      var idx = getIndexByProductId(products, action.data.productId);
       if(idx != -1)  {
-          items[idx].productName = action.data.productName;
+          products[idx].productName = action.data.productName;
       }
       break;
   }
@@ -140,7 +138,7 @@ const appReducer = (state = {items: []}, action) => {
   // It makes sure we know our data can only be modified in one visible way
   // Also lets us time travel through our application state!
   const newState = {
-    items: items,
+    products: products,
   }
   console.log('Current State', newState);
   return newState;
@@ -153,24 +151,19 @@ const appReducer = (state = {items: []}, action) => {
 // The third is usually where enhancers/middleware goes
 // In this example it just loads Redux DevTools so everyone can play around
 let store = Redux.createStore(appReducer, {
-  items: [
+  products: [
     { productId : 1 , productName :'React' },
     { productId : 2 , productName :'Redux' },
-    { productId : 3 , productName :'?????' },
-    { productId : 4 , productName :'Profit' }
+    { productId : 3 , productName :'Profit' }
   ]
 }, window.devToolsExtension ? window.devToolsExtension() : undefined)
 
-// We want to use Redux connect to attach our mapStateToProps to our ListTable (React Component)
+// We want to use Redux connect to attach our mapStateToProps to our ProductTable (React Component)
 const ListApp = ReactRedux.connect(
   mapStateToProps
-)(ListTable)
+)(ProductTable);
 
-// ReactDOM simply renders our component to the page
-// Though we've wrapped our component with something called `Providor`
-// `Providor` is a magic react-redux component which lets our store be
-// accessible by our mapStateToProps methods. Otherwise we would have
-// to pass it manually every time
+// Render
 ReactDOM.render(
   <ReactRedux.Provider store={store}>
     <ListApp />
