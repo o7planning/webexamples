@@ -79,9 +79,10 @@ var nextProductId = 10;
 // Probably the most important method of the demo which handles the React/Redux integration.
 // When state changes, this method is called, which then you can use to customly
 // map the state into props that your React component can use
+// MAP: state.productList <==> props.products
 const mapStateToProps = (state) => {
   return {
-    products: state.products,
+    products: state.productList
   }
 }
 
@@ -103,10 +104,10 @@ const getIndexByProductId = (products, productId)  => {
 // All state in Redux is immutable(never changes) so we always have to return a new
 // state object.
 // We are going to copy the current state and return a new one based off the action creators above
-const appReducer = (state = {products: []}, action) => {
+const appReducer = (state = {productList: []}, action) => {
 
   // Clone Array.
-  let products = state.products.slice();
+  let products = state.productList.slice();
   // This is quite a common way of deciding which event to process
   // Note: ALL events will be coming through this reducer
   console.log('Actions', action); // Open your console to see what actions look like
@@ -135,7 +136,7 @@ const appReducer = (state = {products: []}, action) => {
   // It makes sure we know our data can only be modified in one visible way
   // Also lets us time travel through our application state!
   const newState = {
-    products: products,
+    productList: products
   }
   console.log('Current State', newState);
   return newState;
@@ -148,12 +149,12 @@ const appReducer = (state = {products: []}, action) => {
 // The third is usually where enhancers/middleware goes
 // In this example it just loads Redux DevTools so everyone can play around
 let store = Redux.createStore(appReducer, {
-  products: [
+  productList: [
     { productId : 1 , productName :'React' },
     { productId : 2 , productName :'Redux' },
     { productId : 3 , productName :'Profit' }
   ]
-}, window.devToolsExtension ? window.devToolsExtension() : undefined)
+}, window.devToolsExtension ? window.devToolsExtension() : undefined);
 
 // We want to use Redux connect to attach our mapStateToProps to our ProductTable (React Component)
 const ListApp = ReactRedux.connect (
