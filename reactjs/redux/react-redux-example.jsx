@@ -9,14 +9,14 @@ class ProductsPane extends React.Component {
 
   // EVENT HANDLERS
   // They are responsible for calling `dispatch` which will send events to redux
-  addProduct = () => {
+  addProduct() {
     var action = {
         type: 'ADD_PRODUCT'
     };
     this.props.dispatch(action);
   }
 
-  removeProduct  = (productId) =>  {
+  removeProduct(productId) {
     var action = {
       type: 'REMOVE_PRODUCT',
       productId: productId
@@ -24,7 +24,7 @@ class ProductsPane extends React.Component {
     this.props.dispatch(action);
   }
 
-  editProduct = (productId, event) =>   {
+  editProduct(productId, event) {
     var newName =  event.target.value;
     var action = {
       type: 'EDIT_PRODUCT',
@@ -44,9 +44,9 @@ class ProductsPane extends React.Component {
     var trList = products.map( (product, index) => {
       return (<tr key={product.productId}>
         <td>{product.productId}</td>
-        <td><input type="text" onChange={this.editProduct.bind(null, product.productId)} value={product.productName} /></td>
+        <td><input type="text" onChange={this.editProduct.bind(this, product.productId)} value={product.productName} /></td>
         <td>
-          <button onClick={this.removeProduct.bind(null, product.productId)}>
+          <button onClick={this.removeProduct.bind(this, product.productId)}>
              Remove
           </button>
         </td>
@@ -66,7 +66,7 @@ class ProductsPane extends React.Component {
         </tbody>
       </table>
       <br/>
-      <button onClick={this.addProduct}>
+      <button onClick={this.addProduct.bind(this)}>
           Create
       </button>
     </div>);

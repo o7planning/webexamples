@@ -9,6 +9,8 @@ class ProductsPane extends React.Component {
 
   // EVENT HANDLERS
   // They are responsible for calling `dispatch` which will send events to redux
+
+
   addProduct = () => {
     var action = {
         type: 'ADD_PRODUCT'
