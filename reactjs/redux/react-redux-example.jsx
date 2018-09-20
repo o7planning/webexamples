@@ -2,7 +2,7 @@
 // REACT COMPONENT
 // Generally you would spilt this up into logical components
 // and pass props around correctly etc but we are keeping it as simply as possible
-class ProductTable extends React.Component {
+class ProductsPane extends React.Component {
   constructor (props, context) {
     super(props, context);
   }
@@ -156,15 +156,15 @@ let store = Redux.createStore(appReducer, {
   ]
 }, window.devToolsExtension ? window.devToolsExtension() : undefined);
 
-// We want to use Redux connect to attach our mapStateToProps to our ProductTable (React Component)
-const ListApp = ReactRedux.connect (
+// We want to use Redux connect to attach our mapStateToProps to our ProductsPane (React Component)
+const MyApp = ReactRedux.connect (
   mapStateToProps
-)(ProductTable);
+)(ProductsPane);
 
 // Render
 ReactDOM.render(
   <ReactRedux.Provider store={store}>
-    <ListApp />
+    <MyApp />
   </ReactRedux.Provider>,
   document.getElementById('app')
 );
