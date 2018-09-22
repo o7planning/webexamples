@@ -31,7 +31,7 @@ class ProductImages extends React.Component {
 // Component
 class ProductComments extends React.Component {
   render() {
-    return <h3>Some Customer Comments</h3>;
+    return <h3>Some Customer Comments {match}</h3>;
   }
 }
 
@@ -43,23 +43,24 @@ class Product extends React.Component {
       <div id="dashboard">
         <ProductShortInfo/>
         <div className="menu">
-          <ReactRouterDOM.NavLink exact to="/">
+          <ReactRouterDOM.NavLink  exact to="/" activeClassName="selected">
              Feature
           </ReactRouterDOM.NavLink>
 
-          <ReactRouterDOM.NavLink exact to="/automation">
+          <ReactRouterDOM.NavLink  exact to="/automation" activeClassName="selected">
              Images
           </ReactRouterDOM.NavLink>
 
-          <ReactRouterDOM.NavLink exact to="/marketing">
+          <ReactRouterDOM.NavLink  exact to="/marketing" activeClassName="selected">
              Comments
           </ReactRouterDOM.NavLink>
 
         </div>
         <div className="router-display-area">
-          <ReactRouterDOM.Route exact path="/" component={ProductFeature} />
-          <ReactRouterDOM.Route exact path="/marketing" component={ProductComments} />
-          <ReactRouterDOM.Route exact path="/automation" component={ProductImages} />
+        
+          <ReactRouterDOM.Route exact  path="/" component={ProductFeature} />
+          <ReactRouterDOM.Route exact  path="/marketing" component={ProductComments} />
+          <ReactRouterDOM.Route exact  path="/automation" component={ProductImages} />
         </div>
       </div>
     );

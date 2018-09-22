@@ -43,17 +43,17 @@ class Product extends React.Component {
       <div id="dashboard">
         <ProductShortInfo/>
         <div className="menu">
-          <ReactRouterDOM.HashLink  exact to="/router-example.html#test" activeClassName="selected">
+          <ReactRouterDOM.Link  exact to="/router-example.html#test" activeClassName="selected">
              Feature
-          </ReactRouterDOM.HashLink>
+          </ReactRouterDOM.Link>
 
-          <ReactRouterDOM.HashLink  exact to="/automation" activeClassName="selected">
+          <ReactRouterDOM.Link  exact to="/automation" activeClassName="selected">
              Images
-          </ReactRouterDOM.HashLink>
+          </ReactRouterDOM.Link>
 
-          <ReactRouterDOM.HashLink  exact to="/marketing" activeClassName="selected">
+          <ReactRouterDOM.Link  exact to="/marketing" activeClassName="selected">
              Comments
-          </ReactRouterDOM.HashLink>
+          </ReactRouterDOM.Link>
 
         </div>
         <div className="router-display-area">
