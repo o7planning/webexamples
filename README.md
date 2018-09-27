@@ -17,4 +17,4 @@ NodeJS Tutorials:
 
 Bootstrap Tutorials:
 
-  https://o7planning.org/vi/11745/bootstrap
+  https://o7planning.org/en/11745/bootstrap
