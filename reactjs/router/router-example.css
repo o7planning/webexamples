@@ -1,14 +1,10 @@
-#app, #dashboard {
-     width: 100%;
-     height: 100%;
-}
 .product {
    padding: 5px;
    margin-bottom: 15px;
    background-color: #ddd;
 }
 
- .menu a {
+ .product-nav a {
    background-color: #ddd;
    margin: 5px;
    padding: 5px;
@@ -19,7 +15,7 @@
     color: red;
  }
 
- .router-display-area {
+ .route-place {
      margin-top: 10px;
      padding: 30px;
      height: 100%;
