@@ -1,0 +1,12 @@
+ .my-msg-entering {
+    color: blue;
+    font-size: 120%;
+ }
+
+ .my-msg-entered {
+    color: red;
+ }
+
+.my-highlight  {
+  color: red;
+}

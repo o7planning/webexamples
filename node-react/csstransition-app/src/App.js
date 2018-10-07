@@ -43,7 +43,7 @@ class MyDiv extends React.Component {
   }
 
   onExitingHandler() {
-     this.setState({message: 'OK Im Exiting... (Wait timeout!)'});
+     this.setState({message: 'Exiting... (Wait timeout!)'});
   }
 
   onExitedHandler() {
