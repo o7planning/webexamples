@@ -29,13 +29,14 @@ class MyDiv extends React.Component {
      this.setState({message: 'Begin Enter...'});
   }
 
+  onEnteringHandler() {
+     this.setState({message: 'Entering... (Wait timeout!)'});  alert("2-2")
+  }
+
   onEnteredHandler ()  {
      this.setState({message: 'OK Entered!'});
   }
 
-  onEnteringHandler() {
-     this.setState({message: 'Entering... (Wait timeout!)'});
-  }
 
   // Begin Exit: Do anything!
   onExitHandler() {
@@ -58,7 +59,7 @@ class MyDiv extends React.Component {
               classNames="example"
               in={this.state.stateOfIn}
 
-              timeout={1500}
+              timeout={1500} 
 
               onEnter = {() =>  this.onEnterHandler()}
               onEntering = {() =>  this.onEnteringHandler()}
