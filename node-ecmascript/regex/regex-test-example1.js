@@ -26,7 +26,7 @@ let result2 = aRegex.test(str2);
 console.log(result2); // false
 
 let str3 = "123 ABCdef";
-//  
+//
 let result3 = aRegex.test(str3);
 
 console.log(result3); // true
