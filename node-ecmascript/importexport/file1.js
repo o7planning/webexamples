@@ -2,8 +2,6 @@
 const HELLO = "Hello Everybody";
 const BYE = "Goodbye!";
 
-
-
 // Private function
 function doSomething()  {
    console.log("Do Something");
@@ -27,8 +25,5 @@ let sayGoodbye = function(name)  {
   }
 }
 
-// A Module
-// let theModule = {HELLO, BYE, sayHello, sayGoodbye};
-
-
+// Export a Module
 export {HELLO, BYE, sayHello, sayGoodbye};
