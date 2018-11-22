@@ -1,29 +1,9 @@
-// Constants
-const HELLO = "Hello Everybody";
-const BYE = "Goodbye!";
+// Import *
+import * as myModule from './my-module-file.js';
 
-// Private function
-function doSomething()  {
-   console.log("Do Something");
-}
+console.log( myModule.HELLO ); // Hello Everybody
+console.log( myModule.BYE ); // Goodbye!
 
-// A Function
-let sayHello = function(name)  {
-  if(name)  {
-    console.log("Hello " + name);
-  } else {
-    console.log(HELLO);
-  }
-}
+myModule.sayHello("Tom")  ; // Hello Tom
 
-// A Function
-let sayGoodbye = function(name)  {
-  if(name)  {
-    console.log("Goodbye " + name);
-  } else {
-    console.log(BYE);
-  }
-}
-
-// Export a Module
-export {HELLO, BYE, sayHello, sayGoodbye};
+myModule.sayGoodbye("Tom")  ;// Goodbye Tom
