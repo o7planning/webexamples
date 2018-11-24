@@ -1,5 +1,5 @@
 // Import *
-import * as myModule from './my-module-file.js';
+import * as myModule from './es6-module-file.js';
 
 console.log( myModule.HELLO ); // Hello Everybody
 console.log( myModule.BYE ); // Goodbye!
