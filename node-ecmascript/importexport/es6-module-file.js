@@ -2,7 +2,7 @@
 const HELLO = "Hello Everybody";
 const BYE = "Goodbye!";
 
-// Private function
+// Private function (Do not export this function)
 function doSomething()  {
    console.log("Do Something");
 }
