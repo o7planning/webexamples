@@ -27,3 +27,7 @@ let sayGoodbye = function(name)  {
 
 // Export a Module
 export {HELLO, BYE, sayHello, sayGoodbye};
+
+// Export as default Module.
+// IMPORTANT!!: Allow at most one 'default'
+export default {sayHello, sayGoodbye};
