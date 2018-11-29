@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+
+      <title>toLocaleString()</title>
+      <script>
+         var date = new Date(Date.UTC(2012, 11, 20, 3, 20, 59));
+
+         //  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+         //     hour: "2-digit", minute: "2-digit", second: "2-digit"}
+         var options = {}; // Default options
+
+         console.log(date.toLocaleString('de-DE', options));
+         // expected output: 20.12.2012, 10:20:59
+
+         console.log(date.toLocaleString('ar-EG', options));
+         // expected output: ٢٠‏/١٢‏/٢٠١٢ ١٠:٢٠:٥٩ ص
+
+         console.log(date.toLocaleString('ko-KR', options));
+         // expected output: 2012. 12. 20. 오전 10:20:59
+      </script>
+   </head>
+   <body>
+      Show informations in the Console.
+   </body>
+</html>

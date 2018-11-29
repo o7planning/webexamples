@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>toLocaleDateString()</title>
+      <script>
+         var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+         console.log(date.toLocaleDateString('de-DE', options));
+         // expected output: Donnerstag, 20. Dezember 2012
+
+         console.log(date.toLocaleDateString('ar-EG', options));
+         // expected output: الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+         console.log(date.toLocaleDateString('ko-KR', options));
+         // expected output: 2012년 12월 20일 목요일
+      </script>
+   </head>
+   <body>
+      Show informations in the Console.
+   </body>
+</html>
