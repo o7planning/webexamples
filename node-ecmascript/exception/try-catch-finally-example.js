@@ -2,6 +2,13 @@ function getGreeting(language) {
     try {
         console.log("Code in try block (*)");
 
+        // (1)(en)
+        // Call greeting() method of object 'language'
+        // An Exception can throw here if this object has no greeting() method.
+        // (vi)
+        // Gọi phương thức greeting() của đối tượng 'language'.
+        // Một ngoại lệ có thể bị ném ra tại đây
+        // nếu đối tượng này không có phương thức greeting()
         let v = language.greeting();
 
         console.log("Code in try block (**)");
@@ -13,7 +20,10 @@ function getGreeting(language) {
         console.log("Code in catch block. Something Error: " + e);
 
     } finally {
-
+        // (2) (en)
+        // The finally block is always executed.
+        // (vi)
+        // Khối finally luôn luôn được thực thi.
         console.log("Code in finally block");
     }
 
