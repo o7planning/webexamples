@@ -25,13 +25,15 @@ try {
    console.log("typeof e = " + (typeof e));// 'object' or 'string'
 
    if(e instanceof RangeError) {
-      console.log("Catched RangeError!!");
+      console.log("--> RangeError!!");
    } else if(e instanceof EvalError) {
-      console.log("Catched EvalError!!");
+      console.log("--> EvalError!!");
    } else if(e instanceof Error) {
-      console.log("Catched Error!!");
+      console.log("--> Error!!");
    } else if (typeof e == "string"){
-      console.log("String Error!!");
+      console.log("--> String Error!!");
+   } else  {
+      console.log("--> Error!!");
    }
 
    console.log(e);
