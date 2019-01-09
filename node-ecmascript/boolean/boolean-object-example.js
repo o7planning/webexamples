@@ -1,0 +1,16 @@
+console.log( new Boolean(false) );           // [Boolean: false]
+console.log( new Boolean("") );              // [Boolean: false]
+console.log( new Boolean(null) );            // [Boolean: false]
+console.log( new Boolean() );                // [Boolean: false]
+console.log( new Boolean(undefined) );       // [Boolean: false]
+console.log( new Boolean(0) );               // [Boolean: false]
+console.log( new Boolean(NaN) );             // [Boolean: false]
+console.log( new Boolean(Number.Infinite) ); // [Boolean: false]
+console.log( new Boolean(-Number.Infinite) );// [Boolean: false]
+
+console.log(" ------------------- ");
+console.log( new Boolean("0") );       // [Boolean: true]
+console.log( new Boolean("false") );   // [Boolean: true]
+console.log( new Boolean(1) );         // [Boolean: true]
+console.log( new Boolean(100) );       // [Boolean: true]
+console.log( new Boolean( {} ) );      // [Boolean: true]
