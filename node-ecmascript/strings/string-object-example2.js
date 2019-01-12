@@ -1,5 +1,4 @@
-
-let aa = new Number(100);
+let aa = new String("Tom");
 
 let bb = aa;
 
