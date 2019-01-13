@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Cookie example</title>
+      <script type="text/javascript" src="cookie-example.js"></script>
+   </head>
+   <body onload="readCookie()">
+     
+      Your Name: <input type="text" name="fullName" id="fullName" />
+      <br/>
+      Fovorite Color:
+      <select name="favoriteColor" id="favoriteColor">
+         <option value="red">Red</option>
+         <option value="blue">Blue</option>
+         <option value="green">Green</option>
+      </select>
+      <br>
+      <button onclick="writeCookies()">Write Cookies</button>
+      <button onclick="killCookies()">Kill Cookies</button>
+
+      <br/><br/>
+      <!--  Read Cookie Results: -->
+      <hr />
+      Read Cookie Results:
+      <div id="logArea" style="border:1px solid #ccc;padding: 5px;height:150px;">
+      </div>
+      <button  value = "Get Cookie" onclick = "readCookie()">Read cookies</button>
+   </body>
+</html>
