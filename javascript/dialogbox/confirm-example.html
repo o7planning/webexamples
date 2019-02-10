@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Confirmation Dialog Box</title>
+
+      <script type="text/javascript">
+
+         function testConfirmDialog()  {
+
+              var result = confirm("Do you want to continue?");
+
+              if(result)  {
+                  alert("OK Next lesson!");
+              } else {
+                  alert("Bye!");
+              }
+         }
+
+      </script>
+
+   </head>
+   <body>
+      <h2>Confirmation Dialog Box</h2>
+
+
+      <button onclick="testConfirmDialog()">Click me!</button>
+
+   </body>
+</html>
