@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>clearTimeout function</title>
+      <title>clearInterval function</title>
 
       <script type="text/javascript">
+
          var myTask = null;
 
          function greeting()  {
+
               alert("Hello Everyone!");
-              myTask = null;
-         } 
+         }
 
          function startAction()  {
-            if(!myTask) {
-               myTask = setTimeout(greeting, 3000); // 3 seconds.
-            }
+              if(!myTask)  {
+                  myTask = setInterval(greeting, 3000); // 3 seconds.
+              }
          }
 
          function cancelAction()  {
-            if(myTask)  {
-               clearTimeout(myTask);
-               myTask = null;
-            }
+              if(myTask) {
+                 clearInterval(myTask);
+                 myTask = null;
+              }
          }
 
       </script>
 
    </head>
    <body>
-      <h2>setTimeout() &amp; clearTimeout() Function</h2>
+      <h2>setInterval() &amp; clearInterval() Function</h2>
 
 
       <button onclick="startAction()">Show greeting</button>
