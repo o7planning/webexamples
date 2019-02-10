@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>clearTimeout function</title>
+
+      <script type="text/javascript">
+
+         function greeting()  {
+
+              alert("Hello Everyone!");
+         }
+
+         var myTask = null;
+
+         function startAction()  {
+
+            myTask = setTimeout(greeting, 3000); // 3 seconds.
+         }
+
+         function cancelAction()  {
+            if(myTask)  {
+               clearTimeout(myTask);
+            }
+         }
+
+      </script>
+
+   </head>
+   <body>
+      <h2>setTimeout() &amp; clearTimeout() Function</h2>
+
+
+      <button onclick="startAction()">Show greeting</button>
+
+      <button onclick="cancelAction()">Cancel</button>
+
+   </body>
+</html>
