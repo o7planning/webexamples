@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Validation</title>
+      <script type = "text/javascript">
+
+         function validateForm()  {
+
+             var myField = document.getElementById("myNumber");
+             var value = myField.value;
+
+             if( value == "" || isNaN(value) || value < 0 || value > 10)  {
+                alert("Invalid input!");
+                myField.focus();
+                return false;
+             }
+
+             return true;
+         }
+      </script>
+   </head>
+   <body>
+
+      <h2>Enter a Number between 0 and 10</h2>
+
+      <div style="border:1px solid #ddd; padding: 5px;">
+
+         <form name="myForm" action="process-action.html" onsubmit = "return validateForm()">
+            Number: <input type="text" id= "myNumber"/>
+            <br/><br/>
+            <button type="submit">Submit</button>
+         </form>
+
+      </div>
+
+   </body>
+</html>
