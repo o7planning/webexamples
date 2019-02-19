@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>pattern attribute</title>
+
+   </head>
+   <body>
+
+      <h2>Attribute: pattern</h2>
+
+      <div style="border:1px solid #ddd; padding: 5px;">
+
+         <form name="myForm" action="process-action.html">
+            Country code:
+            <input type="text" name = "countryCode" pattern="[A-Za-z]{2}"
+              title="Two letter country code"/>
+            <br/><br/>
+            <button type="submit">Submit</button>
+         </form>
+
+      </div>
+
+   </body>
+</html>

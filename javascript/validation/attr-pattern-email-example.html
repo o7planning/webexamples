@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>pattern attribute</title>
+
+   </head>
+   <body>
+
+      <h2>Attribute: pattern</h2>
+
+      <div style="border:1px solid #ddd; padding: 5px;">
+
+         <form name="myForm" action="process-action.html">
+            Email:
+            <input type="password" name = "password"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Invalid password!"/>
+            <br/><br/>
+            <button type="submit">Submit</button>
+         </form>
+
+      </div>
+
+   </body>
+</html>
