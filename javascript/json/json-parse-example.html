@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>JSON.parse</title>
+   </head>
+   <body>
+      <div style="border:1px solid #ccc;padding:5px;">
+         <h3 id="name"></h3>
+         <i id="location"></i>
+      </div>
+
+      <script>
+         var s = '{"firstName" : "Sammy", "lastName" : "Shark", "location" : "Ocean"}';
+
+         var obj = JSON.parse(s);
+
+         document.getElementById("name").innerHTML = obj.firstName + " " + obj.lastName;
+         document.getElementById("location").innerHTML = obj.location;
+      </script>
+
+   </body>
+</html>
