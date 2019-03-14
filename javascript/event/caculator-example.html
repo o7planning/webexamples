@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Hello Javascript</title>
+
+      <script type = "text/javascript">
+
+         function doCalculate()  {
+             var a = document.getElementById("a").value; // A String value
+             var b = document.getElementById("b").value; // A String value
+
+             var c = Number(a) + Number(b);
+
+             document.getElementById("c").value = c;
+         }
+      </script>
+
+   </head>
+   <body>
+
+      <h3>Click Event example</h3>
+
+      <input id = "a" type="text" value= "100"/> <br/>
+      + <br/>
+      <input id = "b" type="text" value = "200"/> <br/>
+
+      <button onclick="doCalculate()"> = </button> <br/>
+
+      <input id = "c" type="text" value = ""/>
+
+   </body>
+</html>
