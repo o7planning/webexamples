@@ -5,19 +5,22 @@
 
       <script type = "text/javascript">
 
-         function changeSize(target)  {
+         function changeSize(borderColor, target, evt, bgColor)  {
              var random = Math.round(Math.random() * 100) + 100;
              target.style.width  = random + "px";
              target.style.height  = random + "px";
+             target.style.borderColor = borderColor;
+             target.style.backgroundColor = bgColor;
          }
       </script>
 
    </head>
    <body>
 
-      <h3>Event with 'this' object</h3>
+      <h3>A Handler has multiple parameters</h3>
+      <a href="">Reset</a> <br/><br/>
 
-      <button onclick="changeSize(this)">Click Me to Change Size</button>
+      <button onclick="changeSize('red', this, event, 'green')">Click Me</button>
 
    </body>
 </html>

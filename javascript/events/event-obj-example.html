@@ -5,7 +5,9 @@
 
       <script type = "text/javascript">
 
-         function changeSize(target)  {
+         function changeSize(evt)  {
+             var target = evt.target;
+
              var random = Math.round(Math.random() * 100) + 100;
              target.style.width  = random + "px";
              target.style.height  = random + "px";
@@ -15,9 +17,9 @@
    </head>
    <body>
 
-      <h3>Event with 'this' object</h3>
+      <h3>Access 'target' object via 'event' object</h3>
 
-      <button onclick="changeSize(this)">Click Me to Change Size</button>
+      <button onclick="changeSize(event)">Click Me to Change Size</button>
 
    </body>
 </html>
