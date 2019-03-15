@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Event Example</title>
+
+      <script type = "text/javascript">
+
+         function changeSize(target)  {
+             var random = Math.round(Math.random() * 100) + 200;
+             target.style.width  = random + "px";
+             target.style.height  = random + "px";
+         }
+      </script>
+
+   </head>
+   <body>
+
+      <h3>Event with 'this' object</h3>
+
+      <button onclick="changeSize(this)">Click Me to Change Size</button>
+
+   </body>
+</html>
