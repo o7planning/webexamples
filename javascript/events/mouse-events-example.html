@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Mouse Events</title>
+
+    <script src="mouse-events-example.js"></script>
+    <style>
+        .my-div {
+            width: 290px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Mouse Events (Enter, Move, Leave)</h3>
+
+    <div class="my-div"
+               onmouseenter="mouseenterHandler(event)"
+               onmouseleave="mouseleaveHandler(event)" 
+               onmousemove="mousemoveHandler(event)">
+    </div>
+
+    <h3>Mouse position</h3>
+    <div style="color:red;" id="position-div">
+
+    </div>
+
+    <h3>Statistics</h3>
+    <div style="color:red;" id="statistics-div">
+
+    </div>
+
+</body>
+
+</html>
