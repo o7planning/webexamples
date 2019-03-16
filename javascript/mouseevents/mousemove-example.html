@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Mouse Events</title>
+
+    <script src="mousemove-example.js"></script>
+    <style>
+        #target-div {
+            width: 320px;
+            height: 150px;
+            background: blue;
+            margin-bottom: 50px;
+        }
+        #target-div > div  {
+            width: 50px;
+            height: 150px;
+            margin: 40px 0 0 40px;
+            padding: 5px 0 0 5px;
+            float: left;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>mousemove example</h3>
+
+    <div id="target-div" onmousemove="mousemoveHandler(event)">
+
+            <div>Child</div>
+            <div>Child</div>
+            <div>Child</div>
+
+    </div>
+
+    <h3>Statistics:</h3>
+    <div style="color:red;" id="statistics-div">
+
+    </div>
+
+</body>
+</html>
