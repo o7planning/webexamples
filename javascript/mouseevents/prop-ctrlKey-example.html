@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Mouse Events</title>
+
+    <style>
+        #target-div {
+            width: 320px;
+            height: 150px;
+            background: blue;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+    <script>
+      function clickHandler(evt) {
+        var html = "evt.ctrlKey=" + evt.ctrlKey;
+
+        document.getElementById("log-div").innerHTML = html;
+      }
+    </script>
+</head>
+
+<body>
+
+    <h3>Press Ctrl key and Click</h3>
+
+    <div id="target-div" onclick="clickHandler(event)" >
+
+    </div>
+
+    <div style="color:red;" id="log-div">
+
+    </div>
+
+</body>
+</html>
