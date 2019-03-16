@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Mouse Events</title>
+
+    <script src="enter-vs-over-leave-vs-out.js"></script>
+    <style>
+        #target-div {
+            width: 320px;
+            height: 150px;
+            background: blue;
+        }
+        #target-div > div  {
+            width: 50px;
+            height: 80px;
+            margin: 40px 0 0 40px;
+            float: left;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>mouseenter vs mouseover</h3>
+    <h3>mouseleave vs mouseout</h3>
+
+    <div id="target-div"
+               onmouseenter="mouseenterHandler(event)"
+               onmouseover="mouseoverHandler(event)"
+               onmouseleave="mouseleaveHandler(event)"
+               onmouseout="mouseoutHandler(event)"
+               >
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <h3>Statistics:</h3>
+    <div style="color:red;" id="statistics-div">
+
+    </div>
+
+</body>
+</html>
