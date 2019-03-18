@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>KeyEvent Example</title>
+
+      <script src="keyevents-example.js"></script>
+
+   </head>
+   <body>
+
+      <h3>KeyEvent example</h3>
+
+      <input type="text"
+            onkeydown="keydownHandler(event)"
+            onkeyup="keyupHandler(event)"
+            onkeypress="keypressHandler(event)"/>
+      <br/><br/>
+
+      <textarea id="log-div" rows = "10" disabled>
+
+      </textarea>
+      <br/>
+      <button onclick="clearLog()">Clear</button>
+
+   </body>
+</html>
