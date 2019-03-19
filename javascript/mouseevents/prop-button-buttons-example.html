@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>MouseEvent Example</title>
+
+      <script>
+          function mousedownHandler(evt) {
+            var logDiv = document.getElementById("log-div");
+
+            logDiv.innerHTML = "event.button= " + evt.button +"<br/>"
+                             + "event.buttons= "+ evt.buttons;
+          }
+      </script>
+
+   </head>
+   <body>
+
+      <h3>event.button, event.buttons</h3>
+
+      <button onmousedown="mousedownHandler(event)">Click Me!</button>
+      <br/><br/>
+
+      <div id="log-div" style="color:red;"></div>
+   </body>
+</html>
