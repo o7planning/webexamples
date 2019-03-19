@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>KeyEvent Example</title>
+
+      <script src="prop-key-code-example.js"></script>
+
+   </head>
+   <body>
+
+      <h3>event.code, event.charCode</h3>
+
+      <input type="text" onkeydown="keydownHandler1(event)"/>
+      <br/><br/>
+
+      <div id="log-div1" style="color:red;"></div>
+
+      <h3>event.key, event.keyCode</h3>
+      <input type="text" onkeydown="keydownHandler2(event)"/>
+      <br/><br/>
+
+      <div id="log-div2" style="color:red;"></div>
+
+   </body>
+</html>

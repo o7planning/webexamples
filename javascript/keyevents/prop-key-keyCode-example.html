@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>KeyEvent Example</title>
+
+      <script>
+          function keydownHandler(evt) {
+            var logDiv = document.getElementById("log-div");
+
+            logDiv.innerHTML = "event.key= " + evt.key +"<br/>"
+                             + "event.keyCode= "+ evt.keyCode;
+          }
+      </script>
+
+   </head>
+   <body>
+
+      <h3>event.key, event.keyCode</h3>
+
+      <input type="text" onkeydown="keydownHandler(event)"/>
+      <br/><br/>
+
+      <div id="log-div" style="color:red;"></div>
+   </body>
+</html>
