@@ -3,23 +3,24 @@
    <head>
       <title>KeyEvent Example</title>
 
-      <script src="prop-key-code-example.js"></script>
+      <script>
+          function keypressHandler(evt) {
+            var logDiv = document.getElementById("log-div");
+
+            logDiv.innerHTML = "event.code= " + evt.code +"<br/>"
+                             + "event.charCode= "+ evt.charCode;
+          }
+      </script>
 
    </head>
    <body>
 
       <h3>event.code, event.charCode</h3>
 
-      <input type="text" onkeydown="keydownHandler1(event)"/>
+      <input type="text" onkeypress="keypressHandler(event)"/>
       <br/><br/>
 
-      <div id="log-div1" style="color:red;"></div>
-
-      <h3>event.key, event.keyCode</h3>
-      <input type="text" onkeydown="keydownHandler2(event)"/>
-      <br/><br/>
-
-      <div id="log-div2" style="color:red;"></div>
+      <div id="log-div" style="color:red;"></div>
 
    </body>
 </html>
