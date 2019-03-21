@@ -1,28 +1,36 @@
 
+// --------- Handlers for 'Dragged Element' ------------------
 function dragstartHandler(evt) {
-  evt.dataTransfer.setData("MyDragTargetId", evt.target.id);
+  evt.dataTransfer.setData("MyDraggedElementId", evt.target.id);
 }
 
-function draggingHandler(evt) {
-   logging("The p element is being dragged");
+// dragging ...
+function dragHandler(evt) {
+   showLog("The p element is being dragged");
 }
 
+
+// --------- Handlers for 'Drop Target' ------------------
 
 function ondragenterHandler()  {
-  logging("The p element enter drop-target");
+   showLog("The p element enter drop-target");
 }
 
-function allowDrop(evt) {
-  evt.preventDefault();
+// When 'over' you can 'release mouse' to 'drop'.
+function dragoverHandler(evt) {
+    evt.preventDefault(); // Important!!
 }
 
 function dropHandler(evt) {
-   evt.preventDefault();
-   var data = evt.dataTransfer.getData("MyDragTargetId");
-   evt.target.appendChild(document.getElementById(data));
-   logging("The p element was dropped");
+   evt.preventDefault(); // Important!!
+
+   var elementId = evt.dataTransfer.getData("MyDraggedElementId");
+   evt.target.appendChild(document.getElementById(elementId));
+   showLog("The p element was dropped");
 }
 
-function logging(text)  {
-  document.getElementById("log-div").innerHTML = text;
+// -------------------------------------------------------
+
+function showLog(text)  {
+   document.getElementById("log-div").innerHTML = text;
 }

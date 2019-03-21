@@ -27,20 +27,23 @@
 
       <!-- Drop Target 1 -->
       <div class="droptarget-div"
-            ondragover="allowDrop(event)"
+            ondragenter= "ondragenterHandler(event)"
+            ondragover="dragoverHandler(event)"
             ondrop="dropHandler(event)">
 
-        <p id="dragtarget-div"
-            ondragstart="dragstartHandler(event)"
-            ondrag="draggingHandler(event)" 
-            draggable="true">Drag me!</p>
+         <p id="dragtarget-div"
+               ondragstart="dragstartHandler(event)"
+               ondrag="dragHandler(event)"
+               draggable="true">
+            Drag me!
+          </p>
 
       </div>
 
       <!-- Drop Target 2 -->
       <div class="droptarget-div"
-           ondragover="allowDrop(event)"
            ondragenter= "ondragenterHandler(event)"
+           ondragover="dragoverHandler(event)"
            ondrop="dropHandler(event)">
 
       </div>
