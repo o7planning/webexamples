@@ -1,28 +1,40 @@
+// ------------ Handlers for Dragged ELement --------------------
 
 function dragstartHandler(evt) {
-  evt.dataTransfer.setData("MyDragTargetId", evt.target.id);
+    console.log("(Element) dragstart");
 }
 
-function draggingHandler(evt) {
-   logging("The p element is being dragged");
+function dragHandler(evt) {
+    console.log("(Element) drag (dragging)");
+}
+
+function dragendHandler(evt) {
+    console.log("(Element) dragend");
+}
+
+// ------------ Handlers for Drop Target --------------------
+
+function dragenterHandler(evt)  {
+    console.log("(Target) dragenter");
+}
+
+// When 'over' you can 'release' (Call ==> evt.preventDefault() )
+// ==> 'drop' State
+function dragoverHandler(evt)  {
+    console.log("(Target) dragover");
+    evt.preventDefault();
+    // Do something..
+}
+
+function dragleaveHandler(evt)  {
+    console.log("(Target) dragleave");
 }
 
 
-function ondragenterHandler()  {
-  logging("The p element enter drop-target");
-}
-
-function allowDrop(evt) {
-  evt.preventDefault();
-}
-
+// When 'drop' you can (Call ==> evt.preventDefault() )
+// ==> 'dragend' State!!
 function dropHandler(evt) {
-   evt.preventDefault();
-   var data = evt.dataTransfer.getData("MyDragTargetId");
-   evt.target.appendChild(document.getElementById(data));
-   logging("The p element was dropped");
-}
-
-function logging(text)  {
-  document.getElementById("log-div").innerHTML = text;
+    console.log("(Target) drop");
+    evt.preventDefault();
+    // Do something..
 }

@@ -26,21 +26,21 @@
       <p id="log-div">..</p>
 
       <!-- Source -->
-      <div class="source-div"
-            ondragover="allowDrop(event)"
-            ondrop="dropHandler(event)">
+      <div class="source-div">
 
         <p id="dragtarget-div"
             ondragstart="dragstartHandler(event)"
-            ondrag="draggingHandler(event)"
+            ondrag="dragHandler(event)"
+            ondragend="dragendHandler(event)"
             draggable="true">Drag me!</p>
 
       </div>
 
       <!-- Target -->
       <div class="target-div"
-           ondragover="allowDrop(event)"
-           ondragenter= "ondragenterHandler(event)"
+           ondragenter = "dragenterHandler(event)"
+           ondragover="dragoverHandler(event)"
+           ondragleave="dragleaveHandler(event)"
            ondrop="dropHandler(event)">
 
       </div>
