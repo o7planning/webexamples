@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>DragEvent Example</title>
+
+      <script src="dragevents-details-example.js"></script>
+      <style>
+      .source-div, .target-div {
+        float: left;
+        width: 100px;
+        height: 55px;
+        margin: 25px 25px 5px 5px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+      #dragtarget-div {
+         background: #eee;
+         padding: 5px;
+      }
+      </style>
+   </head>
+   <body>
+
+      <h3>DragEvent example</h3>
+
+      <p id="log-div">..</p>
+
+      <!-- Source -->
+      <div class="source-div"
+            ondragover="allowDrop(event)"
+            ondrop="dropHandler(event)">
+
+        <p id="dragtarget-div"
+            ondragstart="dragstartHandler(event)"
+            ondrag="draggingHandler(event)"
+            draggable="true">Drag me!</p>
+
+      </div>
+
+      <!-- Target -->
+      <div class="target-div"
+           ondragover="allowDrop(event)"
+           ondragenter= "ondragenterHandler(event)"
+           ondrop="dropHandler(event)">
+
+      </div>
+
+
+
+
+   </body>
+</html>
