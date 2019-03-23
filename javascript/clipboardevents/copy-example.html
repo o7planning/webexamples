@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ClipboardEvent</title>
+    <style>
+    #target-div {
+      border:1px solid #ccd;
+      padding: 5px;
+    }
+    </style>
+
+    <script>
+        function copyHandler(evt)  {
+            alert("Copied!" + evt.clipboardData);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>Copy box below:</h3>
+
+    <div id="target-div" oncopy="copyHandler(event)">
+            <h2>Title</h2>
+            <div>Content</div>
+    </div>
+
+</body>
+</html>
