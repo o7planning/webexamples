@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ClipboardEvent</title>
+
+    <script src="simple-paste-example.js"></script>
+</head>
+
+<body> 
+    <h3>Copy & Paste</h3>
+
+    <textarea rows="7" cols= "40"
+           oncopy="copyHandler(event)"
+           onpaste ="pasteHandler(event)">
+
+      Try copying and pasting text into this field!
+
+    </textarea>
+
+    <h3>Log:</h3>
+
+
+    <p id="log-div"></p>
+
+</body>
+</html>
