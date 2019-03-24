@@ -1,7 +1,7 @@
 
 var tom =  {
   name: "Tom",
-  country: "American"
+  country: "USA"
 };
 
 // Delete property - country

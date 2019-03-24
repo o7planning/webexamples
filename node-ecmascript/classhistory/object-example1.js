@@ -1,11 +1,11 @@
 
 var tom =  {
   name: "Tom",
-  country: "American"
+  country: "USA"
 };
 
 // Access:
 console.log( tom.name ); // Tom
-console.log( tom.country ); // American
+console.log( tom.country ); // USA
 console.log( tom["name"] ); // Tom
-console.log( tom["country"] ); // American
+console.log( tom["country"] ); // USA
