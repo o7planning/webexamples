@@ -18,7 +18,7 @@ function blurHandler(evt)  {
 
 function showLog(msg)  {
   var oldHtml= document.getElementById("log-div").innerHTML;
-  document.getElementById("log-div").innerHTML=oldHtml + ".."+ msg;
+  document.getElementById("log-div").innerHTML=oldHtml + " .. "+ msg;
 }
 
 // Javascript Code:
