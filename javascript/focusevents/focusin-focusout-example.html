@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FocusEvent</title>
+    <meta charset="utf-8" />
+
+    <script src="focusin-focusout-example.js"></script>
+
+    <style>
+        form {
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Events: focusin & focusout</h3>
+    <p>Focus to 'input' and Blur to it</p>
+
+    <form onfocusin="focusinHandler(event)" onfocusout="focusoutHandler(event)">
+        User Name
+        <input type="text" name="username" />
+        <br>
+        <br> Email
+        <input type="text" name="email" />
+    </form>
+
+</body>
+
+</html>
