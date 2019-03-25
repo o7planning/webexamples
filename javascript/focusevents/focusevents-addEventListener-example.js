@@ -1,7 +1,4 @@
 
-
-
-
 function focusHandler(evt)  {
    showLog("focus");
 }
@@ -20,21 +17,11 @@ function blurHandler(evt)  {
 }
 
 function showLog(msg)  {
-   console.log(msg);
+  var oldHtml= document.getElementById("log-div").innerHTML;
+  document.getElementById("log-div").innerHTML=oldHtml + ".."+ msg;
 }
 
-function readystatechangeHandler(evt)  { alert("ready");
-   if (document.readyState === 'complete') {
-       var myInput = document.getElementById("my-input");
-
-       myInput.addEventListener("focus", focusHandler);
-       myInput.addEventListener("focusin", focusinHandler);
-       myInput.addEventListener("focusout", focusoutHandler);
-       myInput.addEventListener("blur", blurHandler);
-   }
-}
-alert("?? 3");
-
+// Javascript Code:
 var myInput = document.getElementById("my-input");
 
 myInput.addEventListener("focus", focusHandler);
