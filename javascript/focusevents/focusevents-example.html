@@ -4,19 +4,33 @@
 <head>
     <title>FocusEvent</title>
 
-    <script src="focusevents-example.js"></script>
+    <script>
+      function focusHandler(evt)  {
+         showLog("focus");
+      }
+
+      function blurHandler(evt)  {
+         showLog("blur");
+      }
+
+      function showLog(msg)  {
+        var oldHtml= document.getElementById("log-div").innerHTML;
+        document.getElementById("log-div").innerHTML=oldHtml + ".."+ msg;
+      }
+    </script>
+
 </head>
 
 <body>
 
-    <h3>Test events: focus, focusin, focusout, blur</h3>
+    <h3>Test events: focus, blur</h3>
 
     <input type="text"
                   onfocus="focusHandler(event)"
-                  onblur="blurHandler(event)"
-                  onfocusin="focusinHandler(event)"
-                  onforcusout="focusoutHandler(event)" />
+                  onblur="blurHandler(event)"  />
+
+    <br><br>
+    <div id="log-div" style="padding:10px;border:1px solid #ccd;"></div>
 
 </body>
-
 </html>
