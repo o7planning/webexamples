@@ -5,23 +5,23 @@
       <meta charset="UTF-8">
 
       <script>
-          // Note: event.data is not supported in Firefox, IE
+          // Note: event.data, event.inputType is not supported in Firefox, IE
           function inputHandler(evt)  {
 
-             showLog(evt.data);
+             showLog(evt.data +" - " + evt.inputType);
           }
 
           function showLog(text)  {
             var logDiv = document.getElementById("log-div");
-            logDiv.innerHTML = logDiv.innerHTML + " .. " + text;
+            logDiv.innerHTML =   text;
           }
       </script>
 
    </head>
    <body>
 
-      <h3>InputEvent example</h3>
-      <p style="color:red">Note: event.data is not supported in Firefox, IE</p>
+      <h3>InputEvent properties example</h3>
+      <p style="color:red">Note: event.data, event.inputType is not supported in Firefox, IE</p>
 
       <input type="text" oninput ="inputHandler(event)"/>
 
