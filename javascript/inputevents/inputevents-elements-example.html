@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>InputEvent Example</title>
+      <meta charset="UTF-8">
+
+      <style>
+         *[contenteditable='true']   {
+            height:30px;padding:5px;border:1px solid #ccd;
+         }
+      </style>
+      <script>
+          // Note: event.data is not supported in Firefox, IE
+          function inputHandler(evt)  {
+
+             showLog(evt.data);
+          }
+
+          function showLog(text)  {
+            var logDiv = document.getElementById("log-div");
+            logDiv.innerHTML = logDiv.innerHTML + " .. " + text;
+          }
+      </script>
+
+   </head>
+   <body>
+
+      <h3>InputEvent example</h3>
+      <p style="color:red">Note: event.data is not supported in Firefox, IE</p>
+
+      <h3>Input element</h3>
+      <input type="text" oninput ="inputHandler(event)"/>
+
+      <h3>Textarea element</h3>
+      <textarea oninput ="inputHandler(event)" rows="5" cols="30"></textarea>
+
+      <h3>Elements with contenteditable='true'</h3>
+      <div oninput ="inputHandler(event)" contenteditable="true"></div>
+
+      <p id="log-div"></p>
+
+
+   </body>
+</html>
