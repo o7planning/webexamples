@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>ChangeEvent Example</title>
+      <meta charset="UTF-8"> 
+
+      <script>
+          function changeHandler(evt)  {
+            alert("Language: " + evt.target.value);
+          }
+      </script>
+
+   </head>
+   <body>
+
+      <h2>ChangeEvent example</h2>
+
+      <p class="title">Select Language:</p>
+      <select onchange ="changeHandler(event)">
+         <option value ="en">English</option>
+         <option value ="de">German</option>
+         <option value ="vi">Vietnamese</option>
+      </select>
+
+
+   </body>
+</html>
