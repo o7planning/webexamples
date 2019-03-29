@@ -8,9 +8,7 @@
 
       <script>
           function changeHandler(evt)  {
-
-            var logDiv = document.getElementById("log-div");
-            logDiv.innerHTML = logDiv.innerHTML + " .. change!";
+            alert("Changed!");
           }
       </script>
 
@@ -19,31 +17,31 @@
 
       <h2>ChangeEvent example</h2>
 
-      <p class="title">Input (checkbox, radio) element</p>
+      <p class="title">Input (checkbox, radio):</p>
       <input type="checkbox"  onchange ="changeHandler(event)"/>
       <input type="radio" name ="gender" value="M" onchange ="changeHandler(event)"/>
       <input type="radio" name ="gender" value="F" onchange ="changeHandler(event)"/>
 
-      <p class="title">Input (range) element</p>
+      <p class="title">Input (range):</p>
       <input type="range" min ="1" max="10" onchange ="changeHandler(event)"/>
 
-      <p class="title">Input (color) element</p>
+      <p class="title">Input (color):</p>
       <input type="color" onchange ="changeHandler(event)"/>
 
-      <p class="title">Input (file) element</p>
+      <p class="title">Input (file):</p>
       <input type="file" onchange ="changeHandler(event)"/>
 
 
-      <p class="title">Input (image, hidden, buton, submit, reset) element</p>
-       (Not support 'change' event)
+      <p class="title">Input (image, hidden, buton, submit, reset):</p>
+        - (Not support 'change' event)
 
-      <p class="title">Input (text, number, email, password, tel, time, week, month, date, datetime-local, search, url) element</p>
+      <p class="title">Input (text, number, email, password, tel, time, week, month, date, datetime-local, search, url):</p>
       <input type="text" onchange ="changeHandler(event)"/>
 
       <p class="title">Textarea element</p>
       <textarea onchange ="changeHandler(event)" rows="3" cols="30"></textarea>
 
-      <p class="title">Select element</p>
+      <p class="title">Select:</p>
       <select onchange ="changeHandler(event)">
          <option value ="en">English</option>
          <option value ="de">German</option>
