@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>InputEvent Example</title>
+      <meta charset="UTF-8">
+
+      <script>
+          // Note: event.data is not supported in Firefox, IE
+          function inputHandler(evt)  {
+
+             showLog(evt.data);
+          }
+
+          function showLog(text)  {
+            var logDiv = document.getElementById("log-div");
+            logDiv.innerHTML = logDiv.innerHTML + " .. " + text;
+          }
+      </script>
+
+   </head>
+   <body>
+
+      <h3>InputEvent example</h3>
+      <p style="color:red">Note: event.data is not supported in Firefox, IE</p>
+
+      <input type="text" oninput ="inputHandler(event)"/>
+
+      <p id="log-div"></p>
+
+
+   </body>
+</html>
