@@ -4,15 +4,14 @@ function clickHandler(evt) {
     var URL= "https://rawgit.com/o7planning/webexamples/master/_testdatas_/simple-xml-data.xml";
     // var URL= "https://rawgit.com/o7planning/webexamples/master/_testdatas_/triceratops.png";
 
+    resetLog();
+
     // Create XMLHttpRequest.
     let xhr = new XMLHttpRequest();
 
-    let async = true;
 
-    // Initialize It.
-    xhr.open("GET", URL, async);
-
-    resetLog();
+    appendLog("URL: " + URL);
+    appendLog("\n\n");
 
     xhr.onprogress = function(progressEvent) {
         appendLog("onprogress! " + progressEvent);
@@ -52,6 +51,10 @@ function clickHandler(evt) {
         appendLog("onerror!");
         appendLog("Has Error!");
     }
+
+    let async = true;
+    // Initialize It.
+    xhr.open("GET", URL, async);
 
     // Send it (Without body data)
     xhr.send();
