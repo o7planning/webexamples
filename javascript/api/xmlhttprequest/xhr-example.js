@@ -34,17 +34,16 @@ function clickHandler(evt) {
         appendLog(" status = " + xhr.status);
         appendLog(" statusText = " + xhr.statusText);
 
-        if (xhr.status == 200) {
-            appendLog(" ------ xhr.responseText ------: ");
-            appendLog(xhr.responseText);
+        appendLog(" ------ xhr.responseText ------: ");
+        appendLog(xhr.responseText);
 
-            appendLog(" ------ xhr.responseXML -------: ");
-            appendLog(xhr.responseXML); // [object XMLDocument]
+        appendLog(" ------ xhr.responseXML -------: ");
+        appendLog(xhr.responseXML); // [object XMLDocument]
 
-            // Convert XMLDocument to String.
-            var xmlString = (new XMLSerializer()).serializeToString(xhr.responseXML);
-            appendLog(xmlString);
-        }
+        // Convert XMLDocument to String.
+        var xmlString = (new XMLSerializer()).serializeToString(xhr.responseXML);
+        appendLog(xmlString);
+
     }
 
     xhr.onerror = function(progressEvent) {
