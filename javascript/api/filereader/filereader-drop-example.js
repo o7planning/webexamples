@@ -16,6 +16,7 @@ function dropHandler(evt) {
 
     fileReader.onloadstart = function(progressEvent) {
         resetLog();
+        appendLog("onloadstart!");
         var msg = "File Name: " + file.name + "<br>" +
             "File Size: " + file.size + "<br>" +
             "File Type: " + file.type;
@@ -23,18 +24,22 @@ function dropHandler(evt) {
         appendLog(msg);
     }
 
+    fileReader.onload = function(progressEvent) {
+        appendLog("onload!");
+
+        var stringData = fileReader.result;
+        appendLog(" ---------------- File Content ----------------: ");
+        appendLog(stringData);
+    }
+
     fileReader.onloadend = function(progressEvent) {
+        appendLog("onloadend!");
         // FileReader.EMPTY, FileReader.LOADING, FileReader.DONE
         appendLog("readyState = " + fileReader.readyState);
-
-        if (fileReader.readyState == FileReader.DONE) {
-            var stringData = fileReader.result;
-            appendLog(" ---------------- File Content ----------------: ");
-            appendLog(stringData);
-        }
     }
 
     fileReader.onerror = function(progressEvent) {
+        appendLog("onerror!"); 
         appendLog("Has Error!");
     }
 
