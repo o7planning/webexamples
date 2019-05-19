@@ -27,15 +27,28 @@ function downloadFile(url)  {
     return willIGetAFile; // Return a Promise.
 }
 
+
+function openFile(file) {
+    var willFileOpen = new Promise(
+        function (resolve, reject) {
+             var message = "File " + file.fileName + " opened!"
+             resolve(message);
+        }
+    );
+
+    return willFileOpen; // Return a Promise.
+}
+
 // Call downloadFile(..) function:
 // Returns a Promise object:
 var willIGetAFile = downloadFile("http://example.com/file.mp3");
 
 
 willIGetAFile
-        .then(function (fulfilled) {
-            // Get a File
-            // Output: {fileName: 'file.mp3', fileContent: '...', fileSize: '3 MB'}
+        .then(openFile) // Chain it!
+        .then(function (fulfilled) { // If successful fileOpen.
+            // Get a message after file opened!
+            // Output: File file.mp3 opened!
             console.log(fulfilled);
         })
         .catch(function (error) {
