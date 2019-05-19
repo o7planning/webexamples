@@ -43,8 +43,6 @@ function openFile(file) {
     return willFileOpen; // Return a Promise.
 }
 
-console.log("Start app.."); // ***
-
 // Call downloadFile(..) function:
 // Returns a Promise object:
 var willIGetAFile = downloadFile("http://example.com/file.mp3");
@@ -61,7 +59,4 @@ willIGetAFile
              // Network Error!
              // Output: There is a problem with the network.
              console.log(error.message);
-        });
-
-
-console.log("End app.."); // ***
+        }); 

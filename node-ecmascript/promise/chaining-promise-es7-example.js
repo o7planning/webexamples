@@ -1,9 +1,9 @@
-// [ECMAScript 6 Syntax]
+// [ECMAScript 7 Syntax]
 
 var isNetworkOK = true;
 
-// This function return a Promise
-downloadFile = function(url)  {
+// An Asynchronous function return a Promise
+async function downloadFile(url)  {
     console.log("Start downloading file ..."); // ***
 
     // A Promise
@@ -30,7 +30,8 @@ downloadFile = function(url)  {
     return willIGetAFile; // Return a Promise.
 }
 
-openFile = function (file) {
+// An Asynchronous function return a Promise
+async function openFile(file) {
     console.log("Start opening file ..."); // ***
 
     var willFileOpen = new Promise(
@@ -43,25 +44,30 @@ openFile = function (file) {
     return willFileOpen; // Return a Promise.
 }
 
+// Main Function (Asynchronous function)
+async function mainFunction()  {
+    try {
+        console.log("Start app.."); // ***
 
-console.log("Start app.."); // ***
+        // Call downloadFile(..) function with 'await' keyword:
+        // It returns a File (Not Promise)
+        var file = await downloadFile("http://example.com/file.mp3");
 
-// Call downloadFile(..) function:
-// Returns a Promise object:
-var willIGetAFile = downloadFile("http://example.com/file.mp3");
+        console.log(file);
 
+        // Call openFile(..) function with 'await' keyword:
+        // It returns a String (Not Promise)
+        var message = await openFile(file);
 
-willIGetAFile
-        .then(openFile) // Chain it!
-        .then(function (fulfilled) { // If successful fileOpen.
-            // Get a message after file opened!
-            // Output: File file.mp3 opened!
-            console.log(fulfilled);
-        })
-        .catch(function (error) {
-             // Network Error!
-             // Output: There is a problem with the network.
-             console.log(error.message);
-        });
+        console.log(message);
 
-console.log("End app.."); // ***
+        console.log("End app.."); // ***
+    } catch(e)  {
+       console.log(e.message);
+    }
+}
+
+// Call Main Function:
+(async () => {
+    await mainFunction();
+})();
