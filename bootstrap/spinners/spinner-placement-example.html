@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Spinner Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        .my-box {
+            height: 50px;
+            padding: 5px;
+            margin: 10px 0 5px 0;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <h4>Flex</h4>
+        <div class="my-box d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div class="my-box d-flex align-items-center">
+            <span>Loading...</span>
+            <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+        </div>
+
+        <h4>Float</h4>
+        <div class="my-box">
+            <div class="spinner-border float-right" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <h4>Text Align</h4>
+        <div class="my-box text-center">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
