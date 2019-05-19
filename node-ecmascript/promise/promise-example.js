@@ -4,12 +4,14 @@ var isNetworkOK = true;
 
 // This function return a Promise
 function downloadFile(url)  {
+    console.log("Start downloading file ..."); // ***
 
     // A Promise
     var willIGetAFile = new Promise (
         function (resolve, reject) {
 
             if (isNetworkOK) {
+                console.log("Complete the download process!"); // ***
                 var file = {
                     fileName: 'file.mp3',
                     fileContent: '...',
@@ -17,6 +19,7 @@ function downloadFile(url)  {
                 };
                 resolve(file); // fulfilled
             } else {
+                console.log("File download process failed!"); // ***
                 var error = new Error('There is a problem with the network.');
                 reject(error); // reject
             }
@@ -26,6 +29,8 @@ function downloadFile(url)  {
 
     return willIGetAFile; // Return a Promise.
 }
+
+console.log("Start app.."); // ***
 
 // Call downloadFile(..) function:
 // Returns a Promise object:
@@ -43,3 +48,5 @@ willIGetAFile
              // Output: There is a problem with the network.
              console.log(error.message);
         });
+
+console.log("End app.."); // ***
