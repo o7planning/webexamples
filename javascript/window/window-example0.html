@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Window Example</title>
+      <meta charset="UTF-8">
+
+      <script>
+         function showInfos()  {
+
+           var logArea = document.getElementById("log-area");
+
+           logArea.value += "window.outerHeight= " + window.outerHeight +"\n";
+           logArea.value += "window.innerHeight= " + window.innerHeight +"\n";
+           logArea.value += "window.outerWidth= " + window.outerWidth +"\n";
+           logArea.value += "window.innerWidth= " + window.innerWidth +"\n";
+         }
+      </script>
+
+   </head>
+   <body>
+
+      <h3>Window example</h3>
+
+      <button onClick="showInfos()">Show Infos</button>
+
+       <textarea name="name" style="width:100%;margin-top:10px;"
+           rows="8" id="log-area"></textarea>
+
+   </body>
+</html>
