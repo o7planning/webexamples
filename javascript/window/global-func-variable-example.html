@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Window Example</title>
+      <meta charset="UTF-8">
+
+      <script>
+         // A Global Variable
+         var COPY_RIGHT = "o7planning.org";
+
+         // A Global Function
+         function sayHello()  {
+             alert("Hello Everyone!");
+         }
+      </script>
+
+   </head>
+   <body>
+
+      <h2>Global Variable, Global Function</h2>
+
+      <button onClick="alert(COPY_RIGHT)">Call alert(COPY_RIGHT)</button>
+      <button onClick="alert(window.COPY_RIGHT)">Call alert(window.COPY_RIGHT)</button>
+
+      <br><br>
+
+      <button onClick="sayHello()">Call sayHello()</button>
+      <button onClick="window.sayHello()">Call window.sayHello()</button>
+
+   </body>
+</html>
