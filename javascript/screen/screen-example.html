@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Screen Example</title>
+      <meta charset="UTF-8">
+
+
+   </head>
+   <body>
+
+       <h1>window.screen</h1>
+
+       <button onClick="showInfos()">Show Infos</button>
+
+        <textarea name="name" style="width:100%;margin-top:10px;"
+            rows="8" id="log-area"></textarea>
+
+        <script>
+           function showInfos()  {
+
+             var logArea = document.getElementById("log-area");
+             logArea.value = "";
+
+             logArea.value += "screen.width= " + screen.width +"\n";
+             logArea.value += "screen.height= " + screen.height +"\n";
+             logArea.value += "screen.availWidth= " + screen.availWidth +"\n";
+             logArea.value += "screen.availHeight= " + screen.availHeight +"\n";
+
+             logArea.value += "screen.colorDepth= " + screen.colorDepth +"\n";
+             logArea.value += "screen.pixelDepth= " + screen.pixelDepth +"\n"; 
+
+           }
+           showInfos();
+        </script>
+   </body>
+</html>
