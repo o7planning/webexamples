@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Navigator appVersion</title>
-      <meta charset="UTF-8"> 
+      <title>Navigator geolocation</title>
+      <meta charset="UTF-8">
    </head>
    <body>
 
-       <h1>navigator.appVersion</h1>
+       <h1>navigator.geolocation</h1>
 
        <button onClick="showInfos()">Show Infos</button>
 
@@ -15,9 +15,13 @@
 
         <script>
            function showInfos()  {
+             var geos = navigator.geolocation;
 
              var logArea = document.getElementById("log-area");
-             logArea.value = navigator.appVersion;
+
+             logArea.value = "";
+             logArea.value += "Latitude: "+ geos.latitude + "\n";
+             logArea.value += "Longitude: "+ geos.longitude + "\n";
            }
            showInfos();
         </script>
