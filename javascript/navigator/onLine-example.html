@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Navigator onLine</title>
+      <meta charset="UTF-8">
+
+      <style>textarea {width:100%;margin-top:10px;}</style>
+
+      <script>
+        function updateOnlineStatus(msg) {
+            var logArea = document.getElementById("log-area");
+
+            logArea.value += "---------------------\n";
+            logArea.value += msg +"\n";
+            logArea.value += "navigator.onLine = " + navigator.onLine +"\n";
+        }
+
+        function loaded() {
+            updateOnlineStatus("Load Event");
+
+            document.body.addEventListener("offline", function () {
+                updateOnlineStatus("Offline Event")
+            }, false);
+
+            document.body.addEventListener("online", function () {
+                updateOnlineStatus("Online Event")
+            }, false);
+        }
+      </script>
+
+   </head>
+   <body onload = "loaded()">
+
+       <h1>navigator.onLine</h1>
+
+      <textarea rows="8" id="log-area"></textarea>
+
+   </body>
+</html>
