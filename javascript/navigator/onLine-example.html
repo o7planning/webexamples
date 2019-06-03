@@ -8,11 +8,11 @@
 
       <script>
         function updateOnlineStatus(msg) {
-            var logArea = document.getElementById("log-area");
+            var logArea = document.getElementById("log-area"); 
 
-            logArea.value += "---------------------\n";
             logArea.value += msg +"\n";
             logArea.value += "navigator.onLine = " + navigator.onLine +"\n";
+            logArea.value += "---------------------\n";
         }
 
         function loaded() {
