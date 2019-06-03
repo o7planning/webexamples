@@ -9,12 +9,12 @@ function successHandler(position)  {
 
 // Error Handler
 function errorHandler(positionError)  {
-   if(positionError.code == PositionError.PERMISSION_DENIED) {
-       alert("Error: Permission Denied!");
-   } else if(positionError.code == PositionError.POSITION_UNAVAILABLE) {
-       alert("Error: Position Unavailable!");
-   } else if(positionError.code == PositionError.TIMEOUT) {
-       alert("Error: Timeout!");
+   if(positionError.code == 1) { // PERMISSION_DENIED
+       alert("Error: Permission Denied! " + positionError.message);
+   } else if(positionError.code == 2) { // POSITION_UNAVAILABLE
+       alert("Error: Position Unavailable! " + positionError.message);
+   } else if(positionError.code == 3) { // TIMEOUT
+       alert("Error: Timeout!" + positionError.message);
    }
 }
 
