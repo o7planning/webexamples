@@ -3,6 +3,9 @@
    <head>
       <title>Navigator geolocation</title>
       <meta charset="UTF-8">
+      <style>textarea {width:100%;margin-top:10px;}</style>
+
+      <script src="geolocation-example.js"></script>
    </head>
    <body>
 
@@ -10,22 +13,6 @@
 
        <button onClick="showInfos()">Show Infos</button>
 
-        <textarea name="name" style="width:100%;margin-top:10px;"
-            rows="8" id="log-area"></textarea>
-
-        <script>
-           function showInfos()  {
-             var geos = navigator.geolocation;
-
-             console.log(geos);
-
-             var logArea = document.getElementById("log-area");
-
-             logArea.value = "";
-             logArea.value += "Latitude: "+ geos.latitude + "\n";
-             logArea.value += "Longitude: "+ geos.longitude + "\n";
-           }
-           showInfos();
-        </script>
+        <textarea name="name" rows="5" id="log-area"></textarea>
    </body>
 </html>
