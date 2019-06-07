@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>window.location Example</title>
+      <meta charset="UTF-8">
+
+      <script>
+          function showCurrentTime()  {
+              document.getElementById("showtime").innerHTML ="Now is " + new Date();
+          }
+      </script>
+   </head>
+   <body onload="showCurrentTime()">
+
+       <h2>window.location.reload(true/false)</h2>
+
+       <p id="showtime"></p>
+
+
+       <button onclick="location.reload(true)">
+          location.reload(true)
+       </button>
+
+   </body>
+</html>
