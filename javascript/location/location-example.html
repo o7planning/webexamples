@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Location Example</title>
+      <meta charset="UTF-8">
+
+
+   </head>
+   <body>
+
+       <h1>window.location</h1>
+
+       <button onClick="showInfos()">Show Infos</button>
+
+        <textarea name="name" style="width:100%;margin-top:10px;"
+            rows="8" id="log-area"></textarea>
+            href
+            protocol
+            host
+            hostname
+            port
+            pathname
+            search
+            hash
+            username
+            password
+            origin (Read only)
+        <script>
+           function showInfos()  {
+
+             var logArea = document.getElementById("log-area");
+             logArea.value = "";
+
+             logArea.value += "location.href= " + location.href +"\n";
+             logArea.value += "location.protocol= " + location.protocol +"\n";
+             logArea.value += "location.host= " + location.host +"\n";
+             logArea.value += "location.hostname= " + location.hostname +"\n";
+
+             logArea.value += "location.port= " + location.port +"\n";
+             logArea.value += "location.pathname= " + location.pathname +"\n";
+             logArea.value += "location.search= " + location.search +"\n";
+             logArea.value += "location.hash= " + location.hash +"\n";
+             logArea.value += "location.username= " + location.username +"\n";
+             logArea.value += "location.password= " + location.password +"\n";
+             logArea.value += "location.origin= " + location.origin +"\n";
+
+           }
+           showInfos();
+        </script>
+   </body>
+</html>
