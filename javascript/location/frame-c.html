@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Frames Example</title>
+      <meta charset="UTF-8">
+      <script>
+          function showCurrentTime() {
+             document.getElementById("curr-date").innerHTML= new Date();
+          }
+          function sayHello()  {
+             alert("Hello from sayHello() of frame-c.html");
+          }
+      </script>
+   </head>
+   <body onload="showCurrentTime()">
+
+       <h2 id="my-h2" style="color:red;">frame-c.html</h2>
+
+       <p id="curr-date">...</p>
+
+   </body>
+</html>

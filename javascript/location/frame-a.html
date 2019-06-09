@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Frames Example</title>
+      <meta charset="UTF-8">
+
+      <script>
+          function changeSrcOfFrame2(newUrl) {
+              var frame2 = window.parent.frames[1];
+              frame2.location.href = newUrl;
+          }
+          function reloadFrame2() {
+              var frame2 = window.parent.frames[1];
+              frame2.sayHello();
+          }
+      </script>
+   </head>
+   <body>
+
+       <h2>frame-a.html</h2>
+
+       <button onclick="changeSrcOfFrame2('frame-c.html')">
+         Change Location of Frame 2 --&gt; frame-c.html
+       </button>
+       <br/><br/>
+
+       <button onclick="changeSrcOfFrame2('frame-b.html')">
+         Change Location of Frame 2 --&gt; frame-b.html
+       </button>
+
+       <br/><br/>
+
+       <button onclick="reloadFrame2()">
+         Call reload Frame 2
+       </button>
+
+   </body>
+</html>
