@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>frame-a.html</title>
+      <meta charset="UTF-8">
+
+
+   </head>
+   <body>
+
+       <h2>frame-a.html</h2>
+
+       <button onClick="showInfos()">Show Infos</button>
+
+       <script>
+          function showInfos()  {
+
+              var iframeElement = window.frameElement;
+              console.log(iframeElement);
+             // iframeElement.style.border="1px solid red"; alert("OK")
+              iframeElement.src = "frame-b.html";
+          }
+       </script>
+   </body>
+</html>

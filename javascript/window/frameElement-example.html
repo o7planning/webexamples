@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>window.frameElement</title>
+      <meta charset="UTF-8">
+
+      <style>iframe {height: 120px; width: 100%}</style>
+
+      <script>
+         function showInfos()  {
+
+             var iframeElement = window.frames[0].frameElement;
+             iframeElement.style.border="1px solid red"; alert("OK")
+         }
+      </script>
+
+   </head>
+   <body>
+
+      <h3>window.frameElement</h3>
+
+      <button onClick="showInfos()">Show Infos</button>
+
+       <iframe src="frame-a.html"><iframe>
+
+   </body>
+</html>
