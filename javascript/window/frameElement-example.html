@@ -5,23 +5,13 @@
       <meta charset="UTF-8">
 
       <style>iframe {height: 120px; width: 100%}</style>
-
-      <script>
-         function showInfos()  {
-
-             var iframeElement = window.frames[0].frameElement;
-             iframeElement.style.border="1px solid red";  
-         }
-      </script>
-
    </head>
    <body>
 
-      <h3>window.frameElement</h3>
+      <h3>Main Frame</h3>
+      <p style="color:red;">Note: You need to test this example on a http server. </p>
 
-      <button onClick="showInfos()">Show Infos</button>
-
-       <iframe src="frame-a.html"><iframe>
+      <iframe src="frame-a.html"><iframe>
 
    </body>
 </html>

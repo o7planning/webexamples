@@ -4,22 +4,22 @@
       <title>frame-a.html</title>
       <meta charset="UTF-8">
 
-
+      <script>
+         function highlightIFrame()  {
+             // <iframe> element.
+             var iframeElement = window.frameElement;
+             if(iframeElement)  {
+                iframeElement.style.border="1px solid red";
+             }
+         }
+      </script>
    </head>
    <body>
 
        <h2>frame-a.html</h2>
 
-       <button onClick="showInfos()">Show Infos</button>
+       <button onClick="highlightIFrame()">Highlight IFrame</button>
 
-       <script>
-          function showInfos()  {
-
-              var iframeElement = window.frameElement;
-              console.log(iframeElement);
-              iframeElement.style.border="1px solid red"; alert("OK")
-              iframeElement.src = "frame-b.html";
-          }
-       </script>
    </body>
+
 </html>
