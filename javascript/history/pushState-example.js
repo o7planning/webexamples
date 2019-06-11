@@ -8,6 +8,8 @@ function showHistory()  {
 }
 
 function popstateHandler(popstateEvent)  {
+    console.log(popstateEvent );
+    document.title = popstateEvent.state.title;
     showHistory();
 }
 
@@ -18,12 +20,16 @@ var number = 0;
 
 function call_pushState()  {
     number = number + 1;
+    var title = "State "+ number;
+
     var dataState = {
          empId : number,
-         showProfile: true
+         showProfile: true,
+         title: title
     };
-    var title = "Title "+ number;
+
     window.history.pushState(dataState, title);
+    document.title = title;
 
     // Show current History:
     showHistory();
