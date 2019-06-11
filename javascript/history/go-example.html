@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>history.go()</title>
+      <meta charset="UTF-8">
+      <script>
+          function showCurrentTime() {
+             document.getElementById("curr-date").innerHTML= new Date();
+          }
+
+
+      </script>
+   </head>
+   <body onload="showCurrentTime()">
+
+       <h2 id="my-h2">history.go([delta])</h2>
+       <ul>
+          <li><a href="?value=test1">?value=test1</a></li>
+          <li><a href="?value=test2">?value=test2</a></li>
+          <li><a href="?value=test3">?value=test3</a></li>
+          <li><a href="?value=test4">?value=test4</a></li>
+          <li><a href="?value=test5">?value=test5</a></li>
+       </ul>
+
+
+      <button onclick="history.go(-1)">history.go(-1)</button>
+      <button onclick="history.go()">history.go()</button>
+      <button onclick="history.go(1)">history.go(1)</button>
+
+       <p id="curr-date">...</p>
+
+   </body>
+</html>

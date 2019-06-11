@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>history.pushState()</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="pragma" content="no-cache">
+      
+      <style>textarea {width:100%;margin-top:10px;}</style>
+
+      <script>
+          function showHistory()  { alert("Show History");
+             console.log(window.history);
+             var log = document.getElementById("log-area");
+             log.value="";
+             log.value +="history.length="+ history.length +"\n";
+             log.value +="history.scrollRestoration="+history.scrollRestoration+"\n";
+             log.value +="history.state="+ JSON.stringify(history.state)+"\n";
+          }
+
+          var number = 3;
+
+          function call_pushState()  {
+              number = number + 1;
+              var dataState = {
+                   empId : number,
+                   showProfile: true
+              };
+              var title="Title "+ number;
+              var url =  "?value=test"+ number;
+              window.history.pushState(dataState, title, url);
+              showHistory();
+          }
+      </script>
+   </head>
+   <body onpageshow="showHistory()">
+
+       <h2 id="my-h2">history.pushState(..)</h2>
+       <ul>
+          <li><a href="?value=test1">?value=test1</a></li>
+          <li><a href="?value=test2">?value=test2</a></li>
+          <li><a href="?value=test3">?value=test3</a></li>
+          <li><a href="?value=test4">?value=test4</a></li>
+          <li><a href="?value=test5">?value=test5</a></li>
+       </ul>
+      <button onclick="call_pushState()">
+        history.pushState('Data 3','Title 3','?value=test3')
+      </button>
+      <br/><br/>
+
+      <button onclick="history.go(-1)">history.go(-1)</button>
+      <button onclick="history.go()">history.go()</button>
+      <button onclick="history.go(1)">history.go(1)</button>
+
+       <p id="curr-date">...</p>
+       <textarea rows="8" id="log-area"></textarea>
+
+   </body>
+</html>
