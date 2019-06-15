@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Locationbar</title>
+    <meta charset="UTF-8">
+    <script>
+
+        function openNewWindow()  {
+           var winFeature =
+             'location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes';
+
+           // Open a New Windows.
+           window.open('some-page.html','null',winFeature);
+        }
+    </script>
+</head>
+<body>
+    <h3>Locationbar</h3>
+
+    <button onclick="openNewWindow()">Open a New Window</button>
+
+</body>
+</html>
