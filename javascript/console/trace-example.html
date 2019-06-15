@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Console trace()</title>
+    <meta charset="UTF-8">
+    <script>
+
+        function donald()  {
+        }
+
+        function tom() {
+           jerry();
+        }
+
+        function jerry()  {
+           donald();
+           console.trace();
+        }
+
+        // Start Here!!
+        function testTrace() {
+            tom();
+        } 
+    </script>
+</head>
+<body>
+    <h3>Console trace()</h3>
+
+    <p style="color:red;">Click the button, and See result in the Console</p>
+
+    <button onclick="testTrace()">Show Stack Trace</button>
+
+</body>
+</html>
