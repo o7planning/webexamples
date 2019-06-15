@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Console Timer</title>
+    <meta charset="UTF-8">
+    <script>
+        function testAnswerTime() {
+          console.time("Answer time");
+          alert("Click to continue");
+          console.timeLog("Answer time");
+          alert("Do a bunch of other stuff...");
+          console.timeEnd("Answer time");
+        }
+    </script>
+</head>
+<body>
+    <h3>Console Timer</h3>
+
+    <p style="color:red;">Click the button, and See result in the Console</p>
+
+    <button onclick="testAnswerTime()">Test Answer Time</button>
+
+</body>
+</html>
