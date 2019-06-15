@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console table()</title>
+    <meta charset="UTF-8">
+    <script>
+        var john =  {firstName: "John", lastName: "Smith"};
+        var jane =  {firstName: "Jane", lastName: "Doe"};
+
+        var array = [john, jane];
+
+        function test()  {
+          var columns = ["firstName"];
+
+          // All columns
+          console.table(array);
+
+          // Custome Columns
+          console.table(array, columns);
+        }
+    </script>
+</head>
+<body>
+    <h3>Console table() with parameter 'columns'</h3>
+
+    <p style="color:red;">Click the button, and See result in the Console</p>
+
+    <button onclick="test()">Test</button>
+
+</body>
+</html>
