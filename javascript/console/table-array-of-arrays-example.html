@@ -4,20 +4,19 @@
     <title>Console table()</title>
     <meta charset="UTF-8">
     <script>
-        var person = {
-            firstName : 'John',
-            lastName : 'Smith',
-            age : 40
-        }
+        var array = [
+           ["Value-0-1","Value-0-2"],
+           ["Value-1-1","Value-1-2", "Value-1-3"],
+           ["Value-2-1","Value-2-2"],
+        ];
 
         function test()  {
-
-          console.table(person);
+          console.table(array);
         }
     </script>
 </head>
 <body>
-    <h3>Console table() - data is an Object</h3>
+    <h3>Console table() - data is an Array of arrays</h3>
 
     <p style="color:red;">Click the button, and See result in the Console</p>
 

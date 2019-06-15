@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console assert()</title>
+    <meta charset="UTF-8">
+    <script>
+        function test()  {
+          const errorMsg = 'the # is not even';
+          for (let number = 2; number <= 5; number += 1) {
+              console.log('the # is ' + number);
+              console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
+          }
+        }
+    </script>
+</head>
+<body>
+    <h3>Console assert()</h3>
+
+    <p style="color:red;">Click the button, and See result in the Console</p>
+
+    <button onclick="test()">Test</button>
+
+</body>
+</html>
