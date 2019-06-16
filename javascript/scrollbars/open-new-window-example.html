@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrollbars</title>
+    <meta charset="UTF-8">
+    <script>
+
+        function openNewWindow()  {
+           var winFeature = 'scrollbars=no,resizable=yes';
+
+           // Open a New Windows.
+           window.open('some-page.html','MyWinName',winFeature);
+        }
+    </script>
+</head>
+<body>
+    <h3>Locationbar</h3>
+
+    <button onclick="openNewWindow()">Open a New Window without scrollbars</button>
+
+</body>
+</html>
