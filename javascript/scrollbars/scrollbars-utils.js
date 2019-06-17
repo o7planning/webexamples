@@ -14,7 +14,7 @@ function __isScrollbarShowing__(domNode, axis, computedStyles) {
     var clientType = 'client' + type;
     var overflowAxis = 'overflow' + axis;
 
-    var hasScroll = domNode[scrollType] > domNode[clientType]; 
+    var hasScroll = domNode[scrollType] > domNode[clientType];
 
     // Check the overflow and overflowY properties for "auto" and "visible" values
     var cStyle = computedStyles || window.getComputedStyle(domNode)
@@ -24,7 +24,7 @@ function __isScrollbarShowing__(domNode, axis, computedStyles) {
           || cStyle[overflowAxis] == "scroll";
 }
 
-// @domNode: Optional parameter.
+// @domNode: Optional.
 function isScrollbarXShowing(domNode)  {
     if(!domNode) {
        domNode = document.documentElement;
@@ -32,10 +32,16 @@ function isScrollbarXShowing(domNode)  {
     return __isScrollbarShowing__(domNode, 'x');
 }
 
-// @domNode: Optional parameter.
+// @domNode: Optional.
 function isScrollbarYShowing(domNode)  {
     if(!domNode) {
        domNode = document.documentElement;
     }
     return __isScrollbarShowing__(domNode, 'y');
+}
+
+// Scrollbar X or Scrollbar Y is showing?
+// @domNode: Optional.
+function isScrollbarShowing(domNode)  {
+    return isScrollbarXShowing(domNode) || isScrollbarYShowing(domNode);
 }

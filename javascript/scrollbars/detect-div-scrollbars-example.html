@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrollbars</title>
+    <meta charset="UTF-8">
+
+    <style>
+       #my-div {
+         border: 1px solid blue;
+         overflow-x: auto;
+         padding: 5px;
+         width: 150px;
+         height: 80px;
+       }
+    </style>
+    <script src="scrollbars-utils.js"></script>
+
+    <script>
+        function detectScrollbarXOfDiv()  {
+           var domNode = document.getElementById("my-div");
+           var scX = isScrollbarXShowing(domNode);
+           var scY = isScrollbarYShowing(domNode);
+
+           alert("Is Div Scrollbar X Showing? " + scX);
+        }
+    </script>
+
+</head>
+<body>
+    <h3>Detect Scrollbars of an Element</h3>
+
+    <br/>
+    <button onclick="detectScrollbarXOfDiv()">
+        Is Div Scrollbar X Showing?
+    </button>
+
+    <p>Div:</p>
+
+    <div id="my-div">
+      <br>
+      <hr style="width:200px"/>
+      <br>
+    </div>
+
+
+</body>
+</html>
