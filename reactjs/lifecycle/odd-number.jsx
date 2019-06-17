@@ -14,7 +14,7 @@ class NumberView extends React.Component {
     });
   }
 
-  shouldComponentUpdate(props, nextState) {
+  shouldComponentUpdate(nextProps, nextState) {
     // Odd Number
     return nextState.currentNumber % 2 == 1;
   }

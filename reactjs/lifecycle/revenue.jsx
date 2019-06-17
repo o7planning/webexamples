@@ -19,7 +19,7 @@ class RevenueView extends React.Component {
     });
   }
 
-  UNSAFE_componentWillUpdate(props, nextState) {
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
     var rate = (nextState.revenue - this.state.revenue) / this.state.revenue;
     nextState.growthRate = 100 * rate + " %";
   }
