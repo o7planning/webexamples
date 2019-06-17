@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menubar</title>
+    <meta charset="UTF-8">
+    <script>
+
+        function openNewWindow()  {
+           var winFeature = 'menubar=no,resizable=yes';
+
+           // Open a New Windows.
+           window.open('some-page.html','MyWinName',winFeature);
+        }
+    </script>
+</head>
+<body>
+    <h3>Menubar</h3>
+
+    <button onclick="openNewWindow()">
+      Open a New Window without menubar
+    </button>
+
+</body>
+</html>

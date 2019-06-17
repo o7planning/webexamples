@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrollbars</title>
+    <meta charset="UTF-8">
+
+    <script src="scrollbars-utils.js"></script>
+
+    <script>
+      function checkVisible()  {
+          var hasSb = isScrollbarXShowing();
+
+          alert(hasSb);
+      }
+    </script>
+</head>
+<body>
+    <h3>Scrollbars is showing?</h3>
+
+    <br/>
+    <button onclick="alert(isScrollbarXShowing())">
+        Is Scrollbar X Showing?
+    </button>
+
+    <button onclick="alert(isScrollbarYShowing())">
+        Is Scrollbar Y Showing?
+    </button>
+
+    <br/><br/>
+    <hr style="width: 500px;"/>
+
+    <p>1</p>
+    <p>1 2</p>
+    <p>1 2 3</p>
+    <p>1 2 3 4</p>
+    <p>1 2 3 4 5</p>
+
+</body>
+</html>
