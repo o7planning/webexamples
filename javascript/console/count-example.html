@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console count()</title>
+    <meta charset="UTF-8">
+    <script>
+        function greet(userName)  {
+          console.count(userName);
+
+          if(userName != null)  {
+              return "Hi " + userName;
+          }
+          return "Hi!";
+        }
+    </script>
+</head>
+<body>
+    <h3>Console count()</h3>
+
+    <p style="color:red;">
+       Click the button, and See result in the Console
+     </p>
+
+    <button onclick="greet('Tom')">Call greet('Tom')</button>
+    <button onclick="greet('Jerry')">Call greet('Jerry')</button>
+    <button onclick="greet()">Call greet()</button>
+
+</body>
+</html>
