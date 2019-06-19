@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styling Console</title>
+    <meta charset="UTF-8">
+
+    <script>
+        function test() {
+          var style = "color: yellow; font-style: italic; background-color: blue;padding: 2px";
+          console.log("This is %cMy stylish message", style);
+        }
+    </script>
+
+</head>
+<body>
+    <h3>Styling Console</h3>
+
+    <p style="color:red;">
+       Click the button, and See result in the Console
+     </p>
+
+    <button onclick="test()">Call test()</button> 
+
+</body>
+</html>
