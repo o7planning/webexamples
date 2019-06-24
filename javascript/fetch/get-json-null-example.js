@@ -25,7 +25,7 @@ function doGetJSON()  {
 
         var myJSON = null;
 
-        if(myText != null && myText.length > 0)  {
+        if(myText != null && myText.trim().length > 0)  {
             myJSON = JSON.parse(myText);
         }
         console.log("OK! JSON:");
