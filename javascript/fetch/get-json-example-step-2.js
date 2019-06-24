@@ -15,9 +15,9 @@ function doGetJSON()  {
         console.log("OK! Server returns a response object:");
         console.log(response);
 
-        // Get JSON from response object:
-        var myJSON = response.json();
-        return myJSON;
+        // Get JSON Promise object from response object:
+        var myJSON_promise = response.json();
+        return myJSON_promise;
     });
 
   // Work with aPromise2:

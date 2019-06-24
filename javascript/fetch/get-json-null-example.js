@@ -1,6 +1,6 @@
 
-// A URL returns JSON data.
-var url = "https://rawgit.com/o7planning/webexamples/master/_testdatas_/json-simple-data.json";
+// A URL returns null JSON data.
+var url = "https://rawgit.com/o7planning/webexamples/master/_testdatas_/json-null-data.json";
 
 
 function doGetJSON()  {
@@ -15,11 +15,19 @@ function doGetJSON()  {
         console.log("OK! Server returns a response object:");
         console.log(response);
 
-        // Get JSON Promise from response object:
-        var myJSON_promise = response.json();
-        return myJSON_promise;
+        // Get TEXT Promise object from response object:
+        var myText_promise = response.text();
+        return myText_promise;
     })
-    .then(function(myJSON) {
+    .then(function(myText) {
+        console.log("OK! TEXT:");
+        console.log(myText);
+
+        var myJSON = null;
+
+        if(myText != null && myText.length > 0)  {
+            myJSON = JSON.parse(myText);
+        }
         console.log("OK! JSON:");
         console.log(myJSON);
     })
