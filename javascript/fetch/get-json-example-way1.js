@@ -17,11 +17,12 @@ function doGetJSON()  {
 
         // Get JSON Promise from response object:
         var myJSON_promise = response.json();
-        return myJSON_promise;
-    })
-    .then(function(myJSON) {
-        console.log("OK! JSON:");
-        console.log(myJSON);
+
+        // Work with Promise object:
+        myJSON_promise.then(function(myJSON))  {
+          console.log("OK! JSON:");
+          console.log(myJSON);
+        }
     })
     .catch(function(error)  {
         console.log("Noooooo! Something error:");
