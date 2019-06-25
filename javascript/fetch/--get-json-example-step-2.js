@@ -1,4 +1,6 @@
 
+// (CHUA SU DUNG)
+
 // A URL returns JSON data.
 var url = "https://rawgit.com/o7planning/webexamples/master/_testdatas_/json-simple-data.json";
 
@@ -16,12 +18,10 @@ function doGetJSON()  {
         console.log(response);
 
         // Get JSON Promise object from response object:
-        var myJSON_promise = response.json();  
+        var myJSON_promise = response.json();
         return myJSON_promise;
     });
-
-console.log("???????????");
-  console.log(aPromise2);
+ 
 
   // Work with aPromise2:
   aPromise2
