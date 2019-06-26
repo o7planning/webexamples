@@ -15,6 +15,10 @@ function doGetJSON()  {
         console.log("OK! Server returns a response object:");
         console.log(response);
 
+        if(!response.ok) {
+           throw new Error("HTTP error, status = " + response.status);
+        }
+
         // Get TEXT Promise object from response object:
         var myText_promise = response.text();
         return myText_promise;

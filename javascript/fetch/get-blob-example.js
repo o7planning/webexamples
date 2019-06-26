@@ -15,6 +15,9 @@ function doGetBlob()  {
         console.log("OK! Server returns a response object:");
         console.log(response);
 
+        if(!response.ok) {
+           throw new Error("HTTP error, status = " + response.status);
+        } 
         // Get Blob Promise from response object:
         var myBlob_promise = response.blob();
         return myBlob_promise;
