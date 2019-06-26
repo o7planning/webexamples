@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Canvas</title>
+      <meta charset="UTF-8">
+      <script>
+          function drawCircle()  {
+              var c = document.getElementById("myCanvas");
+              var ctx = c.getContext("2d");
+              ctx.beginPath();
+              ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+              ctx.stroke();
+          }
+      </script>
+   </head>
+   <body>
+
+       <h2>Draw Circle</h2>
+
+       <button onclick="drawCircle()">Draw Circle</button>
+       <a href="">Reset</a>
+       <br/><br/>
+
+       <canvas id="myCanvas" style="border:1px solid black" width=280 height=150>
+            Your browser does not support the HTML5 Canvas.
+       </canvas>
+
+   </body>
+</html>
