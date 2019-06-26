@@ -1,5 +1,5 @@
 
-// A URL returns Video data.
+// A URL returns Audio data.
 var url = "https://raw.githubusercontent.com/o7planning/webexamples/master/_testdatas_/yodel.mp3";
 
 // AudioContext
@@ -30,7 +30,7 @@ function doGetArrayBuffer()  {
         var myArrayBuffer_promise = response.arrayBuffer();
         return myArrayBuffer_promise;
     })
-    .then(function(myArrayBuffer) { 
+    .then(function(myArrayBuffer) {
 
         audioContext.decodeAudioData(myArrayBuffer, function(decodedData) {
           bufferSource.buffer = decodedData;
