@@ -1,74 +1,60 @@
-/*
-(function () {
-  'use strict';
-
-  const URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3';
-
-  const context = new AudioContext();
-  const playButton = document.querySelector('#play');
-
-  let yodelBuffer;
-
-  window.fetch(URL)
-    .then(response => response.arrayBuffer())
-    .then(arrayBuffer => context.decodeAudioData(arrayBuffer))
-    .then(audioBuffer => {
-      playButton.disabled = false;
-      yodelBuffer = audioBuffer;
-    });
-
-    playButton.onclick = () => play(yodelBuffer);
-
-  function play(audioBuffer) {
-    const source = context.createBufferSource();
-    source.buffer = audioBuffer;
-    source.connect(context.destination);
-    source.start();
-  }
-}());
-//*/
-
-
-
 
 // A URL returns Video data.
-var url = "https://raw.githubusercontent.com/o7planning/webexamples/master/_testdatas_/mov_bbb.mp4";
+var url = "https://raw.githubusercontent.com/o7planning/webexamples/master/_testdatas_/yodel.mp3";
 
 // AudioContext
-const context = new AudioContext();
+const audioContext = new AudioContext();
+var bufferSource;
 
-// Get ArrayBuffer (Video data) and play it.
+// Get ArrayBuffer (Audio data) and play it.
 function doGetArrayBuffer()  {
+  bufferSource = audioContext.createBufferSource();
+
+  bufferSource.onended =  function () {
+      document.getElementById("play").disabled=false;
+  };
 
   // Call fetch(url) with default options.
   // It returns a Promise object:
   var aPromise = fetch(url);
 
   // Work with Promise object:
-  aPromise
+  var retPromise =
+   aPromise
     .then(function(response) {
-        console.log("OK! Server returns a response object:");
-        console.log(response);
 
+        if(!response.ok)  {
+           throw new Error("HTTP error, status = " + response.status);
+        }
         // Get ArrayBuffer Promise object from response object:
         var myArrayBuffer_promise = response.arrayBuffer();
         return myArrayBuffer_promise;
     })
-    .then(function(myArrayBuffer) {
-        console.log("OK! ArrayBuffer:");
-        console.log(myArrayBuffer);
+    .then(function(myArrayBuffer) { 
 
-      //  var myVideo = document.getElementById("my-video");
-      //  myVideo.src = myArrayBuffer;
-      const source = context.createBufferSource();
-      source.buffer = myArrayBuffer;
-      source.connect(context.destination);
-      source.start();
-
-    })
-    .catch(function(error)  {
-        console.log("Noooooo! Something error:");
-        console.log(error);
+        audioContext.decodeAudioData(myArrayBuffer, function(decodedData) {
+          bufferSource.buffer = decodedData;
+          bufferSource.connect(audioContext.destination);
+        });
     });
 
+    return retPromise;
+}
+
+function playIt()  {
+    console.clear();
+
+    doGetArrayBuffer()
+       .then(function() {
+            document.getElementById("play").disabled=true;
+            bufferSource.start(0);
+       })
+       .catch(function(error){
+            alert("Something Error: " + error.message);
+       });
+}
+
+function stopIt()  {
+    bufferSource.stop(0);
+    document.getElementById("play").disabled=false;
 }

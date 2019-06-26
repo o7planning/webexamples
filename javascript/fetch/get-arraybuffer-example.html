@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>fetch get blob</title>
+    <title>fetch get ArrayBuffer</title>
     <meta charset="UTF-8">
 
     <script src="get-arraybuffer-example.js"></script>
@@ -10,14 +10,11 @@
 
     <h3>fetch get ArrayBuffer</h3>
     <p style="color:red">
-         Click the button to load Video.
+         Click the button to play Audio.
     </p>
 
-    <button onclick="doGetArrayBuffer()">doGetArrayBuffer</button>
-    <br/>
-
-    <video controls="" preload="auto" id="my-video"></video>
-
+    <button onclick="playIt()" id="play">Play Audio</button>
+    <button onclick="stopIt()" id="play">Stop Audio</button>
 
 </body>
 </html>
