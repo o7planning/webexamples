@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Blob Sallad</title>
+      <meta charset="UTF-8">
+
+      <script type="text/javascript">
+
+      function log(msg)
+      {
+        var textArea;
+
+        textArea = document.getElementById("logArea");
+        textArea.value = msg + "\n" + textArea.value;
+      }
+
+      function clearLog()
+      {
+        var textArea;
+
+        textArea = document.getElementById("logArea");
+        textArea.value = "";
+      }
+
+      </script>
+
+      <script src="blobsallad.js"></script>
+   </head>
+   <body  onload="init();">
+
+       <h1>Blob Sallad</h1>
+
+       <canvas id="blob" style="border:1px solid black" width=600 height=400>
+            Your browser does not support the HTML5 Canvas.
+       </canvas>
+
+       <a href="javascript:stop()">Pause Simulation</a>
+       <a href="javascript:start()">Resume Simulation</a>
+
+   </body>
+</html>
