@@ -13,7 +13,13 @@ function doGetTEXT()  {
   aPromise
     .then(function(response) {
         console.log("OK! Server returns a response object:");
-        console.log(response); 
+        console.log(response);
+
+        if(!response.ok)  {
+            throw new Error("HTTP error, status = " + response.status);
+        }
+        
+        return response.text();
     })
     .then(function(myText)) {
          console.log("Text:");

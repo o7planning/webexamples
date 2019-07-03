@@ -15,6 +15,10 @@ function doGetTEXT()  {
         console.log("OK! Server returns a response object:");
         console.log(response);
 
+        if(!response.ok)  {
+            throw new Error("HTTP error, status = " + response.status);
+        }
+
         response.text()
           .then(function(myText)) {
                console.log("Text:");
@@ -28,5 +32,5 @@ function doGetTEXT()  {
         console.log("Noooooo! Something error:");
         // Network Error!
         console.log(error);
-    }); 
+    });
 }
