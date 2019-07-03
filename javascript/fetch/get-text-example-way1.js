@@ -20,13 +20,13 @@ function doGetTEXT()  {
         }
 
         response.text()
-          .then(function(myText)) {
+          .then(function(myText) {
                console.log("Text:");
                console.log(myText);
           })
-          .catch(function(error)) {
+          .catch(function(error) {
              // Never happened.
-          }
+          });
     })
     .catch(function(error)  {
         console.log("Noooooo! Something error:");

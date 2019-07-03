@@ -18,10 +18,10 @@ function doGetTEXT()  {
         if(!response.ok)  {
             throw new Error("HTTP error, status = " + response.status);
         }
-        
+
         return response.text();
     })
-    .then(function(myText)) {
+    .then(function(myText)  {
          console.log("Text:");
          console.log(myText);
     })
