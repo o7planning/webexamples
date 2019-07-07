@@ -1,5 +1,5 @@
 [
-    { "productId" : 1 , "productName" :'React' },
-    { "productId" : 2 , "productName" :'Redux' },
-    { "productId" : 3 , "productName" :'Profit' }
+    { "productId" : 1 , "productName" : "React" },
+    { "productId" : 2 , "productName" : "Redux" },
+    { "productId" : 3 , "productName" : "Profit" }
 ]
