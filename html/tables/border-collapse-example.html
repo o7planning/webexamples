@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table border-collapse</title>
+    <meta charset="UTF-8">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        #table1 {
+            border-collapse: separate;
+        }
+        #table2 {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>border-collapse: separate (Default)</h2>
+
+    <table id="table1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>Smith</td>
+        </tr>
+    </table>
+
+    <h2>border-collapse: collapse</h2>
+
+    <table id="table2">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>Smith</td>
+        </tr>
+    </table>
+
+</body> 
+</html>
