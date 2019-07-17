@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table align</title>
+    <meta charset="UTF-8">
+    <style> 
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+             padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>th, td (text-align, vertical-align)</h2>
+
+    <table>
+      <tr>
+        <th rowspan="2"></th>
+        <th colspan="2">Average</th>
+        <th rowspan="2" style="vertical-align:middle">Red eyes</th>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>weight</td>
+      </tr>
+      <tr>
+        <td>Males</td>
+        <td style="text-align:right">1.9</td>
+        <td>0.003</td>
+        <td style="text-align:center">40%</td>
+      </tr>
+      <tr>
+        <td>Females</td>
+        <td style="text-align:right">1.7</td>
+        <td>0.002</td>
+        <td style="text-align:center">43%</td>
+      </tr>
+    </table>
+
+</body>
+</html>
