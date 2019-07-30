@@ -3,14 +3,29 @@
 <head>
   <title>Iframe</title>
   <meta charset="UTF-8">
+  <script>
+     function setNewContentForIframe() {
+        var div = document.getElementById("mydiv");
+        document.getElementById("myframe").srcdoc = div.innerHTML;
+     } 
+  </script>
 </head>
 
 <body>
 
   <h3>iframe - srcdoc:</h3>
 
-  <iframe  srcdoc="<h3>This is a iframe</h3>"
+  <iframe srcdoc="<h3>This is an iframe</h3>" id ="myframe"
+      height ="100"
       style="border:1px solid black"></iframe>
+  <p>Div</p>
+  <div style="background: #e5e7e9;padding:5px;" id="mydiv">
+      <h4>Content in a div</h4>
+      Content in a div
+  </div>
+  <br/>
+  <button onClick="setNewContentForIframe()">Set new Content for Iframe</button>
+  <a href="">Reset</a>
 
 </body>
 </html>
