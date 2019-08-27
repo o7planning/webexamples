@@ -1,8 +1,8 @@
 q {
-  quotes: "<<" ">>";
+  quotes: "«" "»";
   color: blue;
 }
-
+ 
 q:before {
     content: open-quote;
 }

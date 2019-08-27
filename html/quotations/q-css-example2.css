@@ -1,0 +1,14 @@
+q {
+  color: blue;
+  font-style: italic;
+}
+
+q:before {
+    content:url('quote-16.png');
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+q:after {
+
+}
