@@ -1,0 +1,12 @@
+q {
+  quotes: "<<" ">>";
+  color: blue;
+}
+
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
