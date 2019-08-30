@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>encodeURI()</title>
+    <meta charset="UTF-8">
+    <style>input {margin: 10px 0px;}</style>
+
+    <script>
+        function doEncodeURI()  {
+           var uri = document.getElementById('my-input').value;
+
+           var encodedUri = encodeURI(uri);
+
+           document.getElementById('my-output').value = encodedUri;
+        }
+    </script>
+</head>
+<body>
+    <h3>encodeURI()</h3>
+
+    Enter URL:
+    <input type="text" id="my-input"  style="width:100%;"
+        value="http://example.com/my search?value=tom and jerry&maxResults=10"/>
+
+    <button onclick="doEncodeURI()">encodeURI()</button>
+
+    <input type="text" id="my-output"  style="width:100%;" disabled/>
+</body>
+</html>
