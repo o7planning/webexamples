@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encode All Characters</title>
+    <meta charset="UTF-8">
+    <style>input {margin: 10px 0px;}</style>
+
+    <script src="encodeURIAll.js"></script>
+
+    <script>
+        function doEncodeURI()  {
+           var text = document.getElementById('my-input').value;
+
+           var encodedUri = encodeURIAll(text);
+           console.log(encodedUri)
+
+           document.getElementById('my-output').value = encodedUri;
+        }
+    </script>
+</head>
+<body>
+    <h3>Encode All Characters</h3>
+
+    Enter Text:
+    <input type="text" id="my-input"  style="width:100%;"
+        value="abc_.!~*'()"/>
+
+    <button onclick="doEncodeURI()">Encode</button>
+
+    <input type="text" id="my-output"  style="width:100%;" disabled/>
+</body>
+</html>
