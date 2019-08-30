@@ -2,7 +2,7 @@
 function encodeURIAll(text)  {
     return text.replace(/./g, function(aCharacter) {
 
-       // Characters is not encoded by encodeURIComponent(): _ . ! ~ * ' ( )
+       // Characters is not encoded by encodeURIComponent(): . ! ~ * ' ( )
        if(aCharacter === '.') {
           return "%2e";
        } else if(aCharacter === '!') {
