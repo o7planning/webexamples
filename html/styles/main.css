@@ -1,0 +1,16 @@
+div  {
+    font-size:120%;
+    color: CadetBlue;
+}
+
+code {
+   font-weight: bold;
+   font-style: italic;
+   background-color: yellow;
+   color: blue;
+}
+
+.app-note  {
+    font-size:90%;
+    font-style: italic; 
+}
