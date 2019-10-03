@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Border</title>
+    <meta charset="UTF-8"/>
+    <style>
+        div {
+            padding: 5px;
+            margin-right: px;
+            width: 120px;
+            background: yellow;
+            display: inline-block;
+        }
+        td {
+           border-width: 5px;
+           background-color: yellow;
+        }
+        .cls-solid {
+
+          border-style: solid;
+          padding:10px;
+        }
+        .cls-none {
+          border-style: none;
+          padding:10px;
+        }
+        .cls-hidden {
+          border-style: hidden;
+          padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>CSS border-style</h3>
+
+    <table border="5">
+       <tr>
+          <td class="cls-solid">td {border-style:solid}</td>
+          <td class="cls-none">td {border-style:none}</td>
+          <td class="cls-hidden">td {border-style:hidden}</td>
+       </tr>
+    </table>
+
+    <br/><br/>
+
+    <div style="border-width:15px; border-style:solid">div {border-style:solid}</div>
+
+    <div style="border-width:15px; border-style:none">div {border-style:none}</div>
+
+    <div style="border-width:15px; border-style:hidden">div {border-style:hidden}</div>
+
+</body>
+
+</html>
