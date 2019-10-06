@@ -5,25 +5,28 @@
     <title>CSS Border</title>
     <meta charset="UTF-8"/>
     <style>
-        div {
-            padding: 5px;
-            margin-bottom: 10px;
-        }
 
         .table1  {
            border: 1px solid red;
+           border-spacing: 2px;
         }
-        .table1 th, td  {
+
+        .table1 th {
            border: 1px solid blue;
            padding: 5px;
-           
+
+        } 
+        .table1 td {
+           border: 1px dashed green;
+           padding: 5px;
+
         }
     </style>
 </head>
 
 <body>
 
-    <h3>CSS border-style</h3>
+    <h3>HTML Table</h3>
 
     <table class="table1">
         <tr>
@@ -31,11 +34,10 @@
            <th>Last Name</th>
         </tr>
         <tr>
-           <td>First Name</td>
-           <td>Last Name</td>
+           <td>John</td>
+           <td>Smith</td>
         </tr>
     </table>
 
 </body>
-
 </html>
