@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <title>CSS Padding</title>
+      <meta charset="UTF-8"/>
+      <script>
+         function changeParentSize()  {
+            var blockDiv = document.getElementById("blockDiv");
 
-<head>
-    <title>CSS Padding</title>
-    <meta charset="UTF-8"/>
-</head>
+             // offsetWidth = cssWidth + padding + border
+            var offsetWidth  = blockDiv.offsetWidth;
+            if(offsetWidth > 300)  {
+                offsetWidth = 200;
+            }
 
-<body>
+            blockDiv.style.width = (offsetWidth+1) + "px";
+         }
 
-    <h3>CSS Padding</h3>
+      </script>
+   </head>
 
-    <p>
-      div {width: 200px; padding:10%;}
-    </p>
+   <body>
+      <h3>CSS Padding Percentage</h3>
 
-    <div style="padding:10%; width:200px; border: 1px solid blue;">
-       <div style="width:200px; border:1px solid red;">
-            Content of this element.
-       </div>
-    </div>
+      <div id="blockDiv" style="width:200px; height: 150px; border: 1px solid blue">
+         I am a div (Block-Level Element)
+         <span style="background-color: yellow;">
+            I am a span (Inline Element)
+            <div id= "redDiv" style="width:100px; padding:10%; border:1px solid red;">
+               width:100px; padding:10%;
+            </div>
+         </span>
+      </div>
 
-
-</body>
+      <br/>
+      <button onClick="changeParentSize()">Change size of 'blockDiv'</button>
+   </body>
 </html>
