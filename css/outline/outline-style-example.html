@@ -8,7 +8,7 @@
            padding: 5px;
            outline-color: green;
            outline-width: 10px;
-           margin: 30px 5px; 
+           margin: 30px 5px;
          }
          p.dotted {outline-style: dotted;}
          p.dashed {outline-style: dashed;}
@@ -23,14 +23,32 @@
    <body>
       <h3>CSS outline-style</h3>
 
-      <p class="dotted">A dotted outline</p>
-      <p class="dashed">A dashed outline</p>
-      <p class="solid">A solid outline</p>
-      <p class="double">A double outline</p>
-      <p class="groove">A groove outline. The effect depends on the outline-color value.</p>
-      <p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
-      <p class="inset">An inset outline. The effect depends on the outline-color value.</p>
-      <p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+      <p class="dotted">
+          dotted - A series of round dots.
+      </p>
+      <p class="dashed">
+        dashed - A series of square-ended dashes.
+      </p>
+      <p class="solid">
+         solid - A single line segment.
+      </p>
+      <p class="double">
+        double - Two parallel solid lines with some space between them.
+        When using this value, the border-width value determines the
+        sum of the lines and the space between them.
+      </p>
+      <p class="groove">
+          groove - Looks as if it were carved in the canvas.
+      </p>
+      <p class="ridge">ridge - Looks as if it were coming out of the canvas.</p>
+      <p class="inset">
+        inset - Looks as if the content on the inside of the border is sunken into the canvas.
+        Treated as ridge in the collapsing border model.
+      </p>
+      <p class="outset">
+        outset - Looks as if the content on the inside of the border is coming out of the canvas.
+        Treated as groove in the collapsing border model.
+      </p>
 
    </body>
 </html>
