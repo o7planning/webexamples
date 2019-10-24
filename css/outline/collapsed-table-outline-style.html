@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Collapsed Table</title>
+    <meta charset="UTF-8"/>
+    <style>
+        table   {
+           border-collapse: collapse;
+           border: 1px solid black;
+        }
+        th, td {
+           border: 1px solid black;
+           padding: 10px;
+        }
+
+        table {
+           outline-width: 10px;
+           outline-color: red;
+           outline-style: dashed;
+        }
+        th, td {
+           outline-width: 10px;
+           outline-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CHUA SU DUNG !!!!!!!!!!!!!!!!!! -->
+    <!-- KHONG THAY KHAC BIET GI GIUA None va Hidden -->
+
+    <h3>CSS Collapsed Table with Outline-style</h3>
+
+    <table>
+        <tr>
+           <th style="outline-style:solid;">
+              border-style:solid;<br/>
+              border-width:1px;<br/>
+              border-color:blue;
+           </th>
+           <th style="outline-style:dotted">
+              border-style:dashed;<br/>
+              border-width:1px;<br/>
+              border-color:red;
+           </th>
+        </tr>
+        <tr>
+           <td style="outline-style:hidden;">
+              border-style:hidden;<br/>
+              border-width:1px;<br/>
+              border-color:green;
+           </td>
+           <td style="outline-style:none;">
+              border-style:none;<br/>
+              border-width:1px;<br/>
+              border-color:green;
+           </td>
+        </tr>
+    </table>
+
+</body>
+</html>
