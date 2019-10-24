@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS box-sizing</title>
+    <meta charset="UTF-8"/>
+
+    <style>
+         .my-box  {
+            box-sizing:padding-box;
+            width:250px;  <br/>
+            height:120px;  <br/>
+            margin: 20px;
+            padding:30px;
+            border: 50px solid gray;
+         }
+    </style>
+</head>
+
+<body>
+    <!-- KHONG SU DUNG -->
+    
+    <h3>CSS {box-sizing:padding-box;}</h3>
+    <p>Browser does not support!!!</p>
+
+    <div style="box-sizing:padding-box; padding:50px; border: 1px solid gray;width:200px;height:100px;">
+         box-sizing:padding-box; <br />
+         padding:30px;   <br/>
+         width:200px; <br/>
+         height:100px; <br />
+         border: 1px solid gray;  **
+    </div>
+    <br/>
+
+    <div style="box-sizing:padding-box; padding:50px; border: 50px solid gray;width:200px;height:100px;">
+        box-sizing:padding-box; <br />
+        padding:30px;   <br/>
+        width:200px;  <br/>
+        height:100px; <br />
+        border: 50px solid gray;  **
+    </div>
+
+
+</body>
+</html>
