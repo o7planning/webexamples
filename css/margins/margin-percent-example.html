@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS Padding</title>
+      <meta charset="UTF-8"/>
+      <script>
+         function changeParentSize()  {
+            var blockDiv = document.getElementById("blockDiv");
+
+             // offsetWidth = contentWidth + padding + border
+            var offsetWidth  = blockDiv.offsetWidth;
+            if(offsetWidth > 300)  {
+                offsetWidth = 200;
+            }
+
+            blockDiv.style.width = (offsetWidth+1) + "px";
+         }
+
+      </script>
+   </head>
+
+   <body>
+      <h3>CSS Margin Percentage</h3>
+
+      <div id="blockDiv" style="width:200px; height: 150px; border: 1px solid blue">
+         I am a div (Block-Level Element) <br/>
+         <span style="background-color: yellow;">
+            I am a span (Inline Element)
+            <div id= "redDiv" style="width:100px; margin:10%; border:1px solid red;">
+               width:100px; margin:10%;
+            </div>
+         </span>
+      </div>
+
+      <br/>
+      <button onClick="changeParentSize()">Change size of 'blockDiv'</button>
+   </body>
+</html>
