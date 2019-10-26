@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS Margin Collapsing</title>
+      <meta charset="UTF-8"/>
+      <style>
+         div {
+           border:1px solid green;
+         }
+         button {
+            margin-top:10px;
+         }
+      </style>
+
+      <script>
+         function addDiv2MarginTop(delta)  {
+            var div2 = document.getElementById("div2");
+
+            var style = window.getComputedStyle(div2);
+
+            var marginTopString = style.marginTop;// 20px
+            var marginTopInt = parseInt(marginTopString.substr(0,marginTopString.length-2)); // 20
+
+            var newMarginTopString =  (marginTopInt + delta) + "px";
+
+            div2.style.marginTop = newMarginTopString;
+            div2.innerHTML = "height:50px; margin-top: " + newMarginTopString;
+         }
+
+      </script>
+   </head>
+
+   <body>
+      <h3>CSS Margin Collapsing</h3>
+
+      <div style="height:50px; margin-bottom:50px">
+           height:50px; margin-bottom:50px;
+      </div>
+
+      <div style="height:50px; margin-top:40px" id="div2">
+           height:50px; margin-top:40px
+      </div>
+
+      <button onClick="addDiv2MarginTop(3)">Div2 margin-top (+)</button>
+      <button onClick="addDiv2MarginTop(-3)">Div2 margin-top (-)</button>
+
+
+   </body>
+</html>
