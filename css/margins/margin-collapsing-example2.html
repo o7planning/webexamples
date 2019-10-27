@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS Margin Collapsing</title>
+      <meta charset="UTF-8"/>
+      <style>
+        div {
+          background: lavender;
+        } 
+        p {
+          margin-top: 30px;
+          margin-left: 15px;
+          margin-right: 15px;
+          background: yellow;
+          height: 30px;
+        }
+      </style>
+   </head>
+
+   <body>
+      <h3>CSS Margin Collapsing (Parent and First Child)</h3>
+
+      <div style="min-height:50px;">
+        <p>
+           Child Paragraph 1 - margin-top: 30px;
+        </p>
+        <p>
+           Child Paragraph 2 - margin-top: 30px;
+        </p>
+        This parent element contains two paragraphs!
+      </div>
+
+   </body>
+</html>
