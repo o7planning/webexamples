@@ -1,10 +1,10 @@
 var types= [
   "none",
-	"disc", 
+	"disc",
 	"circle",
 	"square",
 
-  	"armenian",
+  "armenian",
 	"decimal",
 	"cjk-ideographic",
 	"decimal-leading-zero",
