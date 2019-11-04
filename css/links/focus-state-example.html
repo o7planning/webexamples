@@ -5,6 +5,13 @@
       <meta charset="UTF-8"/>
 
       <link rel="stylesheet" href="page.css" />
+
+      <script>
+         function focusLink() {
+             var myLink = document.getElementById("myLink");
+             myLink.focus();
+         }
+      </script>
    </head>
    <body>
        <h1>Focus State</h1>
@@ -17,11 +24,10 @@
           <li class="active">a:active</li>
        </ol>
 
-        <p>Press TAB to focus on Link:</p>
+        <button onClick="focusLink()">Focus on the Link</button>
+         
 
-        <input type="text"  autofocus/>
-
-        <a href="#">
+        <a href="#" id="myLink">
            This is a Link
         </a>
 
