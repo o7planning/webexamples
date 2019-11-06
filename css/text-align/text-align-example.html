@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS text-align</title>
+      <meta charset="UTF-8"/>
+      <style>
+          #my-div {
+            background-color: #eee;
+            height: 135px;
+            padding: 5px;
+          }
+      </style>
+      <script>
+          function changeTextAlign(event)  {
+             var textAlign = event.target.value;
+
+             var div = document.getElementById("my-div");
+             div.style.textAlign = textAlign;
+          }
+      </script>
+   </head>
+   <body>
+       <h1>CSS text-align</h1>
+
+       <input type="radio" name="my-radio" value="left" onclick="changeTextAlign(event)"/> Left<br>
+       <input type="radio" name="my-radio" value="right" onclick="changeTextAlign(event)"/> Right<br>
+       <input type="radio" name="my-radio" value="center" onclick="changeTextAlign(event)"/> Center<br>
+       <input type="radio" name="my-radio" value="justify" onclick="changeTextAlign(event)"/> Justify<br>
+
+       <hr/>
+
+       <div id = "my-div">
+           Apollo 11 was the spaceflight that landed the first humans,
+           Americans Neil Armstrong and Buzz Aldrin,
+           on the Moon on July 20, 1969, at 20:18 UTC.
+           Armstrong became the first to step onto the lunar
+           surface 6 hours later on July 21 at 02:56 UTC.
+       </div>
+
+   </body>
+</html>
