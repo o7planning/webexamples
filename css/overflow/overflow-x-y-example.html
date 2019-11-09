@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS overflow</title>
+      <meta charset="UTF-8"/> 
+      <style>
+         #myDiv  {
+           background-color: #d6eaf8;
+           padding: 5px;
+           margin-top: 15px;
+         }
+      </style>
+      <script src="overflow-x-y-example.js"> </script>
+   </head>
+   <body>
+       <h2>CSS overflow-x, overflow-y</h2>
+       <hr/>
+       <div style="display: inline-block; width: 150px;">
+         <p>Overflow-x:</p>
+         <input type="radio" name="overflowX" value="visible" onClick="changeOverflowX(event)" checked/> Visible <br/>
+         <input type="radio" name="overflowX" value="hidden" onClick="changeOverflowX(event)"/> Hidden <br/>
+         <input type="radio" name="overflowX" value="scroll" onClick="changeOverflowX(event)"/> Scroll <br/>
+         <input type="radio" name="overflowX" value="auto" onClick="changeOverflowX(event)"/> Auto <br/>
+       </div>
+
+       <div style="display: inline-block; width: 150px;">
+         <p>Overflow-y:</p>
+         <input type="radio" name="overflowY" value="visible" onClick="changeOverflowY(event)" checked/> Visible <br/>
+         <input type="radio" name="overflowY" value="hidden" onClick="changeOverflowY(event)"/> Hidden <br/>
+         <input type="radio" name="overflowY" value="scroll" onClick="changeOverflowY(event)"/> Scroll <br/>
+         <input type="radio" name="overflowY" value="auto" onClick="changeOverflowY(event)"/> Auto <br/>
+       </div>
+
+       <div id="infoDiv">
+
+       </div>
+
+       <div id="myDiv" style="height: 50px; width:200px; overflow-x: visible;">
+
+           The value of Pi is <br/>
+           3.1415926535897932384626433832795029.
+
+           The value of e is <br/>
+
+           2.718281828459045235360287471352662
+
+       </div>
+   </body>
+</html>
