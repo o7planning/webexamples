@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS {display:none}</title>
+      <meta charset="UTF-8"/> 
+      <script>
+          function showHideImage(event)  {
+             var myImage = document.getElementById("myImage");
+             var displayValue = myImage.style.display;
+
+             if(!displayValue) {
+                 myImage.style.display = "none";
+             } else {
+                 // Remove CSS dislay.
+                 myImage.style.display = null;
+                 // OR Set to: block|inline|inline-block.
+             }
+          }
+      </script>
+   </head>
+   <body>
+       <h2>CSS {display:none}</h2>
+
+       <button onClick="showHideImage(event)">Show/Hide Image</button>
+
+       <div style="padding:5px; margin-top:10px; background:#eee;">
+           <img src="../images/flower.png" id= "myImage"/>
+           Apollo 11 was the spaceflight that landed the first humans,
+           Americans Neil Armstrong and Buzz Aldrin,
+           on the Moon on July 20, 1969, at 20:18 UTC.
+           Armstrong became the first to step onto the lunar
+           surface 6 hours later on July 21 at 02:56 UTC.
+       </div>
+
+   </body>
+</html>
