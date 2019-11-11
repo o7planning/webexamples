@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS {display:inline}</title>
+      <meta charset="UTF-8"/>
+
+      <script>
+          function setDisplayInline()  {
+             var myDiv = document.getElementById("myDiv");
+             myDiv.style.display = "inline";
+          }
+          // Use default display.
+          function removeDisplay()  {
+             var myDiv = document.getElementById("myDiv");
+             myDiv.style.display = null;
+          }
+      </script>
+   </head>
+   <body>
+       <h2>CSS {display:inline}</h2>
+
+       <button onClick="setDisplayInline()">Set {display:inline}</button>
+       <button onClick="removeDisplay()">Remove display property</button>
+
+       <div style="padding:5px; margin-top:10px; background:#eee;">
+           <img src="../images/flower.png" />
+
+           <div id="myDiv" style="background:yellow">
+             Apollo 11 was the spaceflight that landed the first humans,
+             Americans Neil Armstrong and Buzz Aldrin,
+             on the Moon on July 20, 1969, at 20:18 UTC.
+           </div>
+
+           Armstrong became the first to step onto the lunar
+           surface 6 hours later on July 21 at 02:56 UTC.
+       </div>
+
+   </body>
+</html>
