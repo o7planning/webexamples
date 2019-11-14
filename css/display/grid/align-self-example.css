@@ -1,0 +1,24 @@
+.container {
+     display: grid;
+     grid-template-rows: 150px 100px;
+     grid-template-columns: 200px auto;
+     border:1px solid #ddd;
+}
+
+ .child {
+     padding: 5px;
+     background: #d4e6f1;
+     margin: 5px;
+}
+ .child-1 {
+     align-self: start;
+}
+ .child-2 {
+     align-self: end;
+}
+ .child-3 {
+     align-self: center;
+}
+ .child-4 {
+     align-self: stretch;
+}
