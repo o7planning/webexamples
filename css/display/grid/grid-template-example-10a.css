@@ -1,0 +1,12 @@
+.container {
+   display: grid;
+   border:1px solid #ddd;
+
+   grid-template: 100px 50px / 150px auto 120px;
+}
+
+.child {
+  padding: 5px;
+  background: #d4e6f1;
+  margin: 5px;
+}
