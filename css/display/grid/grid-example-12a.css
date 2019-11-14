@@ -1,0 +1,21 @@
+.container {
+   display: grid;
+   grid-template-columns: 40px 50px auto [col4-start] 50px 40px;
+   grid-template-rows: 35px 50px 30px;
+
+   border:1px solid #ddd;
+   margin-top:10px;
+}
+
+.child {
+  padding: 5px;
+  background: #d4e6f1;
+  margin: 5px;
+}
+
+.child-1 {
+   grid-column-start: 2;
+   grid-column-end: span col4-start;
+   grid-row-start: 2;
+   grid-row-end: span 2;
+ }
