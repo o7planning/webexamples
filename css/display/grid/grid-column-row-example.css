@@ -1,0 +1,27 @@
+.container {
+   display: grid;
+   grid-template-columns: 40px [line2] 50px auto [line4] 50px 40px;
+   grid-template-rows: [row1-start] 35px 50px 30px;
+
+   border:1px solid #ddd;
+   margin-top:10px;
+}
+
+.child {
+  padding: 5px;
+  background: #d4e6f1;
+  margin: 5px;
+}
+
+.child-1 {
+  background: lightblue;
+  grid-column : line2 / line4;
+  grid-row : row1-start / 3;
+ }
+
+
+ .child-2 {
+   background: lightgreen;
+   grid-column : 1 / span 2;
+   grid-row : 2 / 4;
+  }
