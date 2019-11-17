@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS {visibility:collapse}</title>
+      <meta charset="UTF-8"/>
+      <style>
+         table {
+            border: 1px solid;
+            margin-top: 10px;
+         }
+         th, td {
+            border: 1px solid;
+            padding: 5px;
+         }
+         #myRow {
+            background: lightgreen;
+         }
+      </style>
+
+      <script>
+          function setVisibilityValue(newValue)  {
+             var myRow = document.getElementById("myRow");
+             myRow.style.visibility = newValue;
+
+             var myNote = document.getElementById("myNote");
+             myNote.innerHTML = "{visibility: " + newValue+"}";
+          }
+      </script>
+   </head>
+   <body>
+       <h2>CSS {visibility:visible | hidden | collapse}</h2>
+
+       <button onClick="setVisibilityValue('visible')">Visible</button>
+       <button onClick="setVisibilityValue('hidden')">Hidden</button>
+       <button onClick="setVisibilityValue('collapse')">Collapse</button>
+
+        <p style="color:blue;">
+           Works for elements: TR, THEAD, TBODY, TFOOT.
+        </p>
+
+       <p id="myNote" style="color:red; font-style:italic;">
+           {visibility:visible}
+       </p>
+
+       <table>
+          <thead>
+              <tr>
+                  <th>No</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr id="myRow">
+                  <td>1</td>
+                  <td>Hillary</td>
+                  <td>Clinton</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Donald</td>
+                    <td>Trump</td>
+                  </tr>
+            </tbody>
+       </table> 
+
+   </body>
+</html>
