@@ -31,6 +31,8 @@
        <button onClick="setVisibilityValue('hidden')">Hidden</button>
        <button onClick="setVisibilityValue('collapse')">Collapse</button>
 
+       <h3>COL, COLGROUP Elements</h3>
+
        <p id="myNote" style="color:red; font-style:italic;">
            {visibility:visible}
        </p>
@@ -66,10 +68,11 @@
         </tr>
       </table>
 
-      <p style="color:red; font-style:italic;">
-        CSS {visibility:collapse} work for ColGroup, Col element in FIREFOX, not work in Chrome!
-      </p>
 
+     <p style="color:red;">
+        CSS {visibility:collapse} works with COL, COLGROUP elements in Firefox (Not Chrome).<br/>
+        CSS {visibility:hidden} does not work  with COL, COLGROUP elements in Firefox and Chrome.
+     </p>
 
    </body>
 </html>
