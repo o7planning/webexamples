@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS {visibility:collapse}</title>
+      <meta charset="UTF-8"/>
+      <style>
+         table {
+            border: 1px solid;
+            margin-top: 10px;
+         }
+         th, td {
+            border: 1px solid;
+            padding: 5px;
+         }
+      </style>
+
+      <script>
+          function setVisibilityValue(newValue)  {
+             var myColGroup = document.getElementById("myColGroup");
+             myColGroup.style.visibility = newValue;
+
+             var myNote = document.getElementById("myNote");
+             myNote.innerHTML = "{visibility: " + newValue+"}";
+          }
+      </script>
+   </head>
+   <body>
+       <h2>CSS {visibility:visible | hidden | collapse}</h2>
+
+       <button onClick="setVisibilityValue('visible')">Visible</button>
+       <button onClick="setVisibilityValue('hidden')">Hidden</button>
+       <button onClick="setVisibilityValue('collapse')">Collapse</button>
+
+       <p id="myNote" style="color:red; font-style:italic;">
+           {visibility:visible}
+       </p>
+
+       <table>
+        <colgroup>
+          <col style="background-color:lightgreen">
+        </colgroup>
+        <colgroup id="myColGroup">
+          <col span="2" style="background-color:red">
+          <col style="background-color:yellow">
+        </colgroup>
+        <tr>
+          <th>No</th>
+          <th>ISBN</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>3476896</td>
+          <td>My first HTML</td>
+          <td>$53</td>
+          <td>..</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>5869207</td>
+          <td>My first CSS</td>
+          <td>$49</td>
+          <td>..</td>
+        </tr>
+      </table>
+
+      <p style="color:red; font-style:italic;">
+        CSS {visibility:collapse} work for ColGroup, Col element in FIREFOX, not work in Chrome!
+      </p>
+
+
+   </body>
+</html>
