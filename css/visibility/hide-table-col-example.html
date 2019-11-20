@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS {visibility:collapse}</title>
+      <meta charset="UTF-8"/>
+      <style>
+         table {
+            border: 1px solid;
+            margin-top: 10px;
+         }
+         th, td {
+            border: 1px solid;
+            padding: 5px;
+         }
+         .cell-col2-hidden {
+            display: none;
+         }
+         .cell-col2-show {
+            display: block;
+            background: lightgreen;
+         }
+      </style>
+
+      <script>
+          function hideColumnGroup(hide)  {
+            if(hide)  {
+              var elements = document.getElementsByClassName("cell-col2-hidden");
+              var copiedElements = [... elements];
+
+              for(var i=0; i< copiedElements.length; i++) {
+                  copiedElements[i].classList.remove("cell-col2-hidden");
+                  copiedElements[i].classList.add("cell-col2-show");
+              }
+            } else {
+              var elements = document.getElementsByClassName("cell-col2-show");
+              var copiedElements = [... elements];
+
+              for(var i=0; i< copiedElements.length; i++) {
+                  copiedElements[i].classList.remove("cell-col2-show");
+                  copiedElements[i].classList.add("cell-col2-hidden");
+              }
+            }
+
+
+             var myNote = document.getElementById("myNote");
+             myNote.innerHTML = "{visibility: " + newValue+"}";
+          }
+      </script>
+   </head>
+   <body>
+       <h2>Show/Hide Table Columns</h2>
+       
+       <button onClick="hideColumnGroup(false)">Hide</button>
+       <button onClick="hideColumnGroup(true)">Show</button>
+
+       <table>
+        <tr>
+          <th>No</th>
+          <th class="cell-col2-show">ISBN</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td class="cell-col2-show">3476896</td>
+          <td>My first HTML</td>
+          <td>$53</td>
+          <td>..</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="cell-col2-show">5869207</td>
+          <td>My first CSS</td>
+          <td>$49</td>
+          <td>..</td>
+        </tr>
+      </table>
+   </body>
+</html>
