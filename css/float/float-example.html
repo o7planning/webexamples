@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS float</title>
+      <meta charset="UTF-8"/>
+      <style>
+          .container {
+            background-color: #eee;
+            min-height: 135px;
+            padding: 5px;
+            text-align: left;
+          }
+          .container span {
+            background-color: yellow;
+          }
+          #myElement {
+            background-color: lightgreen;
+            color: red;
+            font-weight: bold;
+            width: 180px;
+            height: 50px;
+            padding: 5px;
+            margin: 5px;
+          }
+      </style>
+
+      <script>
+          function changeFloat(event)  {
+             var floatValue = event.target.value;
+
+             var myElement = document.getElementById("myElement");
+             myElement.style.float = floatValue;
+             myElement.innerHTML = "{float: "+ floatValue+"}";
+          }
+      </script>
+   </head>
+   <body>
+       <h1>CSS float</h1>
+
+       <input type="radio" name="my-radio" value="none" onclick="changeFloat(event)" checked/> None<br>
+       <input type="radio" name="my-radio" value="left" onclick="changeFloat(event)"/> Left<br>
+       <input type="radio" name="my-radio" value="right" onclick="changeFloat(event)"/> Right
+
+       <hr/>
+
+       <div class = "container">
+
+             <div id = "myElement">
+                {float: none} (Default)
+             </div>
+
+             Apollo 11 was the spaceflight that landed the first humans,
+             Americans <span>Neil Armstrong</span> and <span>Buzz Aldrin</span>,
+             on the Moon on July 20, 1969, at 20:18 UTC.
+             <span>Armstrong</span> became the first to step onto the lunar
+             surface 6 hours later on July 21 at 02:56 UTC.
+
+             <span>Armstrong</span> spent about three and a half two
+             and a half hours outside the spacecraft,
+             <span>Aldrin</span> slightly less; and together they
+             collected 47.5 pounds (21.5 kg) of lunar material
+             for return to Earth. A third member of the mission,...
+
+
+       </div>
+
+   </body>
+</html>
