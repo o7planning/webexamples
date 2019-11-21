@@ -30,7 +30,6 @@
 
              var myElement = document.getElementById("myElement");
              myElement.style.float = floatValue;
-             myElement.innerHTML = "{float: "+ floatValue+"}";
           }
       </script>
    </head>
@@ -45,9 +44,10 @@
 
        <div class = "container">
 
-             <div id = "myElement">
-                {float: none} (Default)
-             </div>
+             <span id = "myElement">
+                I am a Span Element.
+                {width: 180px; height: 50px;}
+             </span>
 
              Apollo 11 was the spaceflight that landed the first humans,
              Americans <span>Neil Armstrong</span> and <span>Buzz Aldrin</span>,
