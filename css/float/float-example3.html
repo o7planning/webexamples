@@ -8,47 +8,50 @@
            background-color: #eee;
            min-height: 135px;
            padding: 5px;
-           text-align: left;
          }
          .container span {
            background-color: yellow;
          }
-         #myElement {
+         .float-left {
            background-color: lightgreen;
-           color: red;
-           font-weight: bold;
-           width: 180px;
+           float: left;
+           width: 70px;
            height: 50px;
            padding: 5px;
            margin: 5px;
          }
-      </style>
-      <script>
-         function changeFloat(event)  {
-            var floatValue = event.target.value;
-
-            var myElement = document.getElementById("myElement");
-            myElement.style.float = floatValue;
+         .float-right {
+           background-color: lightblue;
+           float: right;
+           width: 100px;
+           height: 70px;
+           padding: 5px;
+           margin: 5px;
          }
-      </script>
+      </style>
    </head>
    <body>
-      <h1>CSS float with Inline Element</h1>
-      <input type="radio" name="my-radio" value="none" onclick="changeFloat(event)" checked/> None<br>
-      <input type="radio" name="my-radio" value="left" onclick="changeFloat(event)"/> Left<br>
-      <input type="radio" name="my-radio" value="right" onclick="changeFloat(event)"/> Right
-      <hr/>
+      <h1>CSS float</h1>
 
       <div class = "container">
-
-         <span id = "myElement">
-           I am a Span Element.
-           {width: 180px; height: 50px;}
-         </span>
 
          Apollo 11 was the spaceflight that landed the first humans,
          Americans <span>Neil Armstrong</span> and <span>Buzz Aldrin</span>,
          on the Moon on July 20, 1969, at 20:18 UTC.
+
+         <div class = "float-left">
+              Float left
+         </div>
+
+         <div class = "float-right">
+              Float right
+         </div>
+
+         <div class = "float-left">
+              Float left
+         </div>
+
+
          <span>Armstrong</span> became the first to step onto the lunar
          surface 6 hours later on July 21 at 02:56 UTC.
          <span>Armstrong</span> spent about three and a half two
