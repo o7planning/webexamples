@@ -5,9 +5,9 @@ var clearValue2 = "none"; // CURRENT-LEMENT
 function changeFloat1(event)  {
    floatValue1 = event.target.value;
 
-   var myElement1 = document.getElementById("float-element");
+   var myElement1 = document.getElementById("floating-element");
    myElement1.style.float = floatValue1;
-   myElement1.innerHTML = "FLOAT-ELEMENT<br/>{float: "+ floatValue1+"}";
+   myElement1.innerHTML = "FLOATING-ELEMENT<br/>{float: "+ floatValue1+"}";
 }
 
 function changeFloat2(event)  {

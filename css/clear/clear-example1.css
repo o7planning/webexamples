@@ -24,9 +24,9 @@
     border: 1px solid red;
 }
 
-#float-element {
+#floating-element {
    float: left;
-   width: 130px;
+   width: 160px;
    height: 80px;
    background: lightgreen;
 }
