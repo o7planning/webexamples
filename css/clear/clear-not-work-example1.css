@@ -1,0 +1,22 @@
+.container {
+  background-color: #eee;
+  padding: 15px;
+  height: 200px;
+}
+
+#floating-element {
+   float: left;
+   width: 150px;
+   height: 80px;
+   background: lightgreen;
+   padding:5px;
+   margin: 5px;
+}
+
+#current-element {
+   border: 1px solid lightblue;
+   padding: 5px;
+
+   display: inline;
+   clear: left; /** Not work with Inline, Inline-Block Element */
+}
