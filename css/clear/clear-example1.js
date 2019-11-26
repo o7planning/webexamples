@@ -1,4 +1,4 @@
-var floatValue1 = "left"; // FLOAT-LEMENT
+var floatValue1 = "left"; // FLOATING-LEMENT
 var floatValue2 = "left"; // CURRENT-LEMENT
 var clearValue2 = "none"; // CURRENT-LEMENT
 
