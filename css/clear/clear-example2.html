@@ -4,8 +4,8 @@
       <title>CSS Clear</title>
       <meta charset="UTF-8"/>
 
-      <link rel="stylesheet" href="clear-example1.css" />
-      <script src="clear-example1.js"> </script>
+      <link rel="stylesheet" href="clear-example2.css" />
+      <script src="clear-example2.js"> </script>
    </head>
    <body>
        <h1>CSS Clear</h1>
@@ -18,12 +18,6 @@
 
        <div class="option">
          #current-element <br/><br/>
-         <input type="radio" name="c1-radio" value="left" onclick="changeFloat2(event)" checked/> float:left <br/>
-         <input type="radio" name="c1-radio" value="right" onclick="changeFloat2(event)"/> float:right
-       </div>
-
-       <div class="option">
-         #current-element <br/><br/>
          <input type="radio" name="c2-radio" value="none" onclick="changeClear2(event)" checked/> clear:none <br/>
          <input type="radio" name="c2-radio" value="left" onclick="changeClear2(event)"/> clear:left <br/>
          <input type="radio" name="c2-radio" value="right" onclick="changeClear2(event)"/> clear:right
@@ -32,7 +26,7 @@
 
        <hr/>
        <p style="color:blue;">
-          CASE: #current-element is a Floating Element.
+          CASE: #current-element is a Block Element.
        </p>
 
        <div class = "container">
@@ -41,8 +35,7 @@
               {float: left}
             </div>
             <div id = "current-element">
-              CURRENT-ELEMENT <br/>
-              {float: left}
+              CURRENT-ELEMENT
             </div>
        </div>
    </body>

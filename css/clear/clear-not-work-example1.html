@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS Clear</title>
+      <meta charset="UTF-8"/>
+      <style>
+        .container {
+          background-color: #eee;
+          padding: 15px;
+          height: 200px;
+        }
+
+        #floating-element {
+           float: left;
+           width: 150px;
+           height: 80px;
+           background: lightgreen;
+           padding:5px;
+           margin: 5px;
+        }
+
+        #current-element {
+           border: 1px solid lightblue;
+           padding: 5px;
+
+           display: inline;
+           clear: left; /** Not work with Inline, Inline-Block Element */
+        }
+
+      </style>
+   </head>
+   <body>
+       <h3>CSS Clear not works with Inline, Inline-block element</h3>
+
+
+       <div class = "container">
+            <div id = "floating-element">
+              FLOATING <br/>
+              {float: left}
+            </div>
+            <div id = "current-element">
+              (Inline Element) -
+              Apollo 11 was the spaceflight that landed the first humans,
+              Americans Neil Armstrong and Buzz Aldrin,
+              on the Moon on July 20, 1969, at 20:18 UTC.
+              Armstrong became the first to step onto the lunar
+              surface 6 hours later on July 21 at 02:56 UTC.
+
+              Armstrong spent about three and a half two
+              and a half hours outside the spacecraft,
+              Aldrin slightly less; and together they
+              collected 47.5 pounds (21.5 kg) of lunar material
+              for return to Earth. A third member of the mission,...
+            </div>
+       </div>
+   </body>
+</html>

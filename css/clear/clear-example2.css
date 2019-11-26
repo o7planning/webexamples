@@ -1,0 +1,31 @@
+.option {
+  display: inline-block;
+  width: 130px;
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.container {
+  background-color: #eee;
+  padding: 15px;
+  height: 200px;
+}
+.container div {
+   margin: 5px;
+   padding:10px;
+}
+
+#current-element {
+    height: 120px;
+    margin: 10px;
+    background: yellow;
+    border: 1px solid red;
+}
+
+#float-element {
+   float: left;
+   width: 130px;
+   height: 80px;
+   background: lightgreen;
+}
