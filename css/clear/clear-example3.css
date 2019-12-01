@@ -1,0 +1,31 @@
+.option {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.container {
+  background-color: #eee;
+  padding: 5px;
+  border: 1px solid blue;
+}
+
+#floating-element1 {
+   float: right;
+   width: 100px;
+   height: 40px;
+   background: lightblue;
+}
+
+#floating-element2 {
+   float: left;
+   width: 120px;
+   height: 80px;
+   background: lightgreen;
+}
+
+
+#current-element {
+   border: 1px solid red;
+}

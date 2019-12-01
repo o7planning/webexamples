@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS Clear</title>
+      <meta charset="UTF-8"/>
+
+      <link rel="stylesheet" href="clear-example3.css" />
+      <script src="clear-example3.js"> </script>
+   </head>
+   <body>
+       <h1>CSS Clear</h1>
+
+       <div class="option">
+         <p style="color:red">#current-element</p>
+         <input type="radio" name="c2-radio" value="none" onclick="changeClear(event)" checked/> clear:none <br/>
+         <input type="radio" name="c2-radio" value="left" onclick="changeClear(event)"/> clear:left <br/>
+         <input type="radio" name="c2-radio" value="right" onclick="changeClear(event)"/> clear:right <br/>
+         <input type="radio" name="c2-radio" value="both" onclick="changeClear(event)"/> clear:both
+       </div>
+
+
+       <hr/>
+       <p style="color:red;">
+          CASE: #current-element is a Block Element.
+       </p>
+
+       <div class = "container">
+            <div id = "floating-element1">
+              FLOATING 1 <br/>
+              {float: right}
+            </div>
+            <div id = "floating-element2">
+              FLOATING 2 <br/>
+              {float: left}
+            </div>
+
+            <div id= "current-element">
+            </div>
+       </div>
+   </body>
+</html>
