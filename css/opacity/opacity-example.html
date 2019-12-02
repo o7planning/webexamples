@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Opacity</title>
+    <meta charset="UTF-8"/>
+    <style>
+        #parent  {
+           border: 1px solid blue;
+           padding: 5px;
+           background:lightblue;
+        }
+        .child {
+           display: inline-block;
+           background: lightgreen;
+           padding: 5px;
+           margin: 10px;
+           height: 50px;
+           width: 150px;
+        }
+        .option {
+           border: 1px solid #eee;
+           padding: 5px;
+           margin: 10px 0px;
+        }
+    </style>
+    <script>
+        function changeOpa(event)  {
+           var opacityValue = event.target.value;
+           var parentElement = document.getElementById("parent");
+
+           parentElement.style.opacity = opacityValue;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>CSS Opacity</h3>
+
+    <p style="color:blue;">Set Opacity for parent element:</p>
+    <div class="option">
+        <input type="radio" name="opa" onclick="changeOpa(event)" value="1" checked/> Opacity: 1 <br/>
+        <input type="radio" name="opa" onclick="changeOpa(event)" value="0.5"/> Opacity: 0.5 <br/>
+        <input type="radio" name="opa" onclick="changeOpa(event)" value="0"/> Opacity: 0
+    </div>
+
+
+    <div id="parent">
+        I am a parent element <br/>
+
+        <div class="child">
+            I am a child element. <br/>
+            {opacity: 1}
+        </div>
+
+        <div class="child" style="opacity: 0.5">
+            I am a child element. <br/>
+            {opacity: 0.5}
+        </div>
+        <br/>
+        ...
+    </div>
+
+</body>
+</html>
