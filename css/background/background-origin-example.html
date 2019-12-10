@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS background-origin</title>
+    <meta charset="UTF-8"/>
+    <script>
+        function setBgOrigin(value) {
+           var myElement = document.getElementById("my-div");
+           myElement.style.backgroundOrigin = value;
+        }
+        function setBgRepeat(value) {
+           var myElement = document.getElementById("my-div");
+           myElement.style.backgroundRepeat = value;
+        }
+    </script>
+    <style>
+      .option {
+         padding: 5px;
+         width: 160px;
+         display:inline-block;
+         border: 1px solid gray;
+      }
+       #my-div {
+          border: 20px dashed gray;
+          height:110px;
+          width: 310px;
+          margin-top: 10px;
+          padding: 15px;
+          background-image: url('../images/flower.png');
+          background-repeat: no-repeat;
+       }
+    </style>
+</head>
+<body>
+    <h3>CSS background-origin</h3>
+    Background Image:
+    <img src="../images/flower.png" /> <hr/>
+
+    <div class="option">
+      <p style="color:blue;">background-origin:</p>
+
+      <input name ="a" type="radio" onClick="setBgOrigin('border-box')" /> border-box <br/>
+      <input name ="a" type="radio" onClick="setBgOrigin('padding-box')" checked/> padding-box <br/>
+      <input name ="a" type="radio" onClick="setBgOrigin('content-box')" /> content-box
+    </div>
+
+    <div class="option">
+      <p style="color:blue;">background-repeat:</p>
+
+      <input name ="b" type="radio" onClick="setBgRepeat('repeat-x')" /> repeat-x <br/>
+      <input name ="b" type="radio" onClick="setBgRepeat('repeat-y')" /> repeat-y <br/>
+      <input name ="b" type="radio" onClick="setBgRepeat('repeat')" /> repeat <br/>
+      <input name ="b" type="radio" onClick="setBgRepeat('space')" /> space <br/>
+      <input name ="b" type="radio" onClick="setBgRepeat('round')" /> round <br/>
+      <input name ="b" type="radio" onClick="setBgRepeat('no-repeat')" checked/> no-repeat
+    </div>
+
+    <div id = "my-div"> </div>
+
+</body>
+</html>

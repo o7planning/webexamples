@@ -4,7 +4,7 @@
     <title>CSS background-repeat</title>
     <meta charset="UTF-8"/>
     <script>
-        function setRepeat(value) {
+        function setBgRepeat(value) {
            var myElement = document.getElementById("my-div");
            myElement.style.backgroundRepeat = value;
         }
@@ -25,12 +25,12 @@
     <img src="../images/flower.png" /> <hr/>
     <p style="color:blue;">Set CSS background-repeat:</p>
 
-    <input name ="abc" type="radio" onClick="setRepeat('repeat-x')" /> repeat-x <br/>
-    <input name ="abc" type="radio" onClick="setRepeat('repeat-y')" /> repeat-y <br/>
-    <input name ="abc" type="radio" onClick="setRepeat('repeat')" checked/> repeat <br/>
-    <input name ="abc" type="radio" onClick="setRepeat('space')" /> space <br/>
-    <input name ="abc" type="radio" onClick="setRepeat('round')" /> round <br/>
-    <input name ="abc" type="radio" onClick="setRepeat('no-repeat')" /> no-repeat <br/>
+    <input name ="abc" type="radio" onClick="setBgRepeat('repeat-x')" /> repeat-x <br/>
+    <input name ="abc" type="radio" onClick="setBgRepeat('repeat-y')" /> repeat-y <br/>
+    <input name ="abc" type="radio" onClick="setBgRepeat('repeat')" checked/> repeat <br/>
+    <input name ="abc" type="radio" onClick="setBgRepeat('space')" /> space <br/>
+    <input name ="abc" type="radio" onClick="setBgRepeat('round')" /> round <br/>
+    <input name ="abc" type="radio" onClick="setBgRepeat('no-repeat')" /> no-repeat <br/>
 
     <div id = "my-div"> </div>
 
