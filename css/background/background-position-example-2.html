@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS background-position</title>
+    <meta charset="UTF-8"/>
+    <script src="background-position-example.js"> </script>
+    <style>
+      .option {
+         padding: 5px;
+         display:inline-block;
+         border: 1px solid gray;
+      }
+       #my-div {
+          border: 20px dashed gray;
+          height:110px;
+          width: 310px;
+          margin-top: 10px;
+          padding: 15px;
+          background-image: url('../images/flower.png');
+          background-repeat: no-repeat;
+       }
+    </style>
+</head>
+<body>
+    <h3>CSS background-position</h3>
+    Background Image:
+    <img src="../images/flower.png" /> <hr/>
+
+    <div class="option">
+      <p style="color:red;">background-position:
+        <span style="color:blue">(2-Value Syntax)</span></p>
+
+      <input name ="x" type="radio" onClick="setBgPosition('left top')" /> left top <br/>
+      <input name ="x" type="radio" onClick="setBgPosition('left bottom')" /> left bottom <br/>
+      <input name ="x" type="radio" onClick="setBgPosition('left center')" /> left center <br/>
+      <input name ="x" type="radio" onClick="setBgPosition('right top')" /> right top <br/>
+      <input name ="x" type="radio" onClick="setBgPosition('right bottom')" /> right bottom <br/>
+      <input name ="x" type="radio" onClick="setBgPosition('right center')" /> right center <br/>
+      <input name ="x" type="radio" onClick="setBgPosition('center center')" /> center center <br/>
+      <input name ="x" type="radio" onClick="setBgPosition('10px 10px')" /> 10px 10px <br/>
+      <input name ="x" type="radio" onClick="setBgPosition('20% 80%')" /> 20% 80% 
+    </div>
+
+    <div id = "my-div"> </div>
+
+</body>
+</html>
