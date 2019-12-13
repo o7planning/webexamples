@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS font</title>
+    <meta charset="UTF-8"/>
+    <script>
+        function setFont(value) {
+           var element = document.getElementById("my-div");
+           element.style.font = value;
+        }
+    </script>
+    <style>
+      .option {
+         padding: 5px;
+         display:inline-block;
+         border: 1px solid gray;
+      }
+       #my-div {
+          border: 1px solid gray;
+          height:110px;
+          width: 310px;
+          margin-top: 10px;
+          padding: 15px;
+       }
+    </style>
+</head>
+<body>
+    <h3>CSS font (Keyword values)</h3> 
+
+    <div class="option">
+      <p style="color:red;">font:</p>
+
+      <input name ="x" type="radio" onClick="setFont('caption')" /> caption <br/>
+      <input name ="x" type="radio" onClick="setFont('bottom')" /> icon <br/>
+      <input name ="x" type="radio" onClick="setFont('menu')" /> menu <br/>
+      <input name ="x" type="radio" onClick="setFont('message-box')" /> message-box <br/>
+      <input name ="x" type="radio" onClick="setFont('small-caption')" /> small-caption <br/>
+      <input name ="x" type="radio" onClick="setFont('status-bar')" /> status-bar
+    </div>
+
+    <div id = "my-div">
+      Apollo 11 was the spaceflight that landed the first humans,
+      Americans Neil Armstrong and Buzz Aldrin,
+      on the Moon on July 20, 1969, at 20:18 UTC.
+      Armstrong became the first to step onto the lunar
+      surface 6 hours later on July 21 at 02:56 UTC.
+    </div>
+
+</body>
+</html>
