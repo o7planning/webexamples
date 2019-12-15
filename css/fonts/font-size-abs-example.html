@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS font-size</title>
+    <meta charset="UTF-8"/>
+    <script>
+        function setFontSize(value) {
+           var element = document.getElementById("my-div");
+           element.style.fontSize = value;
+           element.innerHTML = "{font-size : "+ value+";}"
+        }
+    </script>
+    <style>
+      .option {
+         padding: 5px;
+         display:inline-block;
+         border: 1px solid gray;
+      }
+       #my-div {
+          border: 1px solid gray;
+          margin-top: 10px;
+          padding: 15px;
+       }
+       #normal-div {
+         border: 1px solid gray;
+         margin-top: 10px;
+         padding: 15px;
+       }
+    </style>
+</head>
+<body>
+    <h3>CSS font-size</h3>
+
+    <div class="option">
+      <p style="color:red;">font-size:</p>
+
+      <input name ="x" type="radio" onClick="setFontSize('xx-small')" /> xx-small <br/>
+      <input name ="x" type="radio" onClick="setFontSize('x-small')" /> x-small <br/>
+      <input name ="x" type="radio" onClick="setFontSize('small')" /> small <br/>
+      <input name ="x" type="radio" onClick="setFontSize('medium')" /> medium <br/>
+      <input name ="x" type="radio" onClick="setFontSize('large')" />  large <br/>
+      <input name ="x" type="radio" onClick="setFontSize('x-large')" />  x-large <br/>
+      <input name ="x" type="radio" onClick="setFontSize('xx-large')" />  xx-large <br/>
+      <input name ="x" type="radio" onClick="setFontSize('xxx-large')" /> xxx-large
+    </div>
+
+    <div class="option">
+      <p style="color:red;">font-size:</p>
+      <input name ="x" type="radio" onClick="setFontSize('larger')" />  larger <br/>
+      <input name ="x" type="radio" onClick="setFontSize('smaller')" />  smaller
+    </div>
+
+    <div class="option">
+      <p style="color:red;">font-size:</p>
+
+      <input name ="x" type="radio" onClick="setFontSize('32px')" />  32px <br/>
+      <input name ="x" type="radio" onClick="setFontSize('1.2em')" />  1.2em
+    </div>
+
+    <div class="option">
+      <p style="color:red;">font-size:</p>
+
+      <input name ="x" type="radio" onClick="setFontSize('80%')" />  80% <br/>
+      <input name ="x" type="radio" onClick="setFontSize('150%')" />  150%
+    </div>
+
+    <div id="normal-div">Default font size</div>
+    <div id = "my-div">
+       (default)}
+    </div>
+
+</body>
+</html>

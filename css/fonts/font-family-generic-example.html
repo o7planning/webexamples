@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS font-family</title>
+    <meta charset="UTF-8"/>
+    <script>
+        function setFontFamily(value) {
+           var element = document.getElementById("my-div");
+           element.style.fontFamily = value;
+        }
+    </script>
+    <style>
+      .option {
+         padding: 5px;
+         display:inline-block;
+         border: 1px solid gray;
+      }
+       #my-div {
+          border: 1px solid gray;
+          margin-top: 10px;
+          padding: 15px;
+          font-size: 32px;
+       }
+    </style>
+</head>
+<body>
+    <h3>CSS font-family (Generic family names)</h3>
+
+    <div class="option">
+      <p style="color:red;">font-size:32px; <br/>font-family:</p>
+
+      <input name ="x" type="radio" onClick="setFontFamily('serif')" />
+       {font-family: serif;} <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('sans-serif')" />
+       {font-family: sans-serif;} <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('monospace')" />
+       {font-family: monospace;} <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('cursive')" />
+       {font-family: cursive;} <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('fantasy')" />
+       {font-family: fantasy;} <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('system-ui')" />
+        {font-family: system-ui;} <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('emoji')" />
+         {font-family: emoji;} <br/>
+       <input name ="x" type="radio" onClick="setFontFamily('math')" />
+          {font-family: math;} <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('fangsong')" />
+         {font-family: fangsong;} <br/>
+    </div>
+
+    <div id = "my-div">
+      Apollo 11 was the spaceflight that landed the first humans,
+      Americans Neil Armstrong and Buzz Aldrin,
+      on the Moon on July 20, 1969, at 20:18 UTC.
+      Armstrong became the first to step onto the lunar
+      surface 6 hours later on July 21 at 02:56 UTC.
+    </div>
+
+</body>
+</html>
