@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <style type="text/css">
+         /*
+         AmstelvarAlpha-VF is created by David Berlow (https://github.com/TypeNetwork/Amstelvar)
+         and is used here under the terms of its license:
+         https://github.com/TypeNetwork/Amstelvar/blob/master/OFL.txt
+         */
+         @font-face {
+           src: url('AmstelvarAlpha-VF.ttf');
+           font-family:'AmstelvarAlpha';
+           font-style: normal;
+         }
+         .sample {
+            font-size: 32px;
+            font-family: AmstelvarAlpha;
+         }
+      </style>
+      <title>font-style - variable-font-example - code sample</title>
+   </head>
+   <body>
+      <header>
+         <input type="range" id="slant" name="slant" min="-90" max="90" />
+         <label for="slant">Slant</label>
+      </header>
+      <div class="container">
+         <p class="sample">
+            This is a Text
+          </p>
+      </div>
+      <script>
+         let slantLabel = document.querySelector('label[for="slant"]');
+         let slantInput = document.querySelector('#slant');
+         let sampleText = document.querySelector('.sample');
+
+         function update() {
+            let slant = `oblique ${slantInput.value}deg`;
+            slantLabel.textContent = `font-style: ${slant};`;
+            sampleText.style.fontStyle = slant;
+         }
+
+         slantInput.addEventListener('input', update);
+
+         update();
+
+      </script>
+   </body>
+</html>
