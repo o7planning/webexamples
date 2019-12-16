@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS font-style</title>
+    <meta charset="UTF-8"/>
+    <script>
+        function setFontStyle(value) {
+           var element = document.getElementById("my-div");
+           element.style.fontStyle = value;
+        }
+        function setFontFamily(value) {
+           var element = document.getElementById("my-div");
+           element.style.fontFamily  = value;
+        }
+    </script>
+    <style>
+      .option {
+         padding: 5px;
+         display:inline-block;
+         border: 1px solid gray;
+      }
+       #my-div {
+          border: 1px solid gray;
+          margin-top: 10px;
+          padding: 15px;
+          font-family: Arial;
+       }
+    </style>
+</head>
+<body>
+    <h3>CSS font-style</h3>
+
+    <div class="option">
+      <p style="color:red;">font-family:</p>
+
+      <input name ="x" type="radio" onClick="setFontFamily('Arial')" checked/> Arial <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('Courier New')" /> Courier New <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('Comic Sans MS')" /> Comic Sans MS
+    </div>
+
+    <div class="option">
+      <p style="color:blue;">font-style:</p>
+      <input name ="y" type="radio" onClick="setFontStyle('normal')" checked />  normal <br/>
+      <input name ="y" type="radio" onClick="setFontStyle('italic')" />  italic <br/>
+      <input name ="y" type="radio" onClick="setFontStyle('oblique')" />  oblique <br/>
+      <input name ="y" type="radio" onClick="setFontStyle('oblique 45deg')" />  oblique 45deg
+    </div>
+
+    <div id = "my-div">
+       This is a Text!
+    </div>
+
+</body>
+</html>
