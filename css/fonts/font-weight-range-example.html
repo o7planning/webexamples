@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <style type="text/css">
+         /*
+         Mutator Sans is created by LettError (https://github.com/LettError/mutatorSans)
+         and is used here under the terms of its license:
+         https://github.com/LettError/mutatorSans/blob/master/LICENSE
+         */
+         @font-face {
+           src: url('MutatorSans.ttf');
+           font-family:'MutatorSans';
+           font-style: normal;
+         }
+         .sample {
+           text-transform: uppercase;
+           font: 1.5rem 'MutatorSans', sans-serif;
+         }
+      </style>
+      <title>font-weight - variable-font-example - code sample</title>
+   </head>
+   <body>
+      <header>
+         <input type="range" id="weight" name="weight" min="1" max="1000" />
+         <label for="weight">Weight</label>
+      </header>
+      <div class="container">
+         <p class="sample">
+           This is a Text
+         </p>
+      </div>
+      <script>
+         let weightLabel = document.querySelector('label[for="weight"]');
+         let weightInput = document.querySelector('#weight');
+         let sampleText = document.querySelector('.sample');
+
+         function update() {
+           weightLabel.textContent = `font-weight: ${weightInput.value};`;
+           sampleText.style.fontWeight = weightInput.value;
+         }
+
+         weightInput.addEventListener('input', update);
+
+         update();
+
+      </script>
+   </body>
+</html>

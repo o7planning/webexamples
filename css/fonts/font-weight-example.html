@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS font-weight</title>
+    <meta charset="UTF-8"/>
+    <script>
+        function setFontWeight(value) {
+           var element = document.getElementById("my-div");
+           element.style.fontWeight = value;
+        }
+        function setFontFamily(value) {
+           var element = document.getElementById("my-div");
+           element.style.fontFamily  = value;
+        }
+    </script>
+    <style>
+      .option {
+         padding: 5px;
+         display:inline-block;
+         border: 1px solid gray;
+      }
+       #my-div {
+          border: 1px solid gray;
+          margin-top: 10px;
+          padding: 15px;
+          font-family: Arial;
+       }
+    </style>
+</head>
+<body>
+    <h3>CSS font-weight</h3>
+
+    <div class="option">
+      <p style="color:red;">font-family:</p>
+
+      <input name ="x" type="radio" onClick="setFontFamily('Arial')" checked/> Arial <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('Courier New')" /> Courier New <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('Comic Sans MS')" /> Comic Sans MS
+    </div>
+
+    <div class="option">
+      <p style="color:blue;">font-weight:</p>
+      <input name ="y" type="radio" onClick="setFontWeight('lighter')" />  lighter <br/>
+      <input name ="y" type="radio" onClick="setFontWeight('normal')" checked/>  normal <br/>
+      <input name ="y" type="radio" onClick="setFontWeight('bold')" />  bold <br/>
+      <input name ="y" type="radio" onClick="setFontWeight('bolder')" />  bolder
+    </div>
+
+    <div class="option">
+      <p style="color:blue;">font-weight:</p>
+      <input name ="y" type="radio" onClick="setFontWeight(100)" />  100 <br/>
+      <input name ="y" type="radio" onClick="setFontWeight(200)" />  200 <br/>
+      <input name ="y" type="radio" onClick="setFontWeight(300)" />  300 <br/>
+      <input name ="y" type="radio" onClick="setFontWeight(400)" />  400 (Normal) <br/>
+      <input name ="y" type="radio" onClick="setFontWeight(500)" />  500 <br/>
+      <input name ="y" type="radio" onClick="setFontWeight(600)" />  600 <br/>
+      <input name ="y" type="radio" onClick="setFontWeight(700)" />  700 (Bold) <br/>
+      <input name ="y" type="radio" onClick="setFontWeight(800)" />  800 <br/>
+      <input name ="y" type="radio" onClick="setFontWeight(900)" />  900
+    </div>
+
+    <div id = "my-div">
+       This is a Text!
+    </div>
+
+</body>
+</html>
