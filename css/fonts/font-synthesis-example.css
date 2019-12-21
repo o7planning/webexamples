@@ -1,0 +1,17 @@
+#my-div {
+    font-size:1.2em;
+    font-family:KaiTi,serif;
+    margin-top:10px;
+}
+.option {
+   padding: 5px;
+   display:inline-block;
+   border: 1px solid gray;
+}
+
+ .bold{
+     font-weight:bold;
+}
+ .italic{
+    font-style:italic;
+}

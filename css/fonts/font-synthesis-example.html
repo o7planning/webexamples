@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS font-synthesis</title>
+      <meta charset="UTF-8"/>
+      <link rel="stylesheet" type="text/css" href="font-synthesis-example.css" />
+
+      <script>
+          function setFontSynthesis(value) {
+             var element = document.getElementById("my-div");
+             element.style.fontSynthesis = value;
+          }
+      </script>
+   </head>
+   <body>
+      <h3>CSS font-synthesis</h3>
+
+      <p class="info">Most Western fonts include <span class="bold">bold</span> or
+         <span class="italic">italic</span> variants but Chinese, Japanese, Korean fonts tend not to.
+      </p>
+      <div class="option">
+        <p style="color:red;">font-synthesis:</p>
+
+        <input name ="x" type="radio" onClick="setFontSynthesis('none')" /> none <br/>
+        <input name ="x" type="radio" onClick="setFontSynthesis('style')" /> style <br/>
+        <input name ="x" type="radio" onClick="setFontSynthesis('weight')" /> bold <br/>
+        <input name ="x" type="radio" onClick="setFontSynthesis('style weight')" /> style weight
+      </div>
+
+      <div id="my-div">
+         中文排版通常不运用<span class="bold">粗体</span>或<span class="italic">斜体</span>。
+       </div>
+
+   </body>
+</html>
