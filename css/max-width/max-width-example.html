@@ -17,21 +17,20 @@
          #my-div1, #my-div2 {
            background-color: #d6eaf8;
            padding: 5px;
-           margin: 5px;
-           margin-top: 10px;
+           margin: 5px 0px;
          }
          .option {
            display: inline-block;
            border: 1px solid gray;
            padding: 5px;
-           margin: 10px 0px;
+           margin-bottom: 15px;
          }
       </style>
 
    </head>
    <body>
        <h1>CSS max-width</h1>
-       <hr/>
+
        <div class ="option">
          <p style="color:blue;">max-width:</p>
          <input type="radio" name="x" onClick="setMaxWidth('none')" checked/> none <br/>
@@ -54,12 +53,12 @@
        <br/>
 
        <div id="my-div1">
-             (I am block element).
+             (I am a block element).
              Change the maximum width.
        </div>
 
        <div id="my-div2" style="display:inline-block;">
-             (I am inline-block element).
+             (I am an inline-block element).
              Change the maximum width.
        </div>
    </body>
