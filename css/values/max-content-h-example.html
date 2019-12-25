@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Value: max-content</title>
+      <meta charset="UTF-8"/>
+      <style>
+         html,body{overflow:hidden}
+         #parent {
+           width: 0px;
+           border:15px solid lightgray;
+           height:130px;
+         }
+         #parent > #current {
+           border:15px solid lightgreen;
+           padding:10px;
+           background:rgba(255,255,255,0.8);
+           max-width: max-content;
+         }
+         #parent-width {
+            color: red;
+         }
+         #current-width {
+            color: blue;
+         }
+         html::before {
+           content:'';
+           position:absolute;
+           top:0;
+           right:0;
+           height:100%;
+           width:200px;
+           background:linear-gradient(to right, transparent, white 50%);
+         }
+      </style>
+   </head>
+   <body>
+      <h2>Horizontal 'max-content' value?</h2>
+      <div id="parent">
+         <div id="current">
+            This is the content of current box.
+         </div>
+      </div>
+      <br style="clear:both">
+      Current box's width is <span id="current-width"></span> px
+      <br><br>
+      Parent box's width is
+      <input type="range" value="0" min="200" max="600">
+      <span id="parent-width"></span> px
+      <script>
+         var parent = document.querySelector("#parent");
+         var current = document.querySelector("#current");
+         var parentView = document.querySelector("#parent-width");
+         var currentView = document.querySelector("#current-width");
+
+         document.querySelector("input").oninput = function(){
+         parentView.textContent = this.value > 500 ? "infinity" : this.value;
+         parent.style.width = this.value + "px";
+         currentView.textContent = current.offsetWidth;
+         };
+
+         document.querySelector("input").oninput();
+      </script>
+   </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Value: max-content</title>
+      <meta charset="UTF-8"/>
+      <style>
+         html,body{overflow:hidden}
+         #parent {
+           width: 0px;
+           border:15px solid lightgray;
+           height:130px;
+           min-width: min-content;
+         }
+         #parent > #current {
+           border:15px solid lightgreen;
+           padding:10px;
+           background:rgba(255,255,255,0.8);
+           min-width: min-content;
+         }
+         #parent-height {
+            color: red;
+         }
+         #current-height {
+            color: blue;
+         }
+      </style>
+   </head>
+   <body>
+      <h2>Vertical 'max-content' value?</h2>
+
+      Parent box's height is
+      <input type="range" value="0" min="100" max="500">
+      <span id="parent-height"></span> px <br/>
+      Current box's height is <span id="current-height"></span> px
+      <br/><br/>
+
+        <div id="parent">
+           <div id="current">
+              This is the content of current box.
+           </div>
+        </div>
+
+
+      <script>
+         var parent = document.querySelector("#parent");
+         var current = document.querySelector("#current");
+         var parentView = document.querySelector("#parent-height");
+         var currentView = document.querySelector("#current-height");
+
+         document.querySelector("input").oninput = function(){
+           parentView.textContent = this.value > 400 ? "infinity" : this.value;
+           parent.style.height = this.value + "px";
+           parent.style.width = (500- this.value)  + "px";
+           currentView.textContent = current.offsetHeight;
+         };
+
+         document.querySelector("input").oninput();
+      </script>
+   </body>
+</html>
