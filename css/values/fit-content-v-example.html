@@ -4,17 +4,22 @@
       <title>Value: fit-content</title>
       <meta charset="UTF-8"/>
       <style>
-
+        .desc {
+           color: lightgreen;
+        }
          #parent {
-           border:15px solid lightgray;
-           width: 150px;
+           border:15px solid lightgray; 
          }
          #parent > #current {
            border:15px solid lightgreen;
            padding:10px;
            height: fit-content;
+
+           writing-mode: vertical-rl;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: vertical-rl;
          }
-         #parent-height { 
+         #parent-height {
             color: red;
          }
          #current-height {
@@ -23,8 +28,7 @@
       </style>
    </head>
    <body>
-      <h2>Vertical 'fit-content' value?</h2>
-      (NOT WORKING) <br/>
+      <h2 class="desc">LightGreen Box: {width: fit-content}</h2>
 
       Parent box's height is
       <input type="range" value="0" min="30" max="500">
