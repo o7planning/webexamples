@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit: em</title>
+    <meta charset="UTF-8"/>
+     <style>
+       .parent {
+          margin-top: 5px;
+          padding: 5px;
+
+          width: 100px;
+          border: 1px solid blue;
+       }
+       .child {
+          padding: 2em;
+          width: 2em;
+          border: 1px solid red;
+          float: left;
+       }
+    </style>
+    <script>
+        function changeSize(size)  {
+           var e = document.getElementById("test");
+           e.style.width= size;
+        }
+    </script>
+</head>
+<body>
+    <h3>Unit: em</h3>
+
+ <button onClick="changeSize('2em')">Change Size 2em</button>
+<button onClick="changeSize('100px')">Change Size 100px</button>
+
+    <div class = "parent">
+
+        <div class ="child" id="test">
+            Child
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

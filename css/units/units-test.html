@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Unit: em</title>
+      <meta charset="UTF-8"/>
+      <script src = "units-test.js"></script>
+      <style>
+         .option {
+         padding: 5px;
+         display:inline-block;
+         border: 1px solid gray;
+         }
+         #parent {
+         margin-top: 15px;
+         padding: 5px;
+         width: 320px;
+         border: 1px solid blue;
+         font-size: 25px;
+         color: blue;
+         }
+         #child {
+         border: 1px solid red;
+         color: red;
+         }
+         #info {
+         margin: 10px 0 15px 0;
+         padding: 5px;
+         border: 1px solid lightblue;
+         }
+      </style>
+   </head>
+   <body onload="initDefaults(); showInfo();">
+      <h3>Units: em, rem</h3>
+      <div class="option">
+         <p style="color:red;">Style Name:</p>
+         <input name ="x" type="radio" value ="fontSize" onClick="setStyleName(event)" checked/> fontSize <br/>
+         <input name ="x" type="radio" value ="padding" onClick="setStyleName(event)" /> padding <br/>
+         <input name ="x" type="radio" value ="margin" onClick="setStyleName(event)" /> margin <br/>
+         <input name ="x" type="radio" value ="width" onClick="setStyleName(event)" /> width <br/>
+         <input name ="x" type="radio" value ="height" onClick="setStyleName(event)" /> height <br/>
+      </div>
+      <div class="option">
+         <p style="color:red;">Value:</p>
+         <input name ="y" type="radio" value ="1em" onClick="setUnitValue(event)" checked/>  1em <br/>
+         <input name ="y" type="radio" value ="2em" onClick="setUnitValue(event)" />  2em <br/>
+         <input name ="y" type="radio" value ="3em" onClick="setUnitValue(event)" />  3em
+      </div>
+      <div class="option">
+         <p style="color:red;">Value:</p>
+         <input name ="y" type="radio" value ="1rem" onClick="setUnitValue(event)" />  1rem <br/>
+         <input name ="y" type="radio" value ="2rem" onClick="setUnitValue(event)" />  2rem <br/>
+         <input name ="y" type="radio" value ="3rem" onClick="setUnitValue(event)" />  3rem  
+      </div>
+
+      <div id="info">
+      </div>
+
+      Body Text.
+      <div id = "parent">
+         Parent Text <br/>
+         <div  id="child">
+            Child Text
+         </div>
+      </div>
+
+   </body>
+</html>
