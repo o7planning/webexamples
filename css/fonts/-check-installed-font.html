@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Generic Font Family</title>
+    <meta charset="UTF-8"/>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="font.js"></script>
+    <script>
+        function setFontFamily(value) {
+           var element = document.getElementById("my-div");
+           element.style.fontFamily = value;
+
+           var installed = font.isInstalled(value);
+
+        }
+    </script>
+    <style>
+      .option {
+         padding: 5px;
+         display:inline-block;
+         border: 1px solid gray;
+      }
+       #my-div {
+          border: 1px solid gray;
+          margin-top: 10px;
+          padding: 15px;
+          font-size: 144px;
+       }
+    </style>
+</head>
+<body onload="font.setup();">
+    <h3>CSS Generic Font Family</h3>
+
+    <div class="option">
+      <p style="color:red;">font-family:</p>
+
+      <input name ="x" type="radio" onClick="setFontFamily('serif')" /> serif <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('sans-serif')" /> sans-serif <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('monospace')" /> monospace <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('cursive')" /> cursive <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('fantasy')" />  fantasy <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('system-ui')" />  system-ui <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('emoji')" />  emoji <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('math')" /> math <br/>
+      <input name ="x" type="radio" onClick="setFontFamily('fangsong')" /> fangsong
+    </div>
+
+    <div id = "my-div">
+       This is a Text! <br/>
+       这是文本！
+    </div>
+
+</body>
+</html>

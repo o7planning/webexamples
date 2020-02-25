@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS max-width</title>
+      <meta charset="UTF-8"/>
+
+      <script>
+          function setMinWidth(value)  {
+              var e1 = document.getElementById("my-div1");
+              var e2 = document.getElementById("my-div2");
+              e1.style.minWidth = value;
+              e2.style.minWidth = value;
+          }
+      </script>
+
+      <style>
+         #my-div1, #my-div2 {
+           background-color: #d6eaf8;
+           padding: 5px;
+           margin: 5px 0px;
+         }
+         .option {
+           display: inline-block;
+           border: 1px solid gray;
+           padding: 5px;
+           margin-bottom: 15px;
+         }
+      </style>
+
+   </head>
+   <body>
+       <h1>CSS min-width</h1>
+
+       <div class ="option">
+         <p style="color:blue;">min-width:</p>
+         <input type="radio" name="x" onClick="setMinWidth('auto')" checked/> auto <br/>
+         <input type="radio" name="x" onClick="setMinWidth('1000px')" /> 1000px <br/>
+         <input type="radio" name="x" onClick="setMinWidth('150px')" /> 150px <br/>
+         <input type="radio" name="x" onClick="setMinWidth('20em')"/> 20em <br/>
+         <input type="radio" name="x" onClick="setMinWidth('25ch')"/> 20ch
+       </div>
+       <div class ="option">
+         <p style="color:blue;">min-width:</p>
+         <input type="radio" name="x" onClick="setMinWidth('50%')"/> 50% <br/>
+         <input type="radio" name="x" onClick="setMinWidth('75%')"/> 75%
+       </div>
+       <br/>
+
+       <div id="my-div1">
+             (Block element).
+       </div>
+
+       <div id="my-div2" style="display:inline-block;">
+             (Inline-block element).
+       </div>
+   </body>
+</html>
