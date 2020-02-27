@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS line-height</title>
+    <meta charset="UTF-8"/>
+
+     <style>
+       .option {
+           padding: 5px;
+           display:inline-block;
+           border: 1px solid gray;
+       }
+       #my-div {
+          background-color: #ddd;
+          margin-top: 5px;
+       }
+    </style>
+
+    <script>
+        function changeLineHeight(value)  {
+           var e = document.getElementById("my-div");
+           e.style.lineHeight= value;
+        }
+    </script>
+</head>
+<body>
+    <h3>CSS line-height</h3>
+
+    <div class="option">
+       <p style="color:red;">Line-height:</p>
+       <input name ="x" type="radio" onClick="changeLineHeight('normal')" checked/> normal <br/>
+       <input name ="x" type="radio" onClick="changeLineHeight('3.5em')" /> 3.5em <br/>
+       <input name ="x" type="radio" onClick="changeLineHeight('3.5')" /> 3.5 <br/>
+       <input name ="x" type="radio" onClick="changeLineHeight('35px')" /> 35px <br/>
+
+       <input name ="x" type="radio" onClick="changeLineHeight('150%')" /> 150%
+    </div>
+
+    <div id="my-div">
+        Line 1 <br/>
+        Line 2 <br/>
+        Line 3 <br/>
+        Line 4
+    </div> 
+
+</body>
+</html>
