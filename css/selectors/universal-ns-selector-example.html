@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:f="https://www.w3schools.com/furniture">
+   <head>
+      <meta charset="utf-8"/>
+      <title>Universal Selector: ns|*</title>
+      <style>
+        @namespace url(http://www.w3.org/1999/xhtml);
+        @namespace f url(https://www.w3schools.com/furniture);
+
+         f|* {
+           display: none;
+         }
+         table  {
+            border: 1px solid blue;
+         }
+      </style>
+   </head>
+   <body>
+     <!-- Example of Namespace - CHUA SU DUNG VI KHONG HOAT DONG -->
+
+    <table>
+      <tr>
+        <td>Apples</td>
+        <td>Bananas</td>
+      </tr>
+    </table>
+
+    <f:table>
+      <f:name>African Coffee Table</f:name>
+      <f:width>80</f:width>
+      <f:length>120</f:length>
+      <h1>I am H1</h1>
+    </f:table>
+
+   </body>
+</html>
