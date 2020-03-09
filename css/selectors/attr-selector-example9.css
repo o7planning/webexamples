@@ -1,0 +1,4 @@
+*[href$=".html"] {
+   color: red;
+   font-weight: bold;
+}
