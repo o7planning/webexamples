@@ -1,4 +1,4 @@
-a[href$=".html"] {
+a[href*=".html"] {
    color: red;
    font-weight: bold;
 }
