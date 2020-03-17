@@ -1,0 +1,21 @@
+a {
+   margin:5px;
+   font-size: 20px;
+}
+
+.menubar {
+   margin: 10px 0px;
+   padding: 5px;
+   border: 1px solid #ddd;
+}
+
+a:hover {
+    color: blue;
+    font-weight: bold;
+}
+
+a:hover ~ a {
+    font-size: 80%;
+    font-style: italic;
+    color: black;
+}
