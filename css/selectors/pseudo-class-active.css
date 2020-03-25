@@ -1,0 +1,7 @@
+* {
+  margin: 5px;
+}
+
+h1:active, p:active, div:active, input:active, button:active {
+   color:red;
+}
