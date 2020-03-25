@@ -1,13 +1,3 @@
-p {
-  color: blue;
-  font-style: italic;
-}
-
-a:active {
-   color:red;
-   outline: 3px solid lightskyblue;
-}
-
 button:active, input[type="button"]:active {
    color: red;
    outline: 3px solid lightskyblue;
